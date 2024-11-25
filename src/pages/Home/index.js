@@ -18,7 +18,7 @@ function Home () {
     }
 
     const list = () => {
-        window.location = "list"
+        window.location = "mn-transparency/list"
     }
 
     return (
