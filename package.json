@@ -2,7 +2,7 @@
   "name": "mn-transparency",
   "version": "0.1.0",
   "private": true,
-  "homepage": "ttps://oliveirajulio.github.io/mn-transparency/",
+  "homepage": "ttps://oliveirajulio.github.io/mn-transparency",
   "dependencies": {
     "@emotion/react": "^11.13.5",
     "@emotion/styled": "^11.13.5",
