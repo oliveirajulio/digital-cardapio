@@ -15,7 +15,7 @@ function List () {
     useEffect(() => {
         const fetchData = async () => {
           try {
-            const jsonData = await Data(process.env.PUBLIC_URL + '/mn-transparency/data.xlsx');
+            const jsonData = await Data('./data.xlsx');
             setData(jsonData);
           } catch (err) {
             setError(err.message);
