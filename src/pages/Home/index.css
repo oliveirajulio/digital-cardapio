@@ -1,0 +1,115 @@
+@keyframes slide {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0); 
+    }
+  }
+
+.container {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--color_3);
+}
+
+.main-center {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 25vw;
+}
+
+.btn-home {
+    padding: 0;
+    background: transparent;
+    background-image: url(./logo.png);
+    background-repeat: no-repeat;
+    background-size: 60vh;
+    background-position-x: -23vw ;
+    background-position-y: -9vh;
+    border: none;
+    height: 16vh;
+    width: 75vw;
+}
+
+.granel-list {
+    margin-top: 70vw;
+    width: 74vw;
+    height:6.5vh;
+    background-color: var(--color_1);
+    border: none;
+    color: #F9F9F9;
+    font-size: 2.1vh;
+}
+
+.granel-list:active {
+    filter: brightness(0.8);
+}
+
+.input {
+    background-color: #F9F9F9;
+    border: solid 1px var(--color_1);
+    border-radius: 10vh;
+    position: relative;
+    left: 100%;
+    width: 93vw;
+    height: 6vh;
+    margin-top: 2.5vh;
+    margin-left: 3vw;
+    padding-left: 5vw;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--color_3);
+    transition: all 0.1s ease;
+}
+
+.input-show {
+    background-color: #F9F9F9;
+    border: solid 1px var(--color_1);
+    border-radius: 10vh;
+    left: 0;
+    width: 93vw;
+    height: 6vh;
+    margin-top: 2.5vh;
+    margin-left: 3vw;
+    padding-left: 5vw;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--color_3);
+    animation: slide 0.35s ease forwards;
+}
+
+.menu {
+    position: relative;
+    top: -5.5vh;
+    right: -83vw;
+    background-color: transparent;
+    border: none;
+    color: #F9F9F9;
+}
+
+.close {
+    position: relative;
+    top: -5.2vh;
+    right: -83vw;
+    background-color: transparent;
+    border: none;
+    color:var(--color_1);
+    transition: all 1.2s ease;
+}
+
+.menu .ic-menu {
+    font-size: 35px;
+}
+
+.close .ic-menu {
+    font-size: 35px;
+}
+
+
+
