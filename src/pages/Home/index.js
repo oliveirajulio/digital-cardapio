@@ -33,6 +33,8 @@ function Home () {
             <div className="main-center">
                 <button className="btn-home"></button>
                 <button onClick={list} className="granel-list">VER LISTA DE GRANEL</button>
+                <button onClick={list} className="b2"></button>
+                <button onClick={list} className="b3"></button>
             </div>
         </div>
     )

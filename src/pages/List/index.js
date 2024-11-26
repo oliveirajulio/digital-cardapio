@@ -5,6 +5,8 @@ import Data from "../../service/service";
 
 import MenuIcon from '@mui/icons-material/Menu';
 import LanguageIcon from '@mui/icons-material/Language';
+import SearchIcon from '@mui/icons-material/Search';
+import FilterAltIcon from '@mui/icons-material/FilterAlt';
 
 function List () {
 
@@ -34,10 +36,13 @@ function List () {
     return (
         <div className="container-list">
             <div className="main-header">
-                <button className="menui"><MenuIcon className="icon-list"/></button>
+                <button className="menui"><SearchIcon className="icon-list"/></button>
                 <button className="lan"><LanguageIcon className="icon-list"/></button>
             </div>
-            <div className="main-filter">A</div>
+            <div className="main-filter">
+                <button className="filter-btn"><FilterAltIcon className="ic-list"/></button>
+                <nav className="nav"></nav>
+            </div>
             <div className="ctn-list">
               <ul className="item-list">
                 {data.map((item, index) => (

@@ -38,7 +38,26 @@
 }
 
 .granel-list {
-    margin-top: 70vw;
+    margin-top: 50vw;
+    width: 74vw;
+    height:6.5vh;
+    background-color: var(--color_1);
+    border: none;
+    color: #F9F9F9;
+    font-size: 2.1vh;
+}
+
+.b2 {
+    margin-top: 5vw;
+    width: 74vw;
+    height:6.5vh;
+    background-color: var(--color_1);
+    border: none;
+    color: #F9F9F9;
+    font-size: 2.1vh;
+}
+.b3 {
+    margin-top: 5vw;
     width: 74vw;
     height:6.5vh;
     background-color: var(--color_1);

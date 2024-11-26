@@ -10,6 +10,7 @@
 }
 
 .main-filter {
+    position: relative;
     height: 7vh;
     width: 100vw;
     margin-top: 10vh;
@@ -71,13 +72,13 @@
     padding: 0;
     border: none;
     position: relative;
-    margin-left: 89vw;
+    margin-left: 87vw;
     color: #f9f9f9;
     top: 2.5vh;
 }
 
 .menui .icon-list {
-    font-size: 4vh;
+    font-size: 35px;
 }
 
 .lan {
@@ -85,12 +86,30 @@
     background-color: transparent;
     padding: 0;
     border: none;
-    margin-left: 75vw;
+    margin-left: 73vw;
     color: #f9f9f9;
-    top: -2vh;
+    top: -3.5vh;
 }
 
 .lan .icon-list {
-    font-size: 4vh;
+    font-size: 35px;
+}
+
+.filter-btn {
+    width: 1vw;
+    margin-top: 0.5vh;
+    background-color: transparent;
+    border: none;
+    color: var(--color_3);
+}
+
+.filter-btn .ic-list {
+    font-size: 35px;
+}
+
+.nav {
+    margin-top: -6.6vh;
+    margin-left: 15vw;
+    height: 7vh;
 }
 
