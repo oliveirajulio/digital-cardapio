@@ -1,6 +1,8 @@
 import "./index.css"
 import { Input } from "@mui/material";
 import React, { useState } from "react";
+import { useNavigate } from 'react-router-dom';
+
 
 
 
@@ -10,7 +12,8 @@ import CloseIcon from '@mui/icons-material/Close';
 function Home () {
 
     const [showinput, setshowinput] = useState(false);
-    const [modesearch, setmodesearch] = useState(false)
+    const [modesearch, setmodesearch] = useState(false);
+    const navigate = useNavigate();
 
     const inputshow = () => {
         setshowinput(!showinput)
@@ -18,8 +21,8 @@ function Home () {
     }
 
     const list = () => {
-        window.location = "list"
-    }
+        navigate("/list");  // Caminho relativo dentro do React Router
+      }
 
     return (
         <div className="container">
