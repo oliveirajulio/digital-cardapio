@@ -37,6 +37,7 @@ function List () {
                 <button className="menui"><MenuIcon className="icon-list"/></button>
                 <button className="lan"><LanguageIcon className="icon-list"/></button>
             </div>
+            <div className="main-filter">A</div>
             <div className="ctn-list">
               <ul className="item-list">
                 {data.map((item, index) => (

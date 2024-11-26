@@ -9,8 +9,13 @@
     background-color: #f9f9f9;
 }
 
-.ctn-list {
+.main-filter {
+    height: 7vh;
+    width: 100vw;
     margin-top: 10vh;
+}
+
+.ctn-list {
     height: auto;
 }
 
