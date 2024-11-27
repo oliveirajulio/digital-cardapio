@@ -43,10 +43,9 @@ function List () {
                 <button className="filter-btn"><FilterAltIcon className="ic-list"/></button>
                 <nav className="nav">
                   <ul>
-                    <li>Mais Vendidos</li>
-                    <li>Mais Vendidos</li>
-                    <li>Mais Vendidos</li>
-
+                      <button>Mais Vendidos</button>
+                      <button>Mais Vendidos</button>
+                      <button>Mais Vendidos</button>
                   </ul>
                 </nav>
             </div>

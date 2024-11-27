@@ -88,7 +88,7 @@
     border: none;
     margin-left: 73vw;
     color: #f9f9f9;
-    top: -3.0vh;
+    top: -2.5vh;
 }
 
 .lan .icon-list {
@@ -108,7 +108,7 @@
 }
 
 .nav {
-    margin-top: -5.5vh;
+    margin-top: -6.6vh;
     margin-left: 15vw;
     height: 6vh;
     overflow-x: auto;
@@ -121,9 +121,9 @@
     display: none;
 }
 
-.nav li { 
+.nav button { 
     position: relative;
-    top: 2.5vh;
+    top: 2vh;
     border-radius: 30px;
     border: 1px solid var(--color_3);
     display: inline;
@@ -134,5 +134,13 @@
     left: -10vw;
     margin-right: 2vw;
     
+}
+
+.nav button:hover { 
+    cursor: pointer;
+    background-color: var(--color_11) ;
+    color: #f9f9f9;
+    border: none;
+    color: var(--color_3);
 }
 
