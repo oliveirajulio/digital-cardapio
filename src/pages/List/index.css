@@ -88,7 +88,7 @@
     border: none;
     margin-left: 73vw;
     color: #f9f9f9;
-    top: -3.5vh;
+    top: -3.0vh;
 }
 
 .lan .icon-list {
@@ -123,11 +123,11 @@
 
 .nav li { 
     position: relative;
-    top: 1.9vh;
+    top: 2.5vh;
     border-radius: 30px;
     border: 1px solid var(--color_3);
     display: inline;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 400;
     list-style-type: none;
     padding: 2vw;
