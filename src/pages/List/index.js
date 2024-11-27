@@ -41,7 +41,11 @@ function List () {
             </div>
             <div className="main-filter">
                 <button className="filter-btn"><FilterAltIcon className="ic-list"/></button>
-                <nav className="nav"></nav>
+                <nav className="nav">
+                  <ul>
+                    <li>Mais Vendidos</li>
+                  </ul>
+                </nav>
             </div>
             <div className="ctn-list">
               <ul className="item-list">

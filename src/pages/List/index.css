@@ -11,7 +11,7 @@
 
 .main-filter {
     position: relative;
-    height: 7vh;
+    height: 6vh;
     width: 100vw;
     margin-top: 10vh;
 }
@@ -110,6 +110,21 @@
 .nav {
     margin-top: -6.6vh;
     margin-left: 15vw;
-    height: 7vh;
+    height: 6vh;
+}
+
+
+.nav li { 
+    position: relative;
+    top: 1.9vh;
+    border-radius: 30px;
+    border: 1px solid var(--color_3);
+    display: inline;
+    font-size: 14px;
+    font-weight: 400;
+    list-style-type: none;
+    padding: 2vw;
+    left: -10vw;
+
 }
 
