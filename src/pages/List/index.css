@@ -111,8 +111,15 @@
     margin-top: -6.6vh;
     margin-left: 15vw;
     height: 6vh;
+    overflow-x: auto;
+    white-space: nowrap;
+
+
 }
 
+.nav::-webkit-scrollbar {
+    display: none;
+}
 
 .nav li { 
     position: relative;
@@ -125,6 +132,7 @@
     list-style-type: none;
     padding: 2vw;
     left: -10vw;
-
+    margin-right: 2vw;
+    
 }
 

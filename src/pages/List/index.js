@@ -44,6 +44,9 @@ function List () {
                 <nav className="nav">
                   <ul>
                     <li>Mais Vendidos</li>
+                    <li>Mais Vendidos</li>
+                    <li>Mais Vendidos</li>
+
                   </ul>
                 </nav>
             </div>
