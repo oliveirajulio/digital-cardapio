@@ -162,7 +162,8 @@
     display: flex;
     position: relative;
     margin-left: 10vw;
-    color: #091f0263
+    color: #091f0263;
+    font-weight: 400;
 }
 
 
