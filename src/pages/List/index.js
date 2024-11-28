@@ -7,6 +7,10 @@ import MenuIcon from '@mui/icons-material/Menu';
 import LanguageIcon from '@mui/icons-material/Language';
 import SearchIcon from '@mui/icons-material/Search';
 import FilterAltIcon from '@mui/icons-material/FilterAlt';
+import AppleIcon from '@mui/icons-material/Apple';
+
+
+import { IconAppleFilled } from '@tabler/icons-react';
 
 function List () {
 
@@ -44,8 +48,8 @@ function List () {
                 <nav className="nav">
                   <ul>
                       <button>Mais Vendidos</button>
-                      <button>Mais Vendidos</button>
-                      <button>Mais Vendidos</button>
+                      <button>Preço Baixo</button>
+                      <button>Novo Esse Mês</button>
                   </ul>
                 </nav>
             </div>
@@ -54,7 +58,11 @@ function List () {
                 {data.map((item, index) => (
                   <li key={index} className="item-row">
                     <button className="item-button">
+                      <h1 className="icon"><AppleIcon fontSize="large" /></h1>
                       {item["Descrição"]}
+                      <h5 className="sub">Frutas Desistradas</h5>
+                      <h5>R$ {item["Preco"]}/Kg</h5>
+
                     </button>
                   </li>
                 ))}

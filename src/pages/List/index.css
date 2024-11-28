@@ -10,14 +10,20 @@
 }
 
 .main-filter {
-    position: relative;
-    height: 6vh;
+    padding-top:1.1vh;
+    position: fixed;
+    height: 8vh;
     width: 100vw;
     margin-top: 10vh;
+    background-color: #f9f9f9;
+    z-index: 999;
 }
 
 .ctn-list {
+    position: inherit;
+    margin-top: 19vh;
     height: auto;
+    z-index: 1;
 }
 
 .item-list {
@@ -30,7 +36,7 @@
 
 .item-button {
     width: 100vw;
-    height: 6vh;
+    height: 9vh;
     background-color: transparent;
     border: none;
     border-bottom: solid 0.2px;
@@ -39,6 +45,8 @@
     text-align: left;
     color: var(--color_3);
     transition: color 0.01s ease;
+    padding-bottom: 5vh;
+    padding-left: 4vw;
 }
 
 .item-button:active {
@@ -58,6 +66,7 @@
     background-size: 180px;
     background-position-y: -1vh;
     background-position-x: -9vw ;
+    z-index: 1000;
 }
 
 .main-center-list {
@@ -108,13 +117,12 @@
 }
 
 .nav {
-    margin-top: -6.6vh;
-    margin-left: 15vw;
-    height: 6vh;
+    position: relative;
+    margin-top: -7.0vh;
+    margin-left: 12vw;
+    height: 8vh;
     overflow-x: auto;
     white-space: nowrap;
-
-
 }
 
 .nav::-webkit-scrollbar {
@@ -122,6 +130,7 @@
 }
 
 .nav button { 
+    background-color: transparent;
     position: relative;
     top: 2vh;
     border-radius: 30px;
@@ -138,9 +147,37 @@
 
 .nav button:hover { 
     cursor: pointer;
-    background-color: var(--color_11) ;
+    border: solid 1px var(--color_13);
+    background-color: var(--color_13) ;
     color: #f9f9f9;
     border: none;
     color: var(--color_3);
 }
 
+.item-button .icon {
+    display: inline;
+}
+
+.item-button .sub {
+    display: flex;
+    position: relative;
+    margin-left: 10vw;
+    color: #091f0263
+}
+
+
+
+.icon {
+    position: relative;
+    color:var(--color_3); 
+    top: 1vh;
+    left: -1vw;
+}
+
+.item-button h5 {
+    display: flex;
+    position: relative;
+    margin-bottom: -15px;
+    margin-left: 74vw;
+    color: var(--color_1)
+}
