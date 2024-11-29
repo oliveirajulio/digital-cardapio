@@ -10,7 +10,6 @@ import FilterAltIcon from '@mui/icons-material/FilterAlt';
 import AppleIcon from '@mui/icons-material/Apple';
 
 
-import { IconAppleFilled } from '@tabler/icons-react';
 
 function List () {
 
