@@ -41,17 +41,16 @@
     border: none;
     border-bottom: solid 0.2px;
     font-weight: 400;
-    font-size: 1.9vh;
+    font-size: 1.79vh;
     text-align: left;
     color: var(--color_3);
-    transition: color 0.01s ease;
+    transition: color 0.001s ease;
     padding-bottom: 5vh;
     padding-left: 4vw;
+    transition: color ease, 
 }
 
-.item-button:active {
-    color: var(--color_1);
-}
+
   
 .main-header {
     padding: 0;
@@ -158,6 +157,7 @@
     display: inline;
 }
 
+
 .item-button .sub {
     display: flex;
     position: relative;
@@ -170,15 +170,24 @@
 
 .icon {
     position: relative;
-    color:var(--color_3); 
     top: 1vh;
     left: -1vw;
 }
 
-.item-button h5 {
+.item-button .price {
     display: flex;
     position: relative;
-    margin-bottom: -15px;
-    margin-left: 72vw;
+    top: -4vh;
+    margin-left: 73vw;
     color: var(--color_1)
+}
+
+.item-button:active {
+    color: var(--color_1);
+}
+
+.item-button:active .icon,
+.item-button:active .sub {
+  color: inherit;
+  transition: color ease; /* Herda a cor definida no :active do botão */
 }

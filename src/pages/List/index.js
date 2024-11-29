@@ -61,7 +61,7 @@ function List () {
                       <h1 className="icon"><AppleIcon fontSize="large" /></h1>
                       {item["Descrição"]}
                       <h5 className="sub">Frutas Desistradas</h5>
-                      <h5>R$ {item["Preco"]}/Kg</h5>
+                      <h5 className="price">R$ {item["Preco"]}/Kg</h5>
 
                     </button>
                   </li>
