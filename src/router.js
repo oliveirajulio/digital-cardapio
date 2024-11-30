@@ -9,7 +9,7 @@ function Router() {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<Home />} />
+                <Route path="/mn-transparency" element={<Home />} />
                 <Route path="/list" element={<List />} />
                 <Route path="/item/:id" element={<Item />} />
             </Routes>    
