@@ -7,7 +7,7 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom'
 
 function Router() {
     return (
-        <BrowserRouter>
+        <BrowserRouter basename="/mn-transparency">
             <Routes>
                 <Route path="/mn-transparency" element={<Home />} />
                 <Route path="/list" element={<List />} />
