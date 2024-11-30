@@ -46,7 +46,7 @@ function Item() {
                 <button className="lan"><LanguageIcon className="icon-item" /></button>
             </div>
             <div className="image">
-                <img src={data.Imagem} alt='item'/>
+                <img src={process.env.PUBLIC_URL + data.Imagem} alt='item'/>
             </div>
             <div className="ctn-item">
                 <h1 className="titulo">{data["Descrição"]}</h1>
