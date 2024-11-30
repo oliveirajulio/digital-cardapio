@@ -7,7 +7,7 @@ import {HashRouter, Routes, Route} from 'react-router-dom'
 
 function Router() {
     return (
-        <HashRouter basename="/mn-transparency">
+        <HashRouter>
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/list" element={<List />} />
