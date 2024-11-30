@@ -1,7 +1,8 @@
 import "./index.css"
 import { Input } from "@mui/material";
-import React, { useState, useEffect} from "react";
+import React, { useState, useEffect,} from "react";
 import Data from "../../service/service";
+import {UseNavigate} from "react-router-dom"
 
 import MenuIcon from '@mui/icons-material/Menu';
 import LanguageIcon from '@mui/icons-material/Language';
@@ -16,6 +17,8 @@ function List () {
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+
+    const navigate = useNavigate();
 
     useEffect(() => {
         const fetchData = async () => {
@@ -56,7 +59,8 @@ function List () {
               <ul className="item-list">
                 {data.map((item, index) => (
                   <li key={index} className="item-row">
-                    <button className="item-button">
+                    <button className="item-button"
+                      onClick={() => navigate(`/item/${item.ID}`)}>
                       <h1 className="icon"><AppleIcon fontSize="large" /></h1>
                       {item["Descrição"]}
                       <h5 className="sub">Frutas Desistradas</h5>
