@@ -3,17 +3,17 @@ import List from "./pages/List";
 import Item from "./pages/Item"
 
 
-import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import {HashRouter, Routes, Route} from 'react-router-dom'
 
 function Router() {
     return (
-        <BrowserRouter basename="/mn-transparency">
+        <HashRouter basename="/mn-transparency">
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/list" element={<List />} />
                 <Route path="/item/:id" element={<Item />} />
             </Routes>    
-        </BrowserRouter>
+        </HashRouter>
 
     )
 }
