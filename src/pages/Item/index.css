@@ -12,9 +12,12 @@
 
 .ctn-item {
     position: inherit;
-    margin-top: 19vh;
-    height: auto;
-    z-index: 1;
+    margin-left:3vw;
+    margin-right: 3vw;
+    margin-top: 23vh;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
 }
   
 .main-header {
@@ -71,13 +74,23 @@
 .image {
     background-color: var(--color_13);
     margin-top: 10vh;
+    margin-left: 0;
     position: relative;
-    height: 30vh;
+    height: 10vh;
     width: 100vw;
 }
 
-.item-name {
-    
+.titulo {
+    font-size: 3vh;
+    font-weight: 500;
+    color: var(--color_3);
 }
+
+.detalhe {
+    margin-top: 2vh;
+    font-weight: 400;
+}
+
+
 
 
