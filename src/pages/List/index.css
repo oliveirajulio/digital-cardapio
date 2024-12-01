@@ -1,3 +1,39 @@
+    @keyframes pulse {
+    0% {
+      filter: brightness(100%) sepia(0%) saturate(1);
+    }
+    50% {
+      filter: brightness(170%) sepia(50%) saturate(2);
+    }
+    100% {
+      filter: brightness(100%) sepia(0%) saturate(1);
+    }
+  }
+  
+  .pulse-image {
+    object-fit: cover;
+    animation: pulse 2s infinite ease-in-out;
+    margin-left: -95vw;
+    zoom: 200%;
+  }
+
+  .load {
+    height: 100vh;
+    background-color: var(--color_3);
+    width: 100vw;
+    display: flex;
+  }
+
+  .logo-load {
+    position: inherit;
+    display: flex;
+    align-items: center;
+    left: -20vw;
+    top: 25vh;
+    zoom: 0.8;
+  }
+
+
 .container-list {
     display: flex;
     flex-direction: column;
@@ -243,19 +279,3 @@
   color: inherit;
   transition: color ease; /* Herda a cor definida no :active do botão */
 }
-
-.loading-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: var(--color_3); /* Opcional */
-  }
-  
-  .loading-animation {
-    position: relative;
-    margin-top: 49vh;
-    margin-left: -150vw;
-    width: 200vw;
-    height: 50vh;
-  }

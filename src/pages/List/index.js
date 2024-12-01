@@ -10,25 +10,6 @@ import AppleIcon from "@mui/icons-material/Apple";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import CloseIcon from '@mui/icons-material/Close';
 
-const LoadingAnimation = () => (
-  <motion.img
-    src="/mn-transparency/Imagens/load.png"
-    alt="loading"
-
-    initial={{ opacity: 0, scale: 5 }}
-    animate={{
-      opacity: 1,
-      scale: 5,
-    }}
-    transition={{
-      duration: 2,
-      ease: "easeInOut",
-      repeat: Infinity,
-    }}
-    className="loading-animation"
-  />
-);
-
 function List() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -45,7 +26,7 @@ function List() {
         setTimeout(() => {
           setData(jsonData);
           setLoading(false);
-        }, 1000); 
+        },1000); 
       } catch (err) {
         setError(err.message);
         setLoading(false);
@@ -59,8 +40,9 @@ function List() {
 
   if (loading) {
     return (
-      <div className="loading-container">
-        <LoadingAnimation />
+      <div className="load">
+        <img src="/mn-transparency/Imagens/loading.png" className="pulse-image"/>
+        <img src="/mn-transparency/Imagens/logo.png" className="logo-load"/>
       </div>
     );
   }

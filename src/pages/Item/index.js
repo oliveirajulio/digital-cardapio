@@ -38,7 +38,14 @@ function Item() {
         item();
       }, [id]);
     
-      if (loading) return <p>Carregando item...</p>;
+      if (loading) {
+        return (
+          <div className="load">
+            <img src="/mn-transparency/Imagens/loading.png" className="pulse-image"/>
+            <img src="/mn-transparency/Imagens/logo.png" className="logo-load"/>
+          </div>
+        );
+      }
       if (error) return <p>Erro: {error}</p>;
 
       const list = () => {
