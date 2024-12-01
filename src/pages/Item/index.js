@@ -1,12 +1,12 @@
 import "./index.css"
 import Data from "../../service/service";
 import React, { useState, useEffect,} from "react";
-import {useParams} from "react-router-dom"
+import {useParams, useNavigate} from "react-router-dom"
 
 
-import LanguageIcon from '@mui/icons-material/Language';
 import SearchIcon from '@mui/icons-material/Search';
 import FilterAltIcon from '@mui/icons-material/FilterAlt';
+import FormatListBulletedIcon from '@mui/icons-material/FormatListBulleted';
 
 
 function Item() {
@@ -15,6 +15,8 @@ function Item() {
     const [data, setData] = useState(null)
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    const navigate = useNavigate()
+ 
 
     useEffect(() => {
         const item = async () => {
@@ -39,11 +41,17 @@ function Item() {
       if (loading) return <p>Carregando item...</p>;
       if (error) return <p>Erro: {error}</p>;
 
+      const list = () => {
+        navigate("/list");  // Caminho relativo dentro do React Router
+      }
+
+      
+
     return (
         <div className="container-item">
             <div className="main-header">
                 <button className="menui"><SearchIcon className="icon-item" /></button>
-                <button className="lan"><LanguageIcon className="icon-item" /></button>
+                <button className="home" onClick={list}><FormatListBulletedIcon className="icon-list" /></button>
             </div>
             <div className="image">
                 <img src={process.env.PUBLIC_URL + data.Imagem} alt='item'/>

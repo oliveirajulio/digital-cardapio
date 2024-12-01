@@ -34,6 +34,8 @@
     background-position-y: -1vh;
     background-position-x: -9vw ;
     z-index: 1000;
+    box-shadow: 0px 2.5px 10px rgba(0, 0, 0, 0.4);
+
 }
 
 .main-center-item {

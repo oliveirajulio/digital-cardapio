@@ -1,5 +1,6 @@
 import "./index.css"
-import { Input } from "@mui/material";
+import {motion} from "framer-motion"
+import { duration, Input } from "@mui/material";
 import React, { useState } from "react";
 import { useNavigate } from 'react-router-dom';
 
@@ -8,11 +9,14 @@ import { useNavigate } from 'react-router-dom';
 
 import SearchIcon from '@mui/icons-material/Search';
 import CloseIcon from '@mui/icons-material/Close';
+import { Opacity } from "@mui/icons-material";
+import { easeInOut } from "framer-motion";
 
 function Home () {
 
     const [showinput, setshowinput] = useState(false);
     const [modesearch, setmodesearch] = useState(false);
+    const [animation, setanimation ] = useState(false)
     const navigate = useNavigate();
 
     const inputshow = () => {
@@ -20,8 +24,11 @@ function Home () {
         setmodesearch(!modesearch)
     }
 
-    const list = () => {
-        navigate("/list");  // Caminho relativo dentro do React Router
+    
+
+      const list = () => {
+        setanimation(true);
+        setTimeout(() => navigate("/list", 1000))
       }
 
     return (

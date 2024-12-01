@@ -24,6 +24,7 @@
     margin-top: 19vh;
     height: auto;
     z-index: 1;
+    background-color: #F9F9F9;
 }
 
 .item-list {
@@ -75,31 +76,45 @@
     align-items: center;
 }
 
-.menui {
+.search {
+    background-color: transparent;
+    color: #F9F9F9;
+    border: none;
+    position: inherit;
+    right: 2vw;
+    top: 2.5vh;
+}
+
+.search .ic-menu {
+    font-size: 35px;
+}
+
+.close-list {
+    background-color: transparent;
+    color: #F9F9F9;
+    border: none;
+    position: inherit;
+    right: 2vw;
+    top: 2.5vh;
+    color:var(--color_1);
+    transition: all 1.2s ease;
+}
+
+.close-list .ic-menu {
+    font-size: 35px;
+}
+
+.home {
+    position: inherit;
     background-color: transparent;
     padding: 0;
     border: none;
-    position: relative;
-    margin-left: 87vw;
+    right: 15vw;
     color: #f9f9f9;
     top: 2.5vh;
 }
 
-.menui .icon-list {
-    font-size: 35px;
-}
-
-.lan {
-    position: relative;
-    background-color: transparent;
-    padding: 0;
-    border: none;
-    margin-left: 73vw;
-    color: #f9f9f9;
-    top: -2.5vh;
-}
-
-.lan .icon-list {
+.home .icon-list {
     font-size: 35px;
 }
 
@@ -113,6 +128,43 @@
 
 .filter-btn .ic-list {
     font-size: 35px;
+}
+
+.input-list {
+    background-color: #F9F9F9;
+    border: solid 1px var(--color_1);
+    border-radius: 10vh;
+    position: relative;
+    left: 100%;
+    width: 93vw;
+    height: 6vh;
+    margin-top: 2vh;
+    margin-left: 33vw;
+    padding-left: 5vw;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--color_3);
+    transition: all 0.5s ease;
+}
+
+.input-show-list {
+    background-color: #F9F9F9;
+    border: solid 1px var(--color_1);
+    border-radius: 10vh;
+    left: 0;
+    width: 68vw;
+    height: 6vh;
+    margin-top: 2vh;
+    margin-left: 30vw;
+    padding-left: 5vw;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--color_3);
+    animation: slide 0.5s ease forwards;
+}
+
+.home-no {
+    display: none;
 }
 
 .nav {
@@ -191,3 +243,19 @@
   color: inherit;
   transition: color ease; /* Herda a cor definida no :active do botão */
 }
+
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--color_3); /* Opcional */
+  }
+  
+  .loading-animation {
+    position: relative;
+    margin-top: 49vh;
+    margin-left: -150vw;
+    width: 200vw;
+    height: 50vh;
+  }
