@@ -23,21 +23,22 @@ function Item() {
           try {
             // Pega todos os dados e filtra pelo ID
             const allData = await Data("/mn-transparency/data.xlsx");
-            const selectedItem = allData.find((item) => item.ID === Number(id));
-            setTimeout(() => {
-              if (!selectedItem) {
+            const selectedItem = allData.find((item) => item.ID === Number(id)); // Filtra pelo ID
+            if (!selectedItem) {
               throw new Error("Item não encontrado.");
-              }
-              setData(selectedItem);}, 1000)
-            } catch (err) {
-              setError(err.message);
-            } finally {
+            }
+            setTimeout(() => {
+              setData(selectedItem);
               setLoading(false);
+            }, 1000); // Tempo de espera em milissegundos (1 segundo)
+          } catch (err) {
+            setError(err.message);
+            setLoading(false);
           }
         };
-    
-            item();
-          }, [id]);
+      
+        item();
+      }, [id]);
     
       if (loading) {
         return (
