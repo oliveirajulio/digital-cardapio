@@ -27,16 +27,18 @@ function Item() {
             if (!selectedItem) {
               throw new Error("Item não encontrado.");
             }
-            setData(selectedItem);
-          } catch (err) {
-            setError(err.message);
-          } finally {
-            setLoading(false);
-          }
-        };
-    
-        item();
-      }, [id]);
+              setTimeout(() => {
+                setData(selectedItem);
+                setLoading(false);
+              }, 1000); // Tempo de espera em milissegundos (1 segundo)
+            } catch (err) {
+              setError(err.message);
+              setLoading(false);
+            }
+          };
+        
+          item();
+        }, [id]);
     
       if (loading) {
         return (
