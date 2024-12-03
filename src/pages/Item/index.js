@@ -30,7 +30,7 @@ function Item() {
               setTimeout(() => {
                 setData(selectedItem);
                 setLoading(false);
-              }, 1000); // Tempo de espera em milissegundos (1 segundo)
+              }, 3000); // Tempo de espera em milissegundos (1 segundo)
             } catch (err) {
               setError(err.message);
               setLoading(false);
