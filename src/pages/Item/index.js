@@ -41,8 +41,8 @@ function Item() {
       if (loading) {
         return (
           <div className="load">
-            <img src="/mn-transparency/Imagens/loading.png" className="pulse-image"/>
-            <img src="/mn-transparency/Imagens/logo.png" className="logo-load"/>
+            <img src="/mn-transparency/imagens/loading.png" className="pulse-image"/>
+            <img src="/mn-transparency/imagens/logo.png" className="logo-load"/>
           </div>
         );
       }
