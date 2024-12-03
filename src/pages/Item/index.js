@@ -27,16 +27,14 @@ function Item() {
             if (!selectedItem) {
               throw new Error("Item não encontrado.");
             }
-            setTimeout(() => {
-              setData(selectedItem);
-              setLoading(false);
-            }, 1000); // Tempo de espera em milissegundos (1 segundo)
+            setData(selectedItem);
           } catch (err) {
             setError(err.message);
+          } finally {
             setLoading(false);
           }
         };
-      
+    
         item();
       }, [id]);
     
