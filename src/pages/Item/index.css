@@ -54,7 +54,7 @@
     flex-direction: column;
 }
   
-.main-header {
+.main-header-item {
     padding: 0;
     margin: 0;
     position: fixed;
@@ -62,13 +62,13 @@
     left: 0;
     height: 10vh;
     background-color: var(--color_3);
-    background-image: url(./logo.png);
     background-repeat: no-repeat;
     background-size: 180px;
     background-position-y: -1vh;
     background-position-x: -9vw ;
     z-index: 1000;
     box-shadow: 0px 2.5px 10px rgba(0, 0, 0, 0.6);
+    display: inline-flex;
 
 }
 
@@ -79,33 +79,71 @@
     align-items: center;
 }
 
-.menui {
+.search-item {
     background-color: transparent;
     padding: 0;
     border: none;
-    position: relative;
-    margin-left: 87vw;
+    position: inherit;
+    margin-left: 75vw;
     color: #f9f9f9;
-    top: 2.5vh;
+    margin-right: 2vw;
+    margin-top: 2.6vh;
 }
 
-.menui .icon-item {
+.search-item .icon-item {
     font-size: 35px;
 }
 
-.lan {
-    position: relative;
-    background-color: transparent;
-    padding: 0;
-    border: none;
-    margin-left: 73vw;
-    color: #f9f9f9;
-    top: -2.5vh;
+.close-item {
+  background-color: transparent;
+  color: #F9F9F9;
+  border: none;
+  position: inherit;
+  right: 2vw;
+  top: 2.6vh;
+  color:var(--color_1);
+  transition: all 0.7s ease;
 }
 
-.lan .icon-item {
-    font-size: 35px;
+.close-item .icon-item{
+  font-size: 35px;
 }
+
+.input-item {
+  background-color: #F9F9F9;
+  border: solid 1px var(--color_1);
+  border-radius: 10vh;
+  position: relative;
+  left: 100%;
+  width: 93vw;
+  height: 6vh;
+  margin-top: 2vh;
+  margin-left: 33vw;
+  padding-left: 5vw;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--color_3);
+  transition: all 0.5s ease;
+}
+
+.input-show-item {
+  background-color: #F9F9F9;
+  border: solid 1px var(--color_1);
+  border-radius: 10vh;
+  left: 0;
+  width: 100vw;
+  height: 6vh;
+  margin-top: 2vh;
+  margin-left: 7vw;
+  padding-left: 5vw;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--color_3);
+  animation: slide 0.5s ease forwards;
+}
+
+
+
 
 .image {
     margin-top: 9vh;
@@ -126,6 +164,16 @@
     font-weight: 400;
 }
 
+.back {
+  position: relative;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: #f9f9f9;
+  left: 2vw;
+}
 
-
+.back .icon-item {
+  font-size: 35px;
+}
 

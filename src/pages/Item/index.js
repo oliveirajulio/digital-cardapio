@@ -7,15 +7,21 @@ import {useParams, useNavigate} from "react-router-dom"
 import SearchIcon from '@mui/icons-material/Search';
 import FilterAltIcon from '@mui/icons-material/FilterAlt';
 import FormatListBulletedIcon from '@mui/icons-material/FormatListBulleted';
+import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
+import CloseIcon from '@mui/icons-material/Close';
+
 
 
 function Item() {
 
     const {id} = useParams();
-    const [data, setData] = useState(null)
+    const [data, setData] = useState([])
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const navigate = useNavigate()
+    const [search, setsearch] = useState("")
+    const [showinput, setshowinput] = useState(false);
+    const [modesearch, setmodesearch] = useState(false);
  
 
     useEffect(() => {
@@ -50,17 +56,55 @@ function Item() {
       }
       if (error) return <p>Erro: {error}</p>;
 
+      const inputshow = () => {
+        setshowinput(!showinput)
+        setmodesearch(!modesearch)
+    }
+
       const list = () => {
         navigate("/list");  // Caminho relativo dentro do React Router
       }
+
+      const passid = (id) => {
+        navigate(`/item/${id}`);
+      };
+
+      const filterdata = Array.isArray(data) 
+  ? data.filter((item) =>
+      item["Descrição"].toLowerCase().includes(search.toLowerCase())
+    )
+  : [];
+
+
+      
 
       
 
     return (
         <div className="container-item">
-            <div className="main-header">
-                <button className="menui"><SearchIcon className="icon-item" /></button>
-                <button className="home" onClick={list}><FormatListBulletedIcon className="icon-list" /></button>
+            <div className="main-header-item">
+                <button onClick={list} className='back'><KeyboardBackspaceIcon className="icon-item" /></button>
+                <input 
+                className={showinput ? "input-show-item" : "input-item"} 
+                placeholder="Pesquisar Granel"
+                value={search}
+                onChange={(e) => setsearch(e.target.value)}></input>
+                <button onClick={inputshow} className={modesearch ? "close-item" : "search-item"}>{modesearch ? <CloseIcon className="icon-item" /> : <SearchIcon className="icon-item" />}</button>
+
+                {showinput && search && ( // Renderiza a ul apenas quando showinput for true e algo estiver digitado
+                  <ul className="item-list">
+                    {filterdata.map((item, index) => (
+                      <li key={index} className="item-row">
+                        <button
+                          className="item-button"
+                          onClick={() => passid(item.ID)}
+                        >
+                          {item["Descrição"]}
+                        </button>
+                      </li>
+                    ))}
+                  </ul>
+                )}
             </div>
             <div className="image">
                 <img src={process.env.PUBLIC_URL + data.Imagem} alt='item'/>

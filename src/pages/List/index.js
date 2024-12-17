@@ -35,8 +35,7 @@ function List() {
   
     fetchData();
   }, []);
-  
-        
+
 
   if (loading) {
     return (
