@@ -106,7 +106,7 @@ function List() {
                   <AppleIcon fontSize="large" />
                 </h1>
                 {item["Descrição"]}
-                <h5 className="sub">Frutas Desidratadas</h5>
+                <h5 className="sub">{item["Categoria"]}</h5>
                 <h5 className="price">R$ {item["Preco"]}/Kg</h5>
               </button>
             </li>
