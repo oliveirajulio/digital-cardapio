@@ -8,6 +8,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import FilterAltIcon from '@mui/icons-material/FilterAlt';
 import FormatListBulletedIcon from '@mui/icons-material/FormatListBulleted';
 import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
+import AppleIcon from "@mui/icons-material/Apple";
 import CloseIcon from '@mui/icons-material/Close';
 
 
@@ -22,29 +23,36 @@ function Item() {
     const [search, setsearch] = useState("")
     const [showinput, setshowinput] = useState(false);
     const [modesearch, setmodesearch] = useState(false);
+    const [allData, setAllData] = useState([]); // Todos os itens
+    const [selectedItem, setSelectedItem] = useState(null); // Item único
+
+
  
 
     useEffect(() => {
-        const item = async () => {
-          try {
-            // Pega todos os dados e filtra pelo ID
-            const allData = await Data("/mn-transparency/data.xlsx");
-            const selectedItem = allData.find((item) => item.ID === Number(id)); // Filtra pelo ID
-            if (!selectedItem) {
-              throw new Error("Item não encontrado.");
-            }
-              setTimeout(() => {
-                setData(selectedItem);
-                setLoading(false);
-              }, 3000); // Tempo de espera em milissegundos (1 segundo)
-            } catch (err) {
-              setError(err.message);
-              setLoading(false);
-            }
-          };
-        
-          item();
-        }, [id]);
+      const item = async () => {
+        try {
+          const allDataFetched = await Data("/mn-transparency/data.xlsx");
+          console.log("Todos os dados retornados:", allDataFetched);
+    
+          const itemEncontrado = allDataFetched.find((item) => item.ID === Number(id));
+          if (!itemEncontrado) {
+            throw new Error("Item não encontrado.");
+          }
+    
+          setTimeout(() => {
+            setAllData(allDataFetched); // Salva todos os dados
+            setSelectedItem(itemEncontrado); // Salva o item único
+            setLoading(false);
+          }, 3000);
+        } catch (err) {
+          setError(err.message);
+          setLoading(false);
+        }
+      };
+    
+      item();
+    }, [id]);
     
       if (loading) {
         return (
@@ -69,16 +77,11 @@ function Item() {
         navigate(`/item/${id}`);
       };
 
-      const filterdata = Array.isArray(data) 
-  ? data.filter((item) =>
+      const filterdata = Array.isArray(allData)
+  ? allData.filter((item) =>
       item["Descrição"].toLowerCase().includes(search.toLowerCase())
     )
   : [];
-
-
-      
-
-      
 
     return (
         <div className="container-item">
@@ -90,29 +93,35 @@ function Item() {
                 value={search}
                 onChange={(e) => setsearch(e.target.value)}></input>
                 <button onClick={inputshow} className={modesearch ? "close-item" : "search-item"}>{modesearch ? <CloseIcon className="icon-item" /> : <SearchIcon className="icon-item" />}</button>
-
                 {showinput && search && ( // Renderiza a ul apenas quando showinput for true e algo estiver digitado
-                  <ul className="item-list">
-                    {filterdata.map((item, index) => (
-                      <li key={index} className="item-row">
-                        <button
-                          className="item-button"
-                          onClick={() => passid(item.ID)}
-                        >
-                          {item["Descrição"]}
-                        </button>
-                      </li>
-                    ))}
-                  </ul>
+                  <div className='search-container'>
+                    <ul className="item-list">
+                      {(modesearch ? filterdata : data).map((item, index) => (
+                        <li key={index} className="item-row">
+                          <button
+                            className="item-button"
+                            onClick={() => passid(item.ID)}
+                          >
+                            <h1 className="icon">
+                              <AppleIcon fontSize="large" />
+                            </h1>
+                            {item["Descrição"]}
+                            <h5 className="sub">{item["Categoria"]}</h5>
+                            <h5 className="price-item">R$ {item["Preco"]}/Kg</h5>
+                          </button>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 )}
             </div>
             <div className="image">
-                <img src={process.env.PUBLIC_URL + data.Imagem} alt='item'/>
+                <img src={process.env.PUBLIC_URL + selectedItem.Imagem} alt='item'/>
             </div>
             <div className="ctn-item">
-                <h1 className="titulo">{data["Descrição"]}</h1>
+                <h1 className="titulo">{selectedItem["Descrição"]}</h1>
                 <hr/>
-                <h4 className="detalhe">{data["Detalhes"]}</h4>
+                <h4 className="detalhe">{selectedItem["Detalhes"]}</h4>
             </div>
 
         </div>

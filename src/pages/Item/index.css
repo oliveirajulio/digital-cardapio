@@ -66,7 +66,7 @@
     background-size: 180px;
     background-position-y: -1vh;
     background-position-x: -9vw ;
-    z-index: 1000;
+    z-index: 999;
     box-shadow: 0px 2.5px 10px rgba(0, 0, 0, 0.6);
     display: inline-flex;
 
@@ -177,3 +177,80 @@
   font-size: 35px;
 }
 
+.search-container {
+  position: absolute;
+  top: 81%;
+  width: 85vw;
+  height: auto;
+  background-color: #F9F9F9;
+  z-index: 1000;
+  border-radius: 30px;
+  height: 64vh;
+  overflow: hidden;
+  overflow-y: auto;
+
+}
+
+.item-list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin-left: -11vw;
+
+}
+
+.item-button {
+  width: 100vw;
+  height: 9vh;
+  background-color: transparent;
+  border: none;
+  border-bottom: solid 0.2px;
+  font-weight: 400;
+  font-size: 1.79vh;
+  text-align: left;
+  color: var(--color_3);
+  transition: color 0.001s ease;
+  padding-bottom: 5vh;
+  padding-left: 4vw;
+  transition: color ease, 
+}
+
+
+.item-button .icon {
+    display: inline;
+}
+
+
+.item-button .sub {
+    display: flex;
+    position: relative;
+    margin-left: 10vw;
+    color: #091f0263;
+    font-weight: 400;
+}
+
+
+
+.icon {
+    position: relative;
+    top: 1vh;
+    left: -1vw;
+}
+
+.item-button .price-item {
+    display: flex;
+    position: relative;
+    top: -4vh;
+    margin-left: 60vw;
+    color: var(--color_1)
+}
+
+.item-button:active {
+    color: var(--color_1);
+}
+
+.item-button:active .icon,
+.item-button:active .sub {
+  color: inherit;
+  transition: color ease; /* Herda a cor definida no :active do botão */
+}
