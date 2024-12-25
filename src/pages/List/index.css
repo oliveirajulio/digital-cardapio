@@ -1,39 +1,85 @@
-    @keyframes pulse {
+@keyframes rotateZoom {
     0% {
-      filter: brightness(100%) sepia(0%) saturate(1);
-    }
-    50% {
-      filter: brightness(170%) sepia(50%) saturate(2);
+      transform: rotate(0deg) scale(0); /* Começa pequeno e sem rotação */
     }
     100% {
-      filter: brightness(100%) sepia(0%) saturate(1);
+      transform: rotate(360deg) scale(1); /* Rotação completa e tamanho original */
     }
   }
-  
-  .pulse-image {
-    object-fit: cover;
-    animation: pulse 2s infinite ease-in-out;
-    margin-left: -95vw;
-    zoom: 200%;
+
+@keyframes downward {
+    0% {
+      transform: translateY(0); /* Começa fora da tela */
+    }
+    100% {
+      transform: translateY(50vh); /* Chega no centro */
+    }
   }
 
-  .load {
-    height: 100vh;
-    background-color: var(--color_3);
-    width: 100vw;
+  @keyframes zoomIn {
+    0% {
+      transform: scale(0); /* Começa pequeno */
+    }
+    100% {
+      transform: scale(1); /* Fica no tamanho original */
+    }
+  }
+
+
+.btn-home-load {
+    padding: 0;
+    background: transparent;
+    background-image: url(./load.png);  
+    background-repeat: no-repeat;
+    background-size: 50vh;
+    background-position-x: -10vw ;
+    background-position-y: -7vh;
+    border: none;
+    height: 40vh;
+    width: 75vw;
+    margin-bottom: -25vh;
+    animation: rotateZoom 1.5s ease infinite;
+}
+
+.comp {
     display: flex;
+    margin-left: 5vh;
+    margin-top:-10vh;
+    margin-bottom: -46vh;
+    animation: zoomIn 1.5s ease;
+}
+
+.granel-list-load { 
+    animation: downward 1.5s ;
+    margin-top: 50vw;
+    width: 74vw;
+    height:6.5vh;
+    background-color: var(--color_1);
+    border: none;
+    color: #F9F9F9;
+    font-size: 2.1vh;
+}
+
+.b2-load {
+    margin-top: 5vw;
+    width: 74vw;
+    height:6.5vh;
+    background-color: var(--color_1);
+    border: none;
+    color: #F9F9F9;
+    font-size: 2.1vh;
+    animation: downward 2s ;
   }
-
-  .logo-load {
-    position: inherit;
-    display: flex;
-    align-items: center;
-    left: -20vw;
-    top: 25vh;
-    zoom: 0.8;
+  .b3-load {
+    margin-top: 5vw;
+    width: 74vw;
+    height:6.5vh;
+    background-color: var(--color_1);
+    border: none;
+    color: #F9F9F9;
+    font-size: 2.1vh;
+    animation: downward 2.5s ;
   }
-
-
 .container-list {
     display: flex;
     flex-direction: column;

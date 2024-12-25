@@ -107,7 +107,6 @@ function Item() {
                             </h1>
                             {item["Descrição"]}
                             <h5 className="sub">{item["Categoria"]}</h5>
-                            <h5 className="price-item">R$ {item["Preco"]}/Kg</h5>
                           </button>
                         </li>
                       ))}

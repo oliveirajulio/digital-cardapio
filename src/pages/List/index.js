@@ -39,10 +39,15 @@ function List() {
 
   if (loading) {
     return (
-      <div className="load">
-        <img src="/mn-transparency/imagens/loading.png" className="pulse-image"/>
-        <img src="/mn-transparency/imagens/logo.png" className="logo-load"/>
-      </div>
+      <div className="container">
+            <div className="main-center">
+                <img className="comp" src="/mn-transparency/imagens/loadcomp.png" alt="logo"></img>
+                <button className="btn-home-load"></button>
+                <button className="granel-list-load">VER LISTA DE GRANEL</button>
+                <button className="b2-load"></button>
+                <button className="b3-load"></button>
+            </div>
+        </div>
     );
   }
 
