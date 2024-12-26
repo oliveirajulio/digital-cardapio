@@ -163,6 +163,18 @@
     font-weight: 400;
 }
 
+.codigo {
+  font-weight: 400;
+  margin-top: 13vh;
+}
+
+.preco {
+  font-weight: 400;
+  text-align: end;
+  margin-top: -2.5vh;
+  margin-right: 4vw;
+  color: var(--color_1);
+}
 .back {
   position: relative;
   background-color: transparent;

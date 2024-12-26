@@ -35,7 +35,20 @@
     border: none;
     height: 16vh;
     width: 75vw;
+    transition: transform 0.3s ease;
+    transform-origin: center;
+    perspective: 500px; /* Controla a profundidade */
 }
+
+.btn-home:hover,
+.btn-home:active {
+  transform: scale(0.9) rotateX(10deg); /* Simula a perspectiva inclinando */
+}
+
+.btn-home:active {
+  transform: scale(0.95) rotateX(5deg); /* Botão volta ao pressionar */
+}
+
 
 .granel-list {
     margin-top: 50vw;

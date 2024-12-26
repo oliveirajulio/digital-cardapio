@@ -10,6 +10,7 @@ import FormatListBulletedIcon from '@mui/icons-material/FormatListBulleted';
 import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
 import AppleIcon from "@mui/icons-material/Apple";
 import CloseIcon from '@mui/icons-material/Close';
+import { SettingsEthernetOutlined } from "@mui/icons-material";
 
 
 
@@ -74,6 +75,8 @@ function Item() {
       }
 
       const passid = (id) => {
+        setmodesearch(false);
+        setshowinput(false);
         navigate(`/item/${id}`);
       };
 
@@ -121,6 +124,8 @@ function Item() {
                 <h1 className="titulo">{selectedItem["Descrição"]}</h1>
                 <hr/>
                 <h4 className="detalhe">{selectedItem["Detalhes"]}</h4>
+                <h4 className="codigo">Cód. Item: {selectedItem["Codigo"]}</h4>
+                <h4 className="preco">R$ {selectedItem["Preco"]}</h4>
             </div>
 
         </div>
