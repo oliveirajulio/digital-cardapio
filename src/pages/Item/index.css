@@ -164,11 +164,16 @@
 }
 
 .codigo {
+  position: absolute;
+  left: 2vw;
+  bottom: -28.5vh;
   font-weight: 400;
-  margin-top: 13vh;
 }
 
 .preco {
+  position: absolute;
+  left: 2vw;
+  bottom: -28.5vh;
   font-weight: 400;
   text-align: end;
   margin-top: -2.5vh;
