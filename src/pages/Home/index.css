@@ -52,8 +52,8 @@
 
 .granel-list {
     margin-top: 50vw;
-    width: 74vw;
-    height:6.5vh;
+    width: 90vw;
+    height:8vh;
     background-color: var(--color_1);
     border: none;
     color: #F9F9F9;
@@ -62,8 +62,8 @@
 
 .b2 {
     margin-top: 5vw;
-    width: 74vw;
-    height:6.5vh;
+    width: 90vw;
+    height:8vh;
     background-color: var(--color_1);
     border: none;
     color: #F9F9F9;
@@ -71,8 +71,8 @@
 }
 .b3 {
     margin-top: 5vw;
-    width: 74vw;
-    height:6.5vh;
+    width: 90vw;
+    height:8vh;
     background-color: var(--color_1);
     border: none;
     color: #F9F9F9;
