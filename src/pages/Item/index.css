@@ -145,22 +145,55 @@
 
 
 .image {
-    margin-top: 9vh;
+    margin-top: 0.5vh;
     zoom: 1.1;
     position: relative;
     width: 100vw;
 }
 
+.btn-comp {
+  position: inherit;
+  top: 9.5vh;
+  margin-left: 45vw;
+  width: 50vw;
+  height: 4vh;
+  background-color: var(--color_1);
+  border: none;
+  color: #F9F9F9;
+  text-align: center;
+}
+
+.btn-nutri {
+  position: inherit;
+  top: 10vh;
+  margin-left: 45vw;
+  width: 50vw;
+  height: 4vh;
+  background-color: var(--color_1);
+  border: none;
+  color: #F9F9F9;
+  text-align: center;
+}
+
+
 .titulo {
     margin-top: 2vh;
+    margin-bottom: 0.5vh;
     font-size: 3vh;
-    font-weight: 500;
+    font-size: 26px;
+    font-weight: 700;
     color: var(--color_3);
 }
 
 .detalhe {
     margin-top: 2vh;
     font-weight: 400;
+}
+
+.pqslink {
+  color: var(--color_1);
+  margin-top: 1vh;
+  font-weight: 500;
 }
 
 .codigo {

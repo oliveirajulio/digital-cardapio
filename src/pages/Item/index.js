@@ -118,12 +118,15 @@ function Item() {
                 )}
             </div>
             <div className="image">
+                <button className="btn-comp">VER COMPOSIÇÃO</button>
+                <button className="btn-nutri">VALOR NUTRICIONAL </button>
                 <img src={process.env.PUBLIC_URL + selectedItem.Imagem} alt='item'/>
             </div>
             <div className="ctn-item">
                 <h1 className="titulo">{selectedItem["Descrição"]}</h1>
                 <hr/>
                 <h4 className="detalhe">{selectedItem["Detalhes"]}</h4>
+                <a className="pqslink">Para que serve?</a>
                 <h4 className="codigo">Cód. Item: {selectedItem["Codigo"]}</h4>
                 <h4 className="preco">R$ {selectedItem["Preco"]}</h4>
             </div>
