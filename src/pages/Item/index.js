@@ -58,8 +58,8 @@ function Item() {
       if (loading) {
         return (
           <div className="load">
-            <img src="/mn-transparency/imagens/loading.png" className="pulse-image"/>
             <img src="/mn-transparency/imagens/logo.png" className="logo-load"/>
+              <div className="circle"></div>
           </div>
         );
       }

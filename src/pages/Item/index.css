@@ -24,6 +24,14 @@
     display: flex;
   }
 
+  .circle {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 20vw;
+    height: 10vh;
+  }
+
   .logo-load {
     position: inherit;
     display: flex;
