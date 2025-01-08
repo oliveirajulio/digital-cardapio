@@ -45,7 +45,7 @@ function Item() {
             setAllData(allDataFetched); // Salva todos os dados
             setSelectedItem(itemEncontrado); // Salva o item único
             setLoading(false);
-          }, 1400);
+          }, 1300);
         } catch (err) {
           setError(err.message);
           setLoading(false);
