@@ -26,6 +26,7 @@ function Item() {
     const [modesearch, setmodesearch] = useState(false);
     const [allData, setAllData] = useState([]); // Todos os itens
     const [selectedItem, setSelectedItem] = useState(null); // Item único
+    
 
 
  

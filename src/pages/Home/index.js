@@ -24,24 +24,24 @@ function Home () {
         setmodesearch(!modesearch)
     }
 
-    
 
-      const list = () => {
+    const list = () => {
         setanimation(true);
-        setTimeout(() => navigate("/list", 1000))
-      }
+        setTimeout(() => {
+            window.location.href = "https://drive.google.com/uc?export=download&id=1qT7x_xnJuRCKrp4JcIJAVnnd1YfwmgUp";
+        }, 1000);
+    };
+    
 
     return (
         <div className="container">
             <div className="search">
                 <input className={showinput ? "input-show" : "input"} placeholder="Pesquisar Granel"></input>
-                <button onClick={inputshow} className={modesearch ? "close" : "menu"}>{modesearch ? <CloseIcon className="ic-menu" /> : <SearchIcon className="ic-menu" />}</button>
             </div>
             <div className="main-center">
                 <button className="btn-home"></button>
-                <button onClick={list} className="granel-list">VER LISTA DE GRANEL</button>
-                <button onClick={list} className="b2"></button>
-                <button onClick={list} className="b3"></button>
+                <button onClick={list} className="granel-list">BAIXAR CARDAPIO</button>
+                
             </div>
         </div>
     )
