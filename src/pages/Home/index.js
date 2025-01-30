@@ -42,8 +42,8 @@ function Home () {
             <div className="main-center">
                 <button className="btn-home"></button>
                 <button onClick={list} className="granel-list">BAIXAR CARDAPIO</button>
-                <button onClick={list} className="b2">VER RECEITAS</button>
-                <button onClick={list} className="b3"></button>
+                {/* <button onClick={list} className="b2"></button>
+                <button onClick={list} className="b3"></button> */}
             </div>
         </div>
     )
