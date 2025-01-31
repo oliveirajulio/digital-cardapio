@@ -4,9 +4,6 @@ import { duration, Input } from "@mui/material";
 import React, { useState } from "react";
 import { useNavigate } from 'react-router-dom';
 
-
-
-
 import SearchIcon from '@mui/icons-material/Search';
 import CloseIcon from '@mui/icons-material/Close';
 import { Opacity } from "@mui/icons-material";
@@ -32,7 +29,6 @@ function Home () {
         }, 1000);
     };
     
-
     return (
         <div className="container">
             <div className="search">
@@ -41,7 +37,8 @@ function Home () {
             <div className="main-center">
                 <button className="btn-home"></button>
                 <button onClick={list} className="granel-list">BAIXAR CARDAPIO</button>
-                
+                {/* <button onClick={list} className="b2"></button>
+                <button onClick={list} className="b3"></button> */}
             </div>
         </div>
     )
