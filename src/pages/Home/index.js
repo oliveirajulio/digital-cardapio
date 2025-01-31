@@ -26,7 +26,7 @@ function Home () {
 
     
 
-      const list = () => {
+      const cardapio = () => {
         setanimation(true);
         setTimeout(() => {
             window.location.href = "https://drive.google.com/uc?export=download&id=1qT7x_xnJuRCKrp4JcIJAVnnd1YfwmgUp";
@@ -41,9 +41,9 @@ function Home () {
             </div>
             <div className="main-center">
                 <button className="btn-home"></button>
-                <button onClick={list} className="granel-list">BAIXAR CARDAPIO</button>
-                {/* <button onClick={list} className="b2"></button>
-                <button onClick={list} className="b3"></button> */}
+                <button className="granel-list">PEÇA AQUI</button>
+                <button onClick={cardapio} className="b2">BAIXAR CARDAPIO</button>
+                <button className="b3">TABELA NUTRICIONAL</button>
             </div>
         </div>
     )

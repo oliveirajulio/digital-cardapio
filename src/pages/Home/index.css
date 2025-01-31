@@ -54,6 +54,7 @@
     margin-top: 50vw;
     width: 90vw;
     height:8vh;
+    border-radius: 14px;
     background-color: var(--color_1);
     border: none;
     color: #F9F9F9;
@@ -64,6 +65,7 @@
     margin-top: 5vw;
     width: 90vw;
     height:8vh;
+    border-radius: 14px;
     background-color: var(--color_1);
     border: none;
     color: #F9F9F9;
@@ -73,6 +75,7 @@
     margin-top: 5vw;
     width: 90vw;
     height:8vh;
+    border-radius: 14px;
     background-color: var(--color_1);
     border: none;
     color: #F9F9F9;
