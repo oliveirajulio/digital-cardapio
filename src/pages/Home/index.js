@@ -4,9 +4,6 @@ import { duration, Input } from "@mui/material";
 import React, { useState } from "react";
 import { useNavigate } from 'react-router-dom';
 
-
-
-
 import SearchIcon from '@mui/icons-material/Search';
 import CloseIcon from '@mui/icons-material/Close';
 import { Opacity } from "@mui/icons-material";
@@ -24,26 +21,23 @@ function Home () {
         setmodesearch(!modesearch)
     }
 
-    
-
-      const cardapio = () => {
+    const list = () => {
         setanimation(true);
         setTimeout(() => {
             window.location.href = "https://drive.google.com/uc?export=download&id=1qT7x_xnJuRCKrp4JcIJAVnnd1YfwmgUp";
         }, 1000);
-      }
-
+    };
+    
     return (
         <div className="container">
             <div className="search">
                 <input className={showinput ? "input-show" : "input"} placeholder="Pesquisar Granel"></input>
-                <button onClick={inputshow} className={modesearch ? "close" : "menu"}>{modesearch ? <CloseIcon className="ic-menu" /> : <SearchIcon className="ic-menu" />}</button>
             </div>
             <div className="main-center">
                 <button className="btn-home"></button>
-                <button className="granel-list">PEÇA AQUI</button>
-                <button onClick={cardapio} className="b2">BAIXAR CARDAPIO</button>
-                <button className="b3">TABELA NUTRICIONAL</button>
+                <button onClick={list} className="granel-list">fAÇA SEU PEDIDO</button>
+                <button onClick={list} className="b2">TABELA NUTRICIONAL</button>
+                 <button onClick={list} className="b3"></button> 
             </div>
         </div>
     )
