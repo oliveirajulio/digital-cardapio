@@ -21,6 +21,13 @@ function Home () {
         setmodesearch(!modesearch)
     }
 
+    const cardapio = () => {
+        setanimation(true);
+        setTimeout(() => {
+            navigate("/cardapio");
+        }, 1000);
+    };
+
     const list = () => {
         setanimation(true);
         setTimeout(() => {
@@ -35,7 +42,7 @@ function Home () {
             </div>
             <div className="main-center">
                 <button className="btn-home"></button>
-                <button onClick={list} className="granel-list">fAÇA SEU PEDIDO</button>
+                <button onClick={cardapio} className="granel-list">PEÇA AQUI</button>
                 <button onClick={list} className="b2">TABELA NUTRICIONAL</button>
                  <button onClick={list} className="b3"></button> 
             </div>

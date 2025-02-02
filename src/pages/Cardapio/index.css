@@ -1,0 +1,401 @@
+@keyframes expand {
+  0% {
+    transform: scale(1); /* Começa pequeno */
+    opacity: 1;
+  }
+  70% {
+    transform: scale(50); /* Expande para cobrir a tela */
+    opacity: 1;
+  }
+  100% {
+    transform: scale(50); /* Permanece grande */
+    opacity: 0; /* Desaparece no final */
+  }
+}
+
+  .load {
+    height: 100%;
+    background-color: var(--color_3);
+    width: 100%;
+    display: flex;
+  }
+
+  .circle {
+    background-color: #F9F9F9;
+    border-radius: 500px;
+    border: 10px solid var(--color_1);
+    position: fixed;
+    bottom: -100vh;
+    right: -225vw;
+    width: 200vw;
+    height: 100vh;
+    animation: expand 9.5s ease-in-out forwards;
+  }
+
+  .logo-load {
+    position: inherit;
+    display: flex;
+    align-items: center;
+    left: -20vw;
+    top: 25vh;
+    zoom: 0.8;
+  }
+
+.container-cardapio {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #f9f9f9;
+}
+
+.ctn-list-cardapio {
+  position: relative;
+  margin-top: 12rem;
+  height: 100%;
+  z-index: 1;
+  background-color: #FFFFFF;
+}
+
+
+.ctn-item {
+  height: 50vh;
+  position: inherit;
+  margin-left:3vw;
+  margin-right: 3vw;
+  display: flex;
+  flex-direction: column;
+}
+  
+.main-header-cardapio {
+    padding: 0;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 5.5rem;
+    background-color: var(--color_3);
+    background-image: url(./logo.png);
+    background-repeat: no-repeat;
+    background-size: 90px;
+    background-position-y: 0rem;
+    background-position-x: -0.5rem ;
+    z-index: 999;
+    box-shadow: 0px 2.5px 10px rgba(0, 0, 0, 0.6);
+    display: inline-flex;
+
+}
+
+.main-filter-cardapio {
+  padding-top:1.1rem;
+  position: fixed;
+  height: 8rem;
+  width: 100%;
+  margin-top: 4rem;
+  background-color: #FFFFFF;
+  z-index: 900;
+}
+
+.nav-cardapio {
+  position: relative;
+  margin-left: 1vw;
+  height: 8rem;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.nav-cardapio::-webkit-scrollbar {
+  display: none;
+}
+
+.nav-cardapio button { 
+  background-color: transparent;
+  position: relative;
+  top: 1rem;
+  border-radius: 30px;
+  border: 1px solid var(--color_3);
+  color: var(--color_3);
+  display: inline;
+  font-size: 16px;
+  font-weight: 400;
+  list-style-type: none;
+  padding: 0.5rem;
+  left: -2rem;
+  margin-right: 0.5rem;
+}
+
+.nav-cardapio button:focus { 
+  cursor: pointer;
+  border: solid 1px var(--color_13);
+  background-color: var(--color_3);
+  color: #fff !important;
+  border: none;
+  color: var(--color_3);
+}
+
+.ic-filter {
+  position: relative;
+  padding-top: 0.1rem;
+  font-size: 26px !important;
+}
+
+.ic-filter:hover {
+  position: relative;
+  padding-top: 0.1rem;
+  font-size: 26px !important;
+}
+
+.filter-name {
+  position: relative;
+  margin-top: 2rem;
+  margin-left: 0.5rem;
+  color: var(--color_3);
+  font-weight: 600;
+}
+
+.main-center{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.search-item {
+    background-color: transparent;
+    padding: 0;
+    border: none;
+    position: inherit;
+    margin-left: 75vw;
+    color: #f9f9f9;
+    margin-right: 2vw;
+    margin-top: 2.6vh;
+}
+
+.search-item .icon-item {
+    font-size: 35px;
+}
+
+.close-item {
+  background-color: transparent;
+  color: #F9F9F9;
+  border: none;
+  position: inherit;
+  right: 2vw;
+  top: 2.6vh;
+  color:var(--color_1);
+  transition: all 0.7s ease;
+}
+
+.close-item .icon-item{
+  font-size: 35px;
+}
+
+.input-item {
+  background-color: #F9F9F9;
+  border: solid 1px var(--color_1);
+  border-radius: 10vh;
+  position: relative;
+  left: 100%;
+  width: 93vw;
+  height: 6vh;
+  margin-top: 2vh;
+  margin-left: 33vw;
+  padding-left: 5vw;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--color_3);
+  transition: all 0.5s ease;
+}
+
+.input-show-item {
+  background-color: #F9F9F9;
+  border: solid 1px var(--color_1);
+  border-radius: 10vh;
+  left: 0;
+  width: 100vw;
+  height: 6vh;
+  margin-top: 2vh;
+  margin-left: 7vw;
+  padding-left: 5vw;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--color_3);
+  animation: slide 0.5s ease forwards;
+}
+
+
+
+.image {
+    margin-top: 0.5vh;
+    zoom: 1.1;
+    position: relative;
+    width: 100vw;
+}
+
+.btn-comp {
+  position: inherit;
+  top: 9.5vh;
+  margin-left: 45vw;
+  width: 50vw;
+  height: 4vh;
+  background-color: var(--color_1);
+  border: none;
+  color: #F9F9F9;
+  text-align: center;
+}
+
+.btn-nutri {
+  position: inherit;
+  top: 10vh;
+  margin-left: 45vw;
+  width: 50vw;
+  height: 4vh;
+  background-color: var(--color_1);
+  border: none;
+  color: #F9F9F9;
+  text-align: center;
+}
+
+
+.titulo {
+    margin-top: 2vh;
+    margin-bottom: 0.5vh;
+    font-size: 3vh;
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--color_3);
+}
+
+.detalhe {
+    margin-top: 2vh;
+    font-weight: 400;
+}
+
+.pqslink {
+  color: var(--color_1);
+  margin-top: 1vh;
+  font-weight: 500;
+}
+
+.codigo {
+  position: absolute;
+  left: 2vw;
+  bottom: 6vh;
+  font-weight: 400;
+}
+
+.preco {
+  position: absolute;
+  left: 2vw;
+  bottom: 6vh;
+  font-weight: 400;
+  text-align: end;
+  margin-right: 4vw;
+  color: var(--color_1);
+}
+.back {
+  position: relative;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: #f9f9f9;
+  left: 2vw;
+}
+
+.back .icon-item {
+  font-size: 35px;
+}
+
+.search-container {
+  position: absolute;
+  top: 81%;
+  width: 85vw;
+  height: auto;
+  background-color: #F9F9F9;
+  z-index: 1000;
+  border-radius: 30px;
+  height: 64vh;
+  overflow: hidden;
+  overflow-y: auto;
+
+}
+
+.item-list-cardapio {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin-left: -11vw;
+
+}
+
+.item-button-cardapio {
+  position: relative;
+  display: inline-flex;
+  width: 100vw;
+  height: 11vh;
+  background-color: transparent;
+  border: none;
+  border-bottom: solid 0.2px;
+  font-weight: 400;
+  font-size: 13px;
+  text-align: left;
+  color: var(--color_3);
+  transition: color 0.001s ease;
+  padding-bottom: 5vh;
+  padding-left: 4vw;
+  transition: color ease, 
+}
+
+
+
+.item-name-cardapio {
+  position: relative;
+  top: 4.5vh;
+  margin-left: 0.5rem;
+  font-size: 12px;
+  font-weight: 500;
+
+}
+
+
+.icon-cardapio {
+    position: relative;
+    height: 8vh;
+    width: 16.5vw;
+    border-radius: 50px;
+    top: 1rem;
+    background-color: var(--color_3);
+    align-items: center;
+    text-align: center;
+    z-index: 1000;
+}
+
+.ic-cardapio {
+  position: relative;
+  font-size: 32px !important;
+  top: 1rem;
+  color: #fff;
+  align-items: center;
+  text-align: center;
+}
+
+.item-button-cardapio .price-item {
+    display: flex;
+    position: relative;
+    top: -4vh;
+    margin-left: 60vw;
+    color: var(--color_1)
+}
+
+.item-button-cardapio:active {
+    color: var(--color_1);
+}
+
+.item-button-cardapio:active .icon-cardapio,
+.item-button-cardapio:active .sub {
+  color: inherit;
+  transition: color ease; /* Herda a cor definida no :active do botão */
+}
