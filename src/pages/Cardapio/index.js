@@ -71,7 +71,7 @@ function Cardapio() {
             <button onClick={() => filtrarPorCategoria("Café e Chocolates")}><CoffeeIcon className="ic-filter"/></button>
             <button onClick={() => filtrarPorCategoria("Marmitinha e Torta")}><WineBarIcon className="ic-filter"/></button> 
           </ul>
-          <h3 className="filter-name">{categoriaSelecionada ? `${categoriaSelecionada}` : "Escolha um filtro"}</h3>
+          <h3 className="filter-name">{categoriaSelecionada ? `Filtrando por ${categoriaSelecionada}` : "Escolha um filtro"}</h3>
         </nav>
       </div>
 
