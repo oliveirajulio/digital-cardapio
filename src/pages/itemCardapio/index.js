@@ -56,6 +56,10 @@ function ItemCardapio() {
                 <span className="name-product">{produto["Produto"]}</span>
                 <span className="cal-product">{produto["Calorias"]}</span>
             </div>
+            <div className="way-order">
+                <h3 className="ask-way">Onde vai retirar</h3>
+                <hr className="divisoria"/>
+            </div>
             <div className="info-nutri">
                 <div className="qtde"><span>100 <StarIcon className="ic-nutri"/> item</span></div>
                 <span className="description-icp">{produto["Descrição"]}</span>

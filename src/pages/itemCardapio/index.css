@@ -94,6 +94,17 @@
     font-size: 256px !important;
 }
 
+.ask-way {
+    margin: 1rem;
+    color: var(--color_12);
+}
+
+.divisoria {
+    height: 1px;
+    background-color: var(--color_13);
+    border: none;
+}
+
 .info-nutri {
     position: relative;
     display: flex;
