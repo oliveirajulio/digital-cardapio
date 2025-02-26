@@ -87,7 +87,7 @@ function Cardapio() {
               <button className="item-button-cardapio"
                        onClick={() => passcod(item.Código)}>
                 <span className="icon-cardapio">
-                  <ImageNotSupportedIcon className="ic-cardapio" />
+                <img className="ic-cardapio" src="/mn-transparency/imagens/sucoverde.png" alt="Descrição"></img>
                 </span>
                 <span className="item-name-cardapio">{item["Produto"]}</span>
               </button>

@@ -56,6 +56,7 @@
   position: relative;
   margin-top: 12rem;
   height: 100%;
+  width: 100vw;
   z-index: 1;
   background-color: #FFFFFF;
 }
@@ -101,7 +102,7 @@
 
 .nav-cardapio {
   position: relative;
-  margin-left: 1vw;
+  margin-left: 1.2rem;
   height: 8rem;
   overflow-x: auto;
   white-space: nowrap;
@@ -152,7 +153,6 @@
 .filter-name {
   position: relative;
   margin-top: 2rem;
-  margin-left: 0.5rem;
   color: var(--color_3);
   font-weight: 600;
 }
@@ -325,28 +325,27 @@
 }
 
 .item-list-cardapio {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 colunas iguais */
+  margin-left: -1.5rem;
+  gap: 0.8rem;
   list-style: none;
-  margin-left: -11vw;
 
 }
 
+
 .item-button-cardapio {
   position: relative;
-  display: inline-flex;
-  width: 100vw;
-  height: 11vh;
+  display: flex;
+  flex-direction: column;
   background-color: transparent;
   border: none;
   font-weight: 400;
-  font-size: 13px;
   text-align: left;
   color: var(--color_3);
   transition: color 0.001s ease;
-  padding-bottom: 5vh;
-  padding-left: 4vw;
-  transition: color ease, 
+  transition: color ease;
+  margin-bottom: 2rem;
 }
 
 
@@ -354,18 +353,19 @@
 .item-name-cardapio {
   position: relative;
   top: 4.5vh;
-  margin-left: 0.5rem;
-  font-size: 12px;
-  font-weight: 500;
+  left: -2vw;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
 
 }
 
 
 .icon-cardapio {
     position: relative;
-    height: 8vh;
-    width: 16.5vw;
-    border-radius: 50px;
+    height: 19vh;
+    width: 40vw;
+    border-radius: 90px;
     top: 1rem;
     background-color: var(--color_3);
     align-items: center;
@@ -375,12 +375,12 @@
 
 .ic-cardapio {
   position: relative;
-  font-size: 32px !important;
-  top: 1rem;
-  color: #fff;
-  align-items: center;
-  text-align: center;
+  top: 2vh;
+  width: 80px;
+  height: auto;
 }
+
+
 
 .item-button-cardapio .price-item {
     display: flex;
