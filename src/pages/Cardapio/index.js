@@ -13,6 +13,7 @@ import ImageNotSupportedIcon from "@mui/icons-material/ImageNotSupported";
 import MenuIcon from '@mui/icons-material/Menu';
 
 function Cardapio() {
+    const navigate = useNavigate();
   const [datacardapio, setDataCardapio] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -58,6 +59,10 @@ function Cardapio() {
     return <p>Erro: {error}</p>;
   }
 
+  const passcod = (id) => {
+    navigate(`/product/${id}`);
+  };
+
   return (
     <div className="container-cardapio">
       <div className="main-header-cardapio">
@@ -68,12 +73,12 @@ function Cardapio() {
       <div className="main-filter-cardapio">
         <nav className="nav-cardapio">
           <ul>
-            <button onClick={() => filtrarPorCategoria("Lanche")}><LocalDiningIcon className="ic-filter"/></button>
+            <button onClick={() => filtrarPorCategoria("Lanches")}><LocalDiningIcon className="ic-filter"/></button>
             <button onClick={() => filtrarPorCategoria("Bolos/Tortas/Sobremesas")}><CakeIcon className="ic-filter"/></button>
             <button onClick={() => filtrarPorCategoria("Doses")}><WaterDropIcon className="ic-filter"/></button>
             <button onClick={() => filtrarPorCategoria("Bebidas")}><FastfoodIcon className="ic-filter"/></button>
             <button onClick={() => filtrarPorCategoria("Café e Chocolates")}><CoffeeIcon className="ic-filter"/></button>
-            <button onClick={() => filtrarPorCategoria("Marmitinha e Torta")}><WineBarIcon className="ic-filter"/></button> 
+            <button onClick={() => filtrarPorCategoria("Marmitinha e Tortas")}><WineBarIcon className="ic-filter"/></button> 
           </ul>
           <h3 className="filter-name">{categoriaSelecionada ? `Filtrando por ${categoriaSelecionada}` : "Escolha um filtro"}</h3>
         </nav>
@@ -83,9 +88,10 @@ function Cardapio() {
         <ul className="item-list-cardapio">
           {produtosFiltrados.map((item, index) => (
             <li key={index} className="item-row-cardapio">
-              <button className="item-button-cardapio">
+              <button className="item-button-cardapio"
+                       onClick={() => passcod(item.Código)}>
                 <span className="icon-cardapio">
-                  <ImageNotSupportedIcon className="ic-cardapio" />
+                <img className="ic-cardapio" src="/mn-transparency/imagens/sucoverde.png" alt="Descrição"></img>
                 </span>
                 <span className="item-name-cardapio">{item["Produto"]}</span>
               </button>

@@ -2,6 +2,7 @@ import Home from "./pages/Home";
 import List from "./pages/List";
 import Item from "./pages/Item";
 import Cardapio from "./pages/Cardapio"
+import ItemCardapio from "./pages/itemCardapio";
 
 
 import {HashRouter, Routes, Route} from 'react-router-dom'
@@ -14,6 +15,7 @@ function Router() {
                 <Route path="/list" element={<List />} />
                 <Route path="/item/:id" element={<Item />} />
                 <Route path="/cardapio" element={<Cardapio />}/>
+                <Route path="/product/:id" element={<ItemCardapio />} />
             </Routes>    
         </HashRouter>
 
