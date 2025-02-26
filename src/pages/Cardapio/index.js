@@ -10,6 +10,7 @@ import FastfoodIcon from "@mui/icons-material/Fastfood";
 import CoffeeIcon from "@mui/icons-material/Coffee";
 import WineBarIcon from "@mui/icons-material/WineBar";
 import ImageNotSupportedIcon from "@mui/icons-material/ImageNotSupported";
+import MenuIcon from '@mui/icons-material/Menu';
 
 function Cardapio() {
   const [datacardapio, setDataCardapio] = useState([]);
@@ -59,7 +60,10 @@ function Cardapio() {
 
   return (
     <div className="container-cardapio">
-      <div className="main-header-cardapio"></div>
+      <div className="main-header-cardapio">
+        <button className="menu-cardapio"><MenuIcon className="ic-menucardapio"/></button>
+      </div>
+
 
       <div className="main-filter-cardapio">
         <nav className="nav-cardapio">
