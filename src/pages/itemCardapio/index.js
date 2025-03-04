@@ -46,6 +46,7 @@ function ItemCardapio() {
     fetchData();
   }, [id]);
 
+  
   if (loading) return <p></p>;
   if (error) return <p>Erro: {error}</p>;
 

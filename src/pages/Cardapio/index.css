@@ -375,11 +375,11 @@
   position: relative;
 
   top: 4.5vh;
-  left: -2vw;
+  left: 2rem;
+  width: 7rem;
   font-size: 14px;
   font-weight: 400;
   text-align: center;
-
 }
 
 
