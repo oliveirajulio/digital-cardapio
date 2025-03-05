@@ -2,7 +2,7 @@ import Home from "./pages/Home";
 import List from "./pages/List";
 import Item from "./pages/Item";
 import Cardapio from "./pages/Cardapio"
-import ItemCardapio from "./pages/itemCardapio";
+import ItemCardapio from "./pages/ItemCardapio";
 
 
 import {HashRouter, Routes, Route} from 'react-router-dom'

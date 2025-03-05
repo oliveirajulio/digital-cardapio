@@ -54,11 +54,39 @@
 
 .ctn-list-cardapio {
   position: relative;
-  margin-top: 12rem;
+  top: 9rem;
+  padding-top: 0.5rem;
   height: 100%;
   width: 100vw;
   z-index: 1;
   background-color: #FFFFFF;
+}
+
+.view-list {
+  position: relative;
+  left: 21rem;
+  color: var(--color_3);
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  outline: none !important;
+  appearance: none;
+  -webkit-tap-highlight-color: transparent; /* Remove flash azul no mobile */
+  user-select: none
+}
+
+.view-list:focus, .view-list:active {
+  outline: none;
+  box-shadow: none;
+  background-color: transparent !important;
+  -webkit-tap-highlight-color: transparent; /* Remove flash azul no mobile */
+  user-select: none
+
+}
+
+
+.ic-view {
+  font-size: 30px !important;
 }
 
 
@@ -110,71 +138,88 @@
 .main-filter-cardapio {
   padding-top:1.1rem;
   position: fixed;
-  height: 8rem;
+  height: 4.9rem;
   width: 100%;
   margin-top: 4rem;
   border-bottom: 0.1px solid rgba(211, 211, 211, 0.3);
   background-color: #FFFFFF;
+  z-index: 998;
 }
 
 .nav-cardapio {
   position: relative;
-  margin-left: 1.2rem;
-  height: 8rem;
+  width: 91%;
+  height: 4rem;
+  left: 1rem;
   overflow-x: auto;
   white-space: nowrap;
 }
+
 
 .nav-cardapio::-webkit-scrollbar {
   display: none;
 }
 
+.nav-cardapio ul {
+  position: relative;
+  display: inline-flex;
+}
+
+
 .nav-cardapio button { 
   background-color: transparent;
   position: relative;
+  display: flex;
+  flex-direction: column;
   top: 1rem;
-  width: 3rem;
-  height: 3rem;
-  border-radius: 50px;
-  border: 1px solid var(--color_3);
+  width: 4rem;
+  height: 2.7rem;
+  border: none;
   color: var(--color_3);
-  display: inline;
-  font-size: 16px;
   font-weight: 400;
   list-style-type: none;
   padding: 0.5rem;
   left: -2rem;
-  margin-right: 0.5rem;
+  white-space: wrap;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1.5rem;
 }
 
 .nav-cardapio button:focus { 
   cursor: pointer;
-  border: solid 2px var(--color_5);
-  background-color: var(--color_13);
-  color: #fff !important;
-  color: var(--color_3);
+  border-bottom: solid 2px var(--color_5);
 }
+
 
 .ic-filter {
   position: relative;
   padding-top: 0.1rem;
-  font-size: 26px !important;
+  font-size: 12px !important;
+  font-weight: 400 !important;
+
 }
 
 .ic-filter:hover {
   position: relative;
   padding-top: 0.1rem;
-  font-size: 26px !important;
+  font-size: 12px !important;
+  font-weight: 400 !important;
 }
-
-
-
 
 .filter-name {
   position: relative;
-  margin-top: 2rem;
+  margin-top: 1rem;
   color: var(--color_3);
   font-weight: 600;
+  z-index: 1;
+
+}
+
+.horizontal-line {
+  position: relative;
+  margin-top: 1rem;
 
 }
 
@@ -344,6 +389,62 @@
   overflow-y: auto;
 
 }
+.item-list-cardapio-list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin-left: -11vw;
+
+}
+
+.item-button-cardapio-list {
+  position: relative;
+  display: inline-flex;
+  width: 100vw;
+  height: 11vh;
+  background-color: transparent;
+  border: none;
+  font-weight: 400;
+  font-size: 13px;
+  text-align: left;
+  color: var(--color_3);
+  transition: color 0.001s ease;
+  padding-bottom: 5vh;
+  padding-left: 4vw;
+  transition: color ease, 
+}
+
+
+
+.item-name-cardapio-list {
+  position: relative;
+  top: 5vh;
+  margin-left: 0.5rem;
+  font-size: 12px;
+  font-weight: 400;
+
+}
+
+
+.icon-cardapio-list {
+    position: relative;
+    height: 8vh;
+    width: 16.5vw;
+    border-radius: 50px;
+    top: 1rem;
+    background-color: var(--color_3);
+    align-items: center;
+    text-align: center;
+    z-index: 1000;
+
+}
+
+.ic-cardapio-list {
+  position: relative;
+  width: 30px;
+  height: auto;
+  top: 0.5rem;
+}
 
 .item-list-cardapio {
   display: grid;
@@ -373,13 +474,17 @@
 
 .item-name-cardapio {
   position: relative;
-
+  display: flex;
+  flex-direction: column;
   top: 4.5vh;
-  left: 2rem;
-  width: 7rem;
+  left: 1.7rem;
+  width: 6rem;
   font-size: 14px;
   font-weight: 400;
+  white-space: wrap;
   text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 
 

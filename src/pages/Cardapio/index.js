@@ -11,6 +11,8 @@ import CoffeeIcon from "@mui/icons-material/Coffee";
 import WineBarIcon from "@mui/icons-material/WineBar";
 import ImageNotSupportedIcon from "@mui/icons-material/ImageNotSupported";
 import MenuIcon from '@mui/icons-material/Menu';
+import GridViewIcon from '@mui/icons-material/GridView';
+import ViewListIcon from '@mui/icons-material/ViewList';
 
 function Cardapio() {
     const navigate = useNavigate();
@@ -18,6 +20,7 @@ function Cardapio() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [categoriaSelecionada, setCategoriaSelecionada] = useState(null);
+  const [viewlist, setviewlist] = useState(false)
 
   useEffect(() => {
     const fetchData = async () => {
@@ -63,6 +66,11 @@ function Cardapio() {
     navigate(`/product/${id}`);
   };
 
+  const ViewList = () => {
+    setviewlist(!viewlist)
+  }
+
+
   return (
     <div className="container-cardapio">
       <div className="main-header-cardapio">
@@ -73,27 +81,25 @@ function Cardapio() {
       <div className="main-filter-cardapio">
         <nav className="nav-cardapio">
           <ul>
-            <button onClick={() => filtrarPorCategoria("Lanches")}><LocalDiningIcon className="ic-filter"/></button>
-            <button onClick={() => filtrarPorCategoria("Bolos/Tortas/Sobremesas")}><CakeIcon className="ic-filter"/></button>
-            <button onClick={() => filtrarPorCategoria("Doses")}><WaterDropIcon className="ic-filter"/></button>
-            <button onClick={() => filtrarPorCategoria("Bebidas")}><FastfoodIcon className="ic-filter"/></button>
-            <button onClick={() => filtrarPorCategoria("Café e Chocolates")}><CoffeeIcon className="ic-filter"/></button>
-            <button onClick={() => filtrarPorCategoria("Marmitinha e Tortas")}><WineBarIcon className="ic-filter"/></button> 
+            <button onClick={() => filtrarPorCategoria("Lanches")}><span className="ic-filter">Lanches & Sucos </span></button>
+            <button onClick={() => filtrarPorCategoria("Bolos/Tortas/Sobremesas")}><span className="ic-filter">Bolos & Sobremesas</span></button>
+            <button onClick={() => filtrarPorCategoria("Café e Chocolates")}><span className="ic-filter">Café & Chocolates</span></button>
+            <button onClick={() => filtrarPorCategoria("Marmitinha e Tortas")}><span className="ic-filter">Refeições & Tortas</span></button>
           </ul>
-          <h3 className="filter-name">{categoriaSelecionada ? `Filtrando por ${categoriaSelecionada}` : "Escolha um filtro"}</h3>
+          <hr className="horizontal-line"/>
         </nav>
       </div>
-
       <div className="ctn-list-cardapio">
-        <ul className="item-list-cardapio">
+        <button onClick={ViewList} className="view-list">{viewlist ? <ViewListIcon className="ic-view"/> : <GridViewIcon className="ic-view"/> }</button>
+        <ul className={viewlist ? "item-list-cardapio-list" : "item-list-cardapio"}>
           {produtosFiltrados.map((item, index) => (
-            <li key={index} className="item-row-cardapio">
-              <button className="item-button-cardapio"
+            <li key={index} className={viewlist ? "item-row-cardapio-list" : "item-row-cardapio"}>
+              <button className={viewlist ? "item-button-cardapio-list" : "item-button-cardapio"}
                        onClick={() => passcod(item.Código)}>
-                <span className="icon-cardapio">
-                <img className="ic-cardapio" src="/mn-transparency/imagens/sucoverde.png" alt="Descrição"></img>
+                <span className={viewlist ? "icon-cardapio-list" :"icon-cardapio" }>
+                <img className={viewlist ? "ic-cardapio-list" : "ic-cardapio"} src="/mn-transparency/imagens/sucoverde.png" alt="Descrição"></img>
                 </span>
-                <span className="item-name-cardapio">{item["Produto"]}</span>
+                <span className={viewlist ? "item-name-cardapio-list" : "item-name-cardapio"}>{item["Produto"]}</span>
               </button>
             </li>
           ))}
