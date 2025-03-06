@@ -59,8 +59,8 @@ function ItemCardapio() {
                 <span className="cal-product">{produto["Calorias"]}</span>
             </div>
             <div className="way-order">
-                <h3 className="ask-way">Onde vai retirar</h3>
-                <hr className="divisoria"/>
+                {/* <h3 className="ask-way">Onde vai retirar</h3>
+                <hr className="divisoria"/> */}
             </div>
             <div className="info-nutri">
                 <div className="qtde"><span>100 <StarIcon className="ic-nutri"/> item</span></div>
@@ -68,7 +68,7 @@ function ItemCardapio() {
                 <span className="cal-nutri">{produto["Calorias"]}</span>
 
             </div>
-            <button className="order"><LocalGroceryStoreOutlinedIcon className="ic-cdp"/></button>
+            {/* <button className="order"><LocalGroceryStoreOutlinedIcon className="ic-cdp"/></button> */}
         </div>
   );
 }
