@@ -94,9 +94,62 @@
     font-size: 256px !important;
 }
 
+
+
 .ask-way {
+    font-weight: 500;
     margin: 1rem;
-    color: var(--color_12);
+    color: var(--color_3);
+}
+
+.nav-stores {
+    margin-top: 1rem;
+}
+
+.nav-stores ul {
+    margin-left: -2rem;
+    position: relative;
+    display: inline-flex;
+    gap: 1rem;
+}
+
+.nav-stores button {
+   height: 4rem;
+   width: 4rem;
+   border: solid 0.5px var(--color_3);
+   border-radius: 5rem; 
+}
+
+.store-name {
+    position: relative;
+    display: flex;
+    top: 1.5rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+}
+
+.locator-store {
+    position: relative;
+    top: 1rem;
+    font-weight: 400;
+}
+
+.hr-store {
+    margin-top: 0.5rem;
+    width:65vw;
+    height: 0.1vh;
+    background-color: var(--color_3);
+    border: none;
+}
+
+
+.ic-store {
+    position: relative;
+    top: 0;
+    color: var(--color_3);
+    font-size: 36px !important;
 }
 
 .divisoria {
@@ -109,7 +162,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    top: 15rem;
+    top: 12rem;
     width: 100%;
     height: 40vh;
     background-color: var(--color_3);

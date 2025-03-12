@@ -6,6 +6,8 @@ import Data from "../../service/service";
 import LocalGroceryStoreOutlinedIcon from '@mui/icons-material/LocalGroceryStoreOutlined';
 import LocalDrinkTwoToneIcon from '@mui/icons-material/LocalDrinkTwoTone';
 import StarIcon from '@mui/icons-material/Star';
+import StorefrontTwoToneIcon from '@mui/icons-material/StorefrontTwoTone';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 function ItemCardapio() {
   const { id } = useParams(); // Obtém o ID da URL
@@ -59,8 +61,22 @@ function ItemCardapio() {
                 <span className="cal-product">{produto["Calorias"]}</span>
             </div>
             <div className="way-order">
-                <h3 className="ask-way">Onde vai retirar</h3>
+                <h3 className="ask-way">Checar disponibilidade</h3>
                 <hr className="divisoria"/>
+                <div className="stores">
+                  <nav className="nav-stores">
+                    <ul>
+                      <button>
+                        <span><StorefrontTwoToneIcon className="ic-store"/></span>
+                      </button>
+                      <span className="locator-store">
+                        Escolha uma loja
+                        <span><KeyboardArrowDownIcon/></span>
+                        <hr className="hr-store"/>
+                      </span>
+                    </ul>
+                  </nav>
+                </div>
             </div>
             <div className="info-nutri">
                 <div className="qtde"><span>100 <StarIcon className="ic-nutri"/> item</span></div>
@@ -68,7 +84,7 @@ function ItemCardapio() {
                 <span className="cal-nutri">{produto["Calorias"]}</span>
 
             </div>
-            <button className="order"><LocalGroceryStoreOutlinedIcon className="ic-cdp"/></button>
+            {/* <button className="order"><LocalGroceryStoreOutlinedIcon className="ic-cdp"/></button> */}
         </div>
   );
 }
