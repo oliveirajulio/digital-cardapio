@@ -70,8 +70,12 @@ function ItemCardapio() {
                         <span><StorefrontTwoToneIcon className="ic-store"/></span>
                       </button>
                       <span className="locator-store">
-                        Escolha uma loja
+                        Escolha um modo de entrega
                         <span><KeyboardArrowDownIcon/></span>
+                        <div className="btn-modes">
+                          <button>Retirada</button>
+                          <button>Entrega</button>
+                        </div>
                         <hr className="hr-store"/>
                       </span>
                     </ul>

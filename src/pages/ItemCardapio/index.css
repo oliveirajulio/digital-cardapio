@@ -137,7 +137,7 @@
 }
 
 .hr-store {
-    margin-top: 0.5rem;
+    margin-top: 0.6rem;
     width:65vw;
     height: 0.1vh;
     background-color: var(--color_3);
@@ -150,6 +150,26 @@
     top: 0;
     color: var(--color_3);
     font-size: 36px !important;
+}
+
+.btn-modes {
+    margin: 0;
+    padding: 0 !important;
+    margin-top: 0.5rem;
+    margin-left: 2.5rem;
+    width: 36.5vw;
+    position: relative;
+    border: solid 1px;
+    border-radius: 20px;
+
+}
+
+.btn-modes button {
+    position: relative;
+    width: 18vw;
+    height: 2rem;
+    border: none;
+
 }
 
 .divisoria {
