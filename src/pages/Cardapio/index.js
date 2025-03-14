@@ -90,7 +90,7 @@ function Cardapio() {
         </nav>
       </div>
       <div className="ctn-list-cardapio">
-        <button onClick={ViewList} className="view-list">{viewlist ? <ViewListIcon className="ic-view"/> : <GridViewIcon className="ic-view"/> }</button>
+        <button onClick={ViewList} className="view-list">{viewlist ? <GridViewIcon className="ic-view"/> : <ViewListIcon className="ic-view"/> }</button>
         <ul className={viewlist ? "item-list-cardapio-list" : "item-list-cardapio"}>
           {produtosFiltrados.map((item, index) => (
             <li key={index} className={viewlist ? "item-row-cardapio-list" : "item-row-cardapio"}>

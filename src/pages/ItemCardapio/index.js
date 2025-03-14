@@ -81,6 +81,7 @@ function ItemCardapio() {
                     </ul>
                   </nav>
                 </div>
+
             </div>
             <div className="info-nutri">
                 <div className="qtde"><span>100 <StarIcon className="ic-nutri"/> item</span></div>
