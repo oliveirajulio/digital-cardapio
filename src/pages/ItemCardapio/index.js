@@ -81,7 +81,6 @@ function ItemCardapio() {
                     </ul>
                   </nav>
                 </div>
-                <hr className="divisoria"/> 
             </div>
             <div className="info-nutri">
                 <div className="qtde"><span>100 <StarIcon className="ic-nutri"/> item</span></div>
