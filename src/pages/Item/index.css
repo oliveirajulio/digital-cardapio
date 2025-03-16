@@ -32,10 +32,10 @@
     border-radius: 500px;
     border: 10px solid var(--color_1);
     position: fixed;
-    bottom: -100vh;
-    right: -225vw;
-    width: 200vw;
-    height: 100vh;
+    bottom: -30rem;
+    right: 2rem;
+    width: 200rem;
+    height: 100rem;
     animation: expand 9.5s ease-in-out forwards;
   }
 
@@ -43,8 +43,8 @@
     position: inherit;
     display: flex;
     align-items: center;
-    left: -20vw;
-    top: 25vh;
+    left: -10rem;
+    top: 5rem;
     zoom: 0.8;
   }
 

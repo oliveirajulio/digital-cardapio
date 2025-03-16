@@ -8,12 +8,20 @@ import LocalDrinkTwoToneIcon from '@mui/icons-material/LocalDrinkTwoTone';
 import StarIcon from '@mui/icons-material/Star';
 import StorefrontTwoToneIcon from '@mui/icons-material/StorefrontTwoTone';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import AddIcon from '@mui/icons-material/Add';
+import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 
 function ItemCardapio() {
   const { id } = useParams(); // Obtém o ID da URL
   const [produto, setProduto] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [openboard, setopenboard] = useState(false)
+
+  const opennutri = () => {
+    setopenboard(prevState => !prevState)
+  }
+
 
   useEffect(() => {
     const fetchData = async () => {
@@ -61,9 +69,9 @@ function ItemCardapio() {
                 <span className="cal-product">{produto["Calorias"]}</span>
             </div>
             <div className="way-order">
-                <h3 className="ask-way">Checar disponibilidade</h3>
+                <h3 className="ask-way"><span onClick={opennutri}>Ver mais informações nutricionais {openboard ? <KeyboardArrowDownIcon className="ic-add"/> : <KeyboardArrowRightIcon className="ic-add"/> }</span></h3>
                 <hr className="divisoria"/>
-                <div className="stores">
+                {/* <div className="stores">
                   <nav className="nav-stores">
                     <ul>
                       <button>
@@ -80,15 +88,18 @@ function ItemCardapio() {
                       </span>
                     </ul>
                   </nav>
-                </div>
+                </div> */}
 
             </div>
-            <div className="info-nutri">
-                <div className="qtde"><span>100 <StarIcon className="ic-nutri"/> item</span></div>
-                <span className="description-icp">{produto["Descrição"]}</span>
-                <span className="cal-nutri">{produto["Calorias"]}</span>
+            <div className={ openboard ? "info-nutri" : "info-hidden"}>
+                <div className={ openboard ?"qtde" : "info-hidden"}><span>100 <StarIcon className="ic-nutri"/> item</span></div>
+                <span className={ openboard ?"description-icp" : "info-hidden"}>{produto["Descrição"]}</span>
+                <span className={ openboard ?"cal-nutri" : "info-hidden"}>{produto["Calorias"]}</span>
 
             </div>
+            <span className="price-product">R$<span className="num-price">
+              {Number(String(produto["Pr. Venda"]).replace(',', '.')).toFixed(2).replace('.', ',')}
+            </span></span>
             {/* <button className="order"><LocalGroceryStoreOutlinedIcon className="ic-cdp"/></button> */}
         </div>
   );

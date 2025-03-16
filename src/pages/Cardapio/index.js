@@ -42,6 +42,7 @@ function Cardapio() {
   const filtrarPorCategoria = (categoria) => {
     setCategoriaSelecionada((prev) => (prev === categoria ? null : categoria));
   };
+  
 
   const produtosFiltrados = categoriaSelecionada
     ? datacardapio.filter((item) => item["Categoria"] === categoriaSelecionada)
@@ -70,6 +71,10 @@ function Cardapio() {
     setviewlist(!viewlist)
   }
 
+  const isFiltered = (categoria) => {
+    return categoriaSelecionada === categoria;
+  };
+
 
   return (
     <div className="container-cardapio">
@@ -81,10 +86,10 @@ function Cardapio() {
       <div className="main-filter-cardapio">
         <nav className="nav-cardapio">
           <ul>
-            <button onClick={() => filtrarPorCategoria("Lanches")}><span className="ic-filter">Lanches & Sucos </span></button>
-            <button onClick={() => filtrarPorCategoria("Bolos/Tortas/Sobremesas")}><span className="ic-filter">Bolos & Sobremesas</span></button>
-            <button onClick={() => filtrarPorCategoria("Café e Chocolates")}><span className="ic-filter">Café & Chocolates</span></button>
-            <button onClick={() => filtrarPorCategoria("Marmitinha e Tortas")}><span className="ic-filter">Refeições & Tortas</span></button>
+            <button  className={isFiltered("Lanches") ? "active" : ""} onClick={() => filtrarPorCategoria("Lanches")}><span className="ic-filter">Lanches & Sucos </span></button>
+            <button className={isFiltered("Bolos/Tortas/Sobremesas") ? "active" : ""} onClick={() => filtrarPorCategoria("Bolos/Tortas/Sobremesas")}><span className="ic-filter">Bolos & Sobremesas</span></button>
+            <button className={isFiltered("Café e Chocolates") ? "active" : ""} onClick={() => filtrarPorCategoria("Café e Chocolates")}><span className="ic-filter">Café & Chocolates</span></button>
+            <button className={isFiltered("Marmitinha e Tortas") ? "active" : ""} onClick={() => filtrarPorCategoria("Marmitinha e Tortas")}><span className="ic-filter">Refeições & Tortas</span></button>
           </ul>
           <hr className="horizontal-line"/>
         </nav>

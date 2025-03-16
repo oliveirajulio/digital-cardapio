@@ -52,6 +52,28 @@
     padding: 0.8rem;
 }
 
+.price-product {
+    position: fixed;
+    display: flex;
+    bottom: 2rem;
+    right: 1rem;
+    background-color: var(--color_3);
+    height: 2.5rem;
+    width: 7rem;
+    border: none;
+    border-radius: 5rem;
+    box-shadow: 0px 2.5px 5px rgba(0, 0, 0, 0.6);
+    align-items: center;
+    text-align: start;
+    padding-left: 1rem;
+    color: var(--color_14) !important;
+}
+
+.num-price{
+    margin-left: 0.7rem;
+    color: #f9f9f9;
+}
+
 .ic-cdp {
     font-size: 36px !important;
     color: #f9f9f9;
@@ -97,9 +119,14 @@
 
 
 .ask-way {
-    font-weight: 500;
     margin: 1rem;
+    margin-bottom: 0.7rem;
     color: var(--color_3);
+}
+
+.ask-way span {
+font-weight: 400;
+
 }
 
 .nav-stores {
@@ -173,28 +200,42 @@
 }
 
 .divisoria {
-    height: 1px;
+    position: relative;
+    width: 90%;
+    margin-left: 1rem;
+    height: 2px;
     background-color: var(--color_13);
     border: none;
 }
+
+.ic-add {
+    position: relative;
+    top: 0.35rem;
+    font-size: 24px !important;
+}
+
 
 .info-nutri {
     position: relative;
     display: flex;
     flex-direction: column;
-    top: 12rem;
     width: 100%;
     height: 40vh;
     background-color: var(--color_3);
 }
 
+.info-hidden {
+    display: none;
+}
+
 .qtde {
-    border: solid 1.4px var(--color_4);
-    width: 22vw;
-    color: var(--color_4);
+    border: solid 1.4px var(--color_14);
+    border-radius: 7px;
+    width: 5.3rem;
+    color: var(--color_14);
     margin: 1rem;
     padding: 0.5vw;
-    padding-left: 0.6rem;
+    padding-left: 0.5rem;
     font-size: 13px !important;
     align-items: center;
 }
