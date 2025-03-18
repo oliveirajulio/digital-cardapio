@@ -64,15 +64,18 @@ function ItemCardapio() {
     <div className="container-icp">
             <div className="main-header-icp"></div>
             <div className="info-product">
-                <span className="img-product"><img className="im-product" src="/mn-transparency/imagens/sucoverde.png" alt="Descrição"></img></span>
+                <span className="img-product"><img className="im-product" src="/mn-transparency/imagens/salgado.png" alt="Descrição"></img></span>
                 <span className="name-product">{produto["Produto"]}</span>
-                <span className="cal-product">{produto["Calorias"]}</span>
+                <span className="cal-product">{produto["Unidade"]}</span>
             </div>
             <div className="flavor">
               <h3 className="options-flavor">Opções de sabor</h3>
               <hr className="divisoria-flavor"/>
               <nav className="nav-flavor">
                 <ul>
+                  <button className="btn-flavor"></button>
+                  <button className="btn-flavor"></button>
+                  <button className="btn-flavor"></button>
                   <button className="btn-flavor"></button>
                 </ul>
               </nav>
