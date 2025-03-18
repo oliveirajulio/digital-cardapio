@@ -68,10 +68,17 @@ function ItemCardapio() {
                 <span className="name-product">{produto["Produto"]}</span>
                 <span className="cal-product">{produto["Calorias"]}</span>
             </div>
+            <div className="flavor">
+              <h3 className="options-flavor">Opções de sabor</h3>
+              <hr className="divisoria-flavor"/>
+              <nav className="nav-flavor">
+                <ul>
+                  <button className="btn-flavor"></button>
+                </ul>
+              </nav>
+            </div>
             <div className="way-order">
-                <h3 className="ask-way"><span onClick={opennutri}>Ver mais informações nutricionais {openboard ? <KeyboardArrowDownIcon className="ic-add"/> : <KeyboardArrowRightIcon className="ic-add"/> }</span></h3>
-                <hr className="divisoria"/>
-                {/* <div className="stores">
+                {/* {/* <div className="stores"> 
                   <nav className="nav-stores">
                     <ul>
                       <button>
@@ -89,6 +96,8 @@ function ItemCardapio() {
                     </ul>
                   </nav>
                 </div> */}
+                <h3 className="ask-way"><span onClick={opennutri}>Saiba mais{openboard ? <KeyboardArrowDownIcon className="ic-add"/> : <KeyboardArrowRightIcon className="ic-add"/> }</span></h3>
+                <hr className="divisoria"/>
 
             </div>
             <div className={ openboard ? "info-nutri" : "info-hidden"}>
