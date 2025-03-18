@@ -88,7 +88,7 @@ body {
     color: #f9f9f9;
     align-items: center;
     text-align: center;
-    margin-top: -10rem;
+    margin-top: 4em;
     font-size: 24px !important;
     font-weight: 500;
 }
@@ -107,14 +107,14 @@ body {
     position: relative;
     color: #668067;
     align-items: center;
-    margin-top: -20rem;
+    margin-top: 0rem;
     margin-left: -5rem;
     text-align: center;
     justify-content: center;
 }
 
 .im-product {
-    width: 558px;
+    width: 465px;
     height: auto;}
 
 .ic-product {
