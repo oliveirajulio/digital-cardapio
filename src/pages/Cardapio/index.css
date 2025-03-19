@@ -1,3 +1,7 @@
+body {
+  background-color: #F9F9F9;
+}
+
 @keyframes expand {
   0% {
     transform: scale(1); /* Começa pequeno */
@@ -65,7 +69,7 @@
   position: relative;
   top: 9rem;
   padding-top: 0.5rem;
-  height: 100%;
+  height: 100vh;
   width: 100vw;
   z-index: 1;
   background-color: #FFFFFF;
@@ -84,7 +88,7 @@
   outline: none !important;
   appearance: none;
   -webkit-tap-highlight-color: transparent; /* Remove flash azul no mobile */
-  user-select: none
+  user-select: none;
 }
 
 .view-list:focus, .view-list:active {

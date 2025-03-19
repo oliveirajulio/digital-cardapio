@@ -17,7 +17,7 @@ function ItemCardapio() {
   const [produto, setProduto] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [openboard, setopenboard] = useState(false)
+  const [openboard, setopenboard] = useState(true)
   const [openboardflavor, setopenboardflavor] = useState(false)
 
   const opennutri = () => {
