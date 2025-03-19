@@ -36,7 +36,7 @@ body {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 505px;
+    height: 25rem;
     background-color: var(--color_3) ;
 }
 
@@ -88,7 +88,7 @@ body {
     color: #f9f9f9;
     align-items: center;
     text-align: center;
-    margin-top: 4em;
+    margin-top: 1rem;
     font-size: 24px !important;
     font-weight: 500;
 }
@@ -131,6 +131,9 @@ body {
     color: var(--color_3);
     font-weight: 400;
 }
+.options-flavor span{
+    font-weight: 400;
+}
 
 .ask-way {
     margin: 1rem;
@@ -145,12 +148,21 @@ body {
 
 .flavor {
     background-color: #f9f9f9;
-    height: 8rem;
+    height: auto;
 }
 
 .nav-flavor {
     margin-left: 2rem ;
     gap: 2rem;
+}
+
+.flavor-show {
+    height: 5rem;
+    background-color: #f9f9f9;
+}
+
+.flavor-hidden {
+    display: none;
 }
 
 .btn-flavor {

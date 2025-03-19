@@ -10,6 +10,7 @@ import StorefrontTwoToneIcon from '@mui/icons-material/StorefrontTwoTone';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import AddIcon from '@mui/icons-material/Add';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
+import { Hidden } from "@mui/material";
 
 function ItemCardapio() {
   const { id } = useParams(); // Obtém o ID da URL
@@ -17,9 +18,14 @@ function ItemCardapio() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [openboard, setopenboard] = useState(false)
+  const [openboardflavor, setopenboardflavor] = useState(false)
 
   const opennutri = () => {
     setopenboard(prevState => !prevState)
+  }
+
+  const openflavor = () => {
+    setopenboardflavor(prevState => !prevState)
   }
 
 
@@ -69,9 +75,11 @@ function ItemCardapio() {
                 <span className="cal-product">{produto["Unidade"]}</span>
             </div>
             <div className="flavor">
-              <h3 className="options-flavor">Opções de sabor</h3>
+              <h3 className="options-flavor"><span onClick={openflavor}>Consultar sabores{openboardflavor ? <KeyboardArrowDownIcon className="ic-add"/> : <KeyboardArrowRightIcon className="ic-add"/> }</span></h3>
               <hr className="divisoria-flavor"/>
-              <nav className="nav-flavor">
+            </div>
+            <div className={openboardflavor ? "flavor-show" : "flavor-hidden"}>
+            <nav className={openboardflavor ? "nav-flavor" : "flavor-hidden"}>
                 <ul>
                   <button className="btn-flavor"></button>
                   <button className="btn-flavor"></button>
