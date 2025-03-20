@@ -156,13 +156,16 @@ body {
 }
 
 .nav-flavor ul {
-    padding: 1rem;
+    margin: 0.7rem;
+    background-color:var(--color_13);
+    border-radius: 1rem;
+    padding: 0.7rem;
     display: flex;
     flex-direction: column;
 }
 
 .flavor-show {
-    height: 15rem;
+    height: auto;
     background-color: #f9f9f9;
 }
 
@@ -172,11 +175,15 @@ body {
 
 .btn-flavor {
     margin-top: 0.5rem;
-    margin-right: 1rem;
+    padding-left: 1rem;
     height: 3rem;
-    width: 95%;
-    border: solid 1px var(--color_3);
+    width: 100%;
+    border: none;
     border-radius: 0.7rem;
+    background-color: #f9f9f9;
+    color: var(--color_1) ;
+    text-align: start;
+    font-size: 16px !important;
 }
 
 
@@ -296,8 +303,8 @@ body {
     color: var(--color_14);
     margin: 1rem;
     padding: 0.5vw;
-    padding-left: 0.5rem;
     font-size: 13px !important;
+    text-align: center;
     align-items: center;
 }
 

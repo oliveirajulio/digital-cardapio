@@ -66,6 +66,9 @@ function ItemCardapio() {
   if (loading) return <p></p>;
   if (error) return <p>Erro: {error}</p>;
 
+  const flavors = produto["Sabor"] && produto["Sabor"].trim() !== "";
+
+
   return (
     <div className="container-icp">
             <div className="main-header-icp"></div>
@@ -74,20 +77,37 @@ function ItemCardapio() {
                 <span className="name-product">{produto["Produto"]}</span>
                 <span className="cal-product">{produto["Unidade"]}</span>
             </div>
-            <div className="flavor">
-              <h3 className="options-flavor"><span onClick={openflavor}>Consultar sabores{openboardflavor ? <KeyboardArrowDownIcon className="ic-add"/> : <KeyboardArrowRightIcon className="ic-add"/> }</span></h3>
-              <hr className="divisoria-flavor"/>
-            </div>
-            <div className={openboardflavor ? "flavor-show" : "flavor-hidden"}>
-            <nav className={openboardflavor ? "nav-flavor" : "flavor-hidden"}>
-                <ul>
-                  <button className="btn-flavor"></button>
-                  <button className="btn-flavor"></button>
-                  <button className="btn-flavor"></button>
-                  <button className="btn-flavor"></button>
-                </ul>
-              </nav>
-            </div>
+            {flavors && (
+              <>
+                <div className="flavor">
+                  <h3 className="options-flavor">
+                    <span onClick={openflavor}>
+                      Consultar sabores
+                      {openboardflavor ? 
+                        <KeyboardArrowDownIcon className="ic-add"/> : 
+                        <KeyboardArrowRightIcon className="ic-add"/>
+                      }
+                    </span>
+                  </h3>
+                  <hr className="divisoria-flavor"/>
+                </div>
+                <div className={openboardflavor ? "flavor-show" : "flavor-hidden"}>
+                  <nav className={openboardflavor ? "nav-flavor" : "flavor-hidden"}>
+                    <ul>
+                      {produto["Sabor"].split(/,\s*/).map((flavor, index) => (
+                        <button 
+                          key={index} 
+                          className="btn-flavor"
+                          onClick={() => console.log(`Sabor selecionado: ${flavor.trim()}`)}
+                        >
+                          {flavor.trim()}
+                        </button>
+                      ))}
+                    </ul>
+                  </nav>
+                </div>
+              </>
+            )}
             <div className="way-order">
                 {/* {/* <div className="stores"> 
                   <nav className="nav-stores">
@@ -112,7 +132,7 @@ function ItemCardapio() {
 
             </div>
             <div className={ openboard ? "info-nutri" : "info-hidden"}>
-                <div className={ openboard ?"qtde" : "info-hidden"}><span>100 <StarIcon className="ic-nutri"/> item</span></div>
+                <div className={ openboard ?"qtde" : "info-hidden"}><span>{produto['Unidade']}</span></div>
                 <span className={ openboard ?"description-icp" : "info-hidden"}>{produto["Descrição"]}</span>
                 <span className={ openboard ?"cal-nutri" : "info-hidden"}>{produto["Calorias"]}</span>
 
