@@ -80,19 +80,10 @@ function ItemCardapio() {
             {flavors && (
               <>
                 <div className="flavor">
-                  <h3 className="options-flavor">
-                    <span onClick={openflavor}>
-                      Consultar sabores
-                      {openboardflavor ? 
-                        <KeyboardArrowDownIcon className="ic-add"/> : 
-                        <KeyboardArrowRightIcon className="ic-add"/>
-                      }
-                    </span>
-                  </h3>
                   <hr className="divisoria-flavor"/>
                 </div>
-                <div className={openboardflavor ? "flavor-show" : "flavor-hidden"}>
-                  <nav className={openboardflavor ? "nav-flavor" : "flavor-hidden"}>
+                <div className="flavor-show">
+                  <nav className="nav-flavor">
                     <ul>
                       {produto["Sabor"].split(/,\s*/).map((flavor, index) => (
                         <button 
@@ -134,7 +125,7 @@ function ItemCardapio() {
             <div className={ openboard ? "info-nutri" : "info-hidden"}>
                 <div className={ openboard ?"qtde" : "info-hidden"}><span>{produto['Unidade']}</span></div>
                 <span className={ openboard ?"description-icp" : "info-hidden"}>{produto["Descrição"]}</span>
-                <span className={ openboard ?"cal-nutri" : "info-hidden"}>{produto["Calorias"]}</span>
+                <span className={ openboard ?"cal-nutri" : "info-hidden"}>{produto["Alergenicos"]}</span>
 
             </div>
             <span className="price-product">R$<span className="num-price">

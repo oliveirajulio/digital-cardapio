@@ -142,7 +142,7 @@ body {
 }
 
 .ask-way span {
-    font-weight: 500;
+    font-weight: 400;
 
 }
 
@@ -152,21 +152,25 @@ body {
 }
 
 .nav-flavor {
+    align-items: center;
+    text-align: center;
     gap: 2rem;
 }
 
 .nav-flavor ul {
     margin: 0.7rem;
-    background-color:var(--color_13);
+    gap: 1rem;
+    background-color:var(--color_3);
     border-radius: 1rem;
     padding: 0.7rem;
-    display: flex;
-    flex-direction: column;
+    padding-bottom: 0.2rem;
+    display: inline-flex;
+    
 }
 
 .flavor-show {
     height: auto;
-    background-color: #f9f9f9;
+    background-color: var(--color_3);
 }
 
 .flavor-hidden {
@@ -174,16 +178,23 @@ body {
 }
 
 .btn-flavor {
-    margin-top: 0.5rem;
-    padding-left: 1rem;
-    height: 3rem;
-    width: 100%;
-    border: none;
-    border-radius: 0.7rem;
+    width:auto;
+    border: solid 1px var(--color_3);
+    width: auto;
+    height: 2.5rem;
+    border-radius: 2rem;
     background-color: #f9f9f9;
-    color: var(--color_1) ;
-    text-align: start;
+    color: var(--color_3);
+    align-items: center;
+    text-align: center;
+    font-weight: 400;
     font-size: 16px !important;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+    padding: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+
 }
 
 
