@@ -73,7 +73,7 @@ function ItemCardapio() {
     <div className="container-icp">
             <div className="main-header-icp"></div>
             <div className="info-product">
-                <span className="img-product"><img className="im-product" src="/mn-transparency/imagens/salgado.jpg" alt="Descrição"></img></span>
+                <span className="img-product"><img className="im-product" src={`/mn-transparency/imagens/${produto["Produto"]}.jpg`} alt="Descrição"></img></span>
                 <span className="name-product">{produto["Produto"]}</span>
                 <span className="cal-product">{produto["Unidade"]}</span>
             </div>
