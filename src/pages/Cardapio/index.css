@@ -60,7 +60,7 @@ body {
     position: relative;
     margin: 0;
     padding: 0;
-    height: 100vh;
+    height: auto;
     width: 100%;
     background-color: #f9f9f9;
 }
@@ -70,7 +70,7 @@ body {
   top: 9rem;
   padding-top: 0.5rem;
   width: 100vw;
-  height: 100%;
+  height: 100vh;
   z-index: 1;
   background-color: #FFFFFF;
   align-items: center;
@@ -522,8 +522,15 @@ body {
 
 .ic-cardapio {
   position: relative;
-  top: 2vh;
-  width: 80px;
+  top: 4vh;
+  width: 100px;
+  height: auto;
+}
+
+.ic-cardapio {
+  position: relative;
+  top: 4vh;
+  width: 100px;
   height: auto;
 }
 

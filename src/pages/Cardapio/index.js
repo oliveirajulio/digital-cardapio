@@ -102,7 +102,7 @@ function Cardapio() {
               <button className={viewlist ? "item-button-cardapio-list" : "item-button-cardapio"}
                        onClick={() => passcod(item.Código)}>
                 <span className={viewlist ? "icon-cardapio-list" :"icon-cardapio" }>
-                <img className={viewlist ? "ic-cardapio-list" : "ic-cardapio"} src="/mn-transparency/imagens/sucoverde.png" alt="Descrição"></img>
+                <img className={viewlist ? "ic-cardapio-list" : "ic-cardapio"} src={`/mn-transparency/imagens/${item["Produto"]}.png`} alt="Descrição"></img>
                 </span>
                 <span className={viewlist ? "item-name-cardapio-list" : "item-name-cardapio"}>{item["Produto"]}</span>
               </button>
