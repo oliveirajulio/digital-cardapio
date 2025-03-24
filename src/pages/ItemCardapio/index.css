@@ -90,7 +90,7 @@ body {
     text-align: center;
     margin-top: 1rem;
     font-size: 24px !important;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .cal-product {
@@ -108,7 +108,7 @@ body {
     color: #668067;
     align-items: center;
     margin-top: 0rem;
-    margin-left: -5rem;
+    margin-left: -2rem;
     text-align: center;
     justify-content: center;
 }
@@ -159,8 +159,9 @@ body {
 
 .nav-flavor ul {
     margin: 0.7rem;
+    margin-top: 0.1rem;
     gap: 1rem;
-    background-color:var(--color_3);
+    background-color:#f9f9f9;
     border-radius: 1rem;
     padding: 0.7rem;
     padding-bottom: 0.2rem;
@@ -168,9 +169,17 @@ body {
     
 }
 
+.availble-flavor {
+    margin: 0.6rem;
+    margin-bottom: 0;
+    color: #0000004c;
+    font-weight: 400;
+    font-size: 13px !important;
+}
+
 .flavor-show {
     height: auto;
-    background-color: var(--color_3);
+    background-color: #f9f9f9;
 }
 
 .flavor-hidden {
@@ -183,8 +192,8 @@ body {
     width: auto;
     height: 2.5rem;
     border-radius: 2rem;
-    background-color: #f9f9f9;
-    color: var(--color_3);
+    background-color: var(--color_3);
+    color: #f9f9f9;
     align-items: center;
     text-align: center;
     font-weight: 400;

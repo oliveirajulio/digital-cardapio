@@ -83,6 +83,7 @@ function ItemCardapio() {
                   <hr className="divisoria-flavor"/>
                 </div>
                 <div className="flavor-show">
+                  <span className="availble-flavor">Sabores Disponíveis</span>
                   <nav className="nav-flavor">
                     <ul>
                       {produto["Sabor"].split(/,\s*/).map((flavor, index) => (
@@ -123,7 +124,7 @@ function ItemCardapio() {
 
             </div>
             <div className={ openboard ? "info-nutri" : "info-hidden"}>
-                <div className={ openboard ?"qtde" : "info-hidden"}><span>{produto['Unidade']}</span></div>
+                <div className={ openboard ?"qtde" : "info-hidden"}><span>Descrição</span></div>
                 <span className={ openboard ?"description-icp" : "info-hidden"}>{produto["Descrição"]}</span>
                 <span className={ openboard ?"cal-nutri" : "info-hidden"}>{produto["Alergenicos"]}</span>
 
