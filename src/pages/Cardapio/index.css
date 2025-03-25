@@ -510,8 +510,8 @@ body {
 
 .icon-cardapio {
     position: relative;
-    height: 10rem;
-    width: 10rem;
+    height: 9rem;
+    width: 9rem;
     border-radius: 90px;
     top: 1rem;
     background-color: var(--color_3);
