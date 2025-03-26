@@ -70,7 +70,7 @@ body {
   top: 9rem;
   padding-top: 0.5rem;
   width: 100vw;
-  height: 100vh;
+  height: 200vh;
   z-index: 1;
   background-color: #FFFFFF;
   align-items: center;
@@ -451,7 +451,8 @@ body {
     width: 4.2rem;
     border-radius: 50px;
     top: 1rem;
-    background-color: var(--color_3);
+    background-color: #f9f9f9;
+    border: solid 1px var(--color_3);
     align-items: center;
     text-align: center;
     z-index: 1000;
@@ -514,7 +515,8 @@ body {
     width: 9rem;
     border-radius: 90px;
     top: 1rem;
-    background-color: var(--color_3);
+    background-color: #F9F9F9;
+    border: solid 2px var(--color_3);
     align-items: center;
     text-align: center;
     z-index: 1000;
