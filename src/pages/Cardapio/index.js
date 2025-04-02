@@ -90,11 +90,11 @@ function Cardapio() {
             <button  className={isFiltered("Lanches") ? "active" : ""} onClick={() => filtrarPorCategoria("Lanches")}><span className="ic-filter">Lanches da Casa</span></button>
             <button  className={isFiltered("Pão de Queijo") ? "active" : ""} onClick={() => filtrarPorCategoria("Pão de Queijo")}><span className="ic-filter">Pães de Queijo</span></button>
             <button  className={isFiltered("Salgados Integrais") ? "active" : ""} onClick={() => filtrarPorCategoria("Salgados Integrais")}><span className="ic-filter">Salgados Integrais</span></button>
-            <button className={isFiltered("Bolos/Tortas/Sobremesas") ? "active" : ""} onClick={() => filtrarPorCategoria("Bolos/Tortas/Sobremesas")}><span className="ic-filter">Bolos & Sobremesas</span></button>
-            <button className={isFiltered("Café e Chocolates") ? "active" : ""} onClick={() => filtrarPorCategoria("Café e Chocolates")}><span className="ic-filter">Café & Chocolates</span></button>
-            <button className={isFiltered("Marmitinha e Tortas") ? "active" : ""} onClick={() => filtrarPorCategoria("Marmitinha e Tortas")}><span className="ic-filter">Refeições & Tortas</span></button>
+            <button className={isFiltered("Sobremesas") ? "active" : ""} onClick={() => filtrarPorCategoria("Sobremesas")}><span className="ic-filter">Sobremesas</span></button>
+            <button className={isFiltered("Sucos Naturais") ? "active" : ""} onClick={() => filtrarPorCategoria("Sucos Naturais")}><span className="ic-filter">Sucos Naturais</span></button>
+            <button className={isFiltered("Cafés & Chocolates") ? "active" : ""} onClick={() => filtrarPorCategoria("Cafés & Chocolates")}><span className="ic-filter">Cafés & Chocolates</span></button>
+            <button className={isFiltered("Refeições") ? "active" : ""} onClick={() => filtrarPorCategoria("Refeições")}><span className="ic-filter">Refeições</span></button>
           </ul>
-          <hr className="horizontal-line"/>
         </nav>
       </div>
       <div className="ctn-list-cardapio">
