@@ -171,7 +171,6 @@ body {
 
 .nav-cardapio {
   position: relative;
-  width: 91%;
   height: 4rem;
   left: 1rem;
   overflow-x: auto;
@@ -527,19 +526,10 @@ body {
 
 .ic-cardapio {
   position: relative;
-  top: 4vh;
+  top: 2.5vh;
   width: 100px;
   height: auto;
 }
-
-.ic-cardapio {
-  position: relative;
-  top: 4vh;
-  width: 100px;
-  height: auto;
-}
-
-
 
 .item-button-cardapio .price-item {
     display: flex;
