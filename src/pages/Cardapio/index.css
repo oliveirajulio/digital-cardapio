@@ -517,8 +517,7 @@ body {
     width: 9rem;
     border-radius: 90px;
     top: 1rem;
-    background-color: #F9F9F9;
-    border: solid 2px var(--color_3);
+    background-color: var(--color_3);
     align-items: center;
     text-align: center;
     z-index: 1000;
