@@ -338,9 +338,20 @@ body {
 }
 
 .description-icp {
-    margin-left: 0.5rem;
+    position: relative;
+    display: flex;
+    width: 100vw;
+    height: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
     color: #ffffffb3;
     font-weight: 400;
+    box-sizing: border-box;
+    word-break: break-all;
+    white-space: normal;
+    text-align: start;
+    justify-content: center;
+    align-items: center;
 }
 
 .cal-nutri {
