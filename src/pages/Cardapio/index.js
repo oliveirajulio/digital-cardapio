@@ -22,7 +22,15 @@ function Cardapio() {
   const [categoriaSelecionada, setCategoriaSelecionada] = useState(null);
   const [viewlist, setviewlist] = useState(false)
 
+  
+
   useEffect(() => {
+    
+    const StoredFilter = localStorage.getItem("categoriaSelecionada");
+      if (StoredFilter) {
+        setCategoriaSelecionada(StoredFilter)
+      }
+
     const fetchData = async () => {
       try {
         const jsonData = await Data("/mn-transparency/cardapiodata.xlsx");
@@ -40,8 +48,19 @@ function Cardapio() {
   }, []);
 
   const filtrarPorCategoria = (categoria) => {
-    setCategoriaSelecionada((prev) => (prev === categoria ? null : categoria));
-  };
+    setCategoriaSelecionada((prev) => {
+        const newCategory = (prev === categoria) ? null : categoria;
+
+        // Armazena a nova categoria no localStorage
+        if (newCategory) {
+            localStorage.setItem("categoriaSelecionada", newCategory);
+        } else {
+            localStorage.removeItem("categoriaSelecionada");
+        }
+
+        return newCategory;
+    });
+};
   
 
   const produtosFiltrados = categoriaSelecionada

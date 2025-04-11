@@ -79,7 +79,6 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding-left: 1rem;
   margin-bottom: 0; /* Garante que não haja margem no final */
 }
 .view-list {
