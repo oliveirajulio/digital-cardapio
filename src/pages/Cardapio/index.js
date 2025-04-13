@@ -105,7 +105,6 @@ function Cardapio() {
       <div className="main-filter-cardapio">
         <nav className="nav-cardapio">
           <ul>
-            <button  className={isFiltered("Tapiocas") ? "active" : ""} onClick={() => filtrarPorCategoria("Tapiocas")}><span className="ic-filter">Tapiocas  </span></button>
             <button  className={isFiltered("Lanches") ? "active" : ""} onClick={() => filtrarPorCategoria("Lanches")}><span className="ic-filter">Lanches da Casa</span></button>
             <button  className={isFiltered("Pão de Queijo") ? "active" : ""} onClick={() => filtrarPorCategoria("Pão de Queijo")}><span className="ic-filter">Pães de Queijo</span></button>
             <button  className={isFiltered("Salgados Integrais") ? "active" : ""} onClick={() => filtrarPorCategoria("Salgados Integrais")}><span className="ic-filter">Salgados Integrais</span></button>
