@@ -56,6 +56,18 @@ body {
     zoom: 0.8;
   }
 
+  .input-cardapio {
+    position: relative;
+    display: flex;
+    top: 1rem;
+    left: 7rem;
+    width: 15rem;
+    height: 3rem;
+    background-color: var(--color_3);
+    border: none;
+    border-bottom: solid 1px var(--color_1);
+  }
+
   .container-cardapio {
     position: relative;
     display: flex;
@@ -473,7 +485,7 @@ body {
   grid-template-columns: repeat(2, 1fr); /* 2 colunas iguais */
   list-style: none;
   padding-left: 4%;
-  margin-right: -1%;
+  margin-right: -1%;  
 }
 
 

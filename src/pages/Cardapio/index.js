@@ -13,6 +13,8 @@ import ImageNotSupportedIcon from "@mui/icons-material/ImageNotSupported";
 import MenuIcon from '@mui/icons-material/Menu';
 import GridViewIcon from '@mui/icons-material/GridView';
 import ViewListIcon from '@mui/icons-material/ViewList';
+import SearchIcon from '@mui/icons-material/Search';
+
 
 function Cardapio() {
     const navigate = useNavigate();
@@ -98,7 +100,13 @@ function Cardapio() {
   return (
     <div className="container-cardapio">
       <div className="main-header-cardapio">
-        <button className="menu-cardapio"><MenuIcon className="ic-menucardapio"/></button>
+        <input 
+          className="input-cardapio"
+          placeholder="O que você quer comer?"
+        >
+          
+        </input>
+        <button className="menu-cardapio"><SearchIcon className="ic-menucardapio"/></button>
       </div>
 
 
