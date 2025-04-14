@@ -82,6 +82,7 @@ body {
 }
 
 .ctn-list-cardapio {
+  margin-left: 1rem;
   position: relative;
   top: 9rem;
   padding-top: 0.5rem;
