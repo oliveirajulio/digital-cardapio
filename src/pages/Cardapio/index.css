@@ -58,14 +58,15 @@ body {
 
   .input-cardapio {
     position: relative;
-    display: flex;
     top: 1rem;
-    left: 7rem;
-    width: 15rem;
+    margin-left: 7rem;
+    width: 55%;
     height: 3rem;
     background-color: var(--color_3);
     border: none;
     border-bottom: solid 1px var(--color_1);
+    font-weight: 400;
+    padding-top: 0.5rem;
   }
 
   .container-cardapio {
