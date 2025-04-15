@@ -107,7 +107,7 @@ function Cardapio() {
       <div className="main-header-cardapio">
         <input 
           className="input-cardapio"
-          placeholder="O que você quer comer?"
+          placeholder="O que você quer comer hoje?"
           value={search}
           onChange={(e) => setsearch(e.target.value)}
         >

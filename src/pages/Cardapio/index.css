@@ -448,7 +448,6 @@ body {
   color: var(--color_3);
   transition: color 0.001s ease;
   padding-bottom: 5vh;
-  padding-left: 4vw;
   transition: color ease, 
 }
 
