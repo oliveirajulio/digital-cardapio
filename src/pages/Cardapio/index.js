@@ -18,11 +18,12 @@ import SearchIcon from '@mui/icons-material/Search';
 
 function Cardapio() {
     const navigate = useNavigate();
-  const [datacardapio, setDataCardapio] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-  const [categoriaSelecionada, setCategoriaSelecionada] = useState(null);
-  const [viewlist, setviewlist] = useState(false)
+    const [datacardapio, setDataCardapio] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+    const [categoriaSelecionada, setCategoriaSelecionada] = useState(null);
+    const [viewlist, setviewlist] = useState(false);
+    const [search, setsearch] = useState("")
 
   
 
@@ -96,6 +97,10 @@ function Cardapio() {
     return categoriaSelecionada === categoria;
   };
 
+  const filterdata = (produtosFiltrados || []).filter((item) =>
+    item["Produto"].toLowerCase().includes(search.toLowerCase())
+  );
+
 
   return (
     <div className="container-cardapio">
@@ -103,10 +108,11 @@ function Cardapio() {
         <input 
           className="input-cardapio"
           placeholder="O que você quer comer?"
+          value={search}
+          onChange={(e) => setsearch(e.target.value)}
         >
           
         </input>
-        <button className="menu-cardapio"><SearchIcon className="ic-menucardapio"/></button>
       </div>
 
 
@@ -126,7 +132,7 @@ function Cardapio() {
       <div className="ctn-list-cardapio">
         <button onClick={ViewList} className="view-list">{viewlist ? <GridViewIcon className="ic-view"/> : <ViewListIcon className="ic-view"/> }</button>
         <ul className={viewlist ? "item-list-cardapio-list" : "item-list-cardapio"}>
-          {produtosFiltrados.map((item, index) => (
+          {filterdata.map((item, index) => (
             <li key={index} className={viewlist ? "item-row-cardapio-list" : "item-row-cardapio"}>
               <button className={viewlist ? "item-button-cardapio-list" : "item-button-cardapio"}
                        onClick={() => passcod(item.Código)}>

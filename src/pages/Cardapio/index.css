@@ -59,15 +59,19 @@ body {
   .input-cardapio {
     position: relative;
     top: 1rem;
-    margin-left: 7rem;
-    width: 55%;
+    margin-left: 6rem;
+    width: 70%;
     height: 3rem;
     background-color: var(--color_3);
+    color: #F9F9F9;
     border: none;
     border-bottom: solid 1px var(--color_1);
     font-weight: 400;
     padding-top: 0.5rem;
   }
+
+
+  
 
   .container-cardapio {
     position: relative;
@@ -89,7 +93,7 @@ body {
   width: 100vw;
   height: auto;
   z-index: 1;
-  background-color: #FFFFFF;
+  background-color: #f9f9f9;
   align-items: center;
   justify-content: center;
   text-align: center;

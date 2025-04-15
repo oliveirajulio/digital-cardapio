@@ -1,6 +1,3 @@
-body {
-    background-color: var(--color_3);
-}
 .container-icp {
     display: flex;
     flex-direction: column;
