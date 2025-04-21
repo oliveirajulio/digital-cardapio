@@ -20,6 +20,7 @@ function Cardapio() {
     const navigate = useNavigate();
     const [datacardapio, setDataCardapio] = useState([]);
     const [loading, setLoading] = useState(true);
+    const [loadingfilter, setLoadingFilter] = useState(true);
     const [error, setError] = useState(null);
     const [categoriaSelecionada, setCategoriaSelecionada] = useState(null);
     const [viewlist, setviewlist] = useState(false);
@@ -50,6 +51,18 @@ function Cardapio() {
     fetchData();
   }, []);
 
+  useEffect(() => {
+    if (categoriaSelecionada !== null) {
+      setLoadingFilter(true);
+  
+      const timer = setTimeout(() => {
+        setLoadingFilter(false);
+      }, 800);
+  
+      return () => clearTimeout(timer);
+    }
+  }, [categoriaSelecionada]);
+
   const filtrarPorCategoria = (categoria) => {
     setCategoriaSelecionada((prev) => {
         const newCategory = (prev === categoria) ? null : categoria;
@@ -60,9 +73,10 @@ function Cardapio() {
         } else {
             localStorage.removeItem("categoriaSelecionada");
         }
-
         return newCategory;
+
     });
+
 };
   
 
@@ -79,6 +93,30 @@ function Cardapio() {
         </div>
       </div>
     );
+  }
+
+  if (error) {
+    return <p>Erro: {error}</p>;
+  }
+
+  if (loadingfilter) {
+    return (
+      
+      <div className="ctn-list">
+        <div className="main-header-cardapio">
+        <input 
+          className="input-cardapio"
+          placeholder="O que você quer comer hoje?"
+          value={search}
+          onChange={(e) => setsearch(e.target.value)}
+        >
+        </input>
+      </div>
+        <div className="center-load">
+          <img className="load-filter" src="/mn-transparency/imagens/loadingfilter.png"/>
+        </div>
+      </div>
+    )
   }
 
   if (error) {

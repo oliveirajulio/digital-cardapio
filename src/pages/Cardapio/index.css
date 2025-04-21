@@ -8,15 +8,21 @@ body {
 @keyframes expand {
   0% {
     transform: scale(1); /* Começa pequeno */
-    opacity: 1;
   }
   70% {
     transform: scale(50); /* Expande para cobrir a tela */
-    opacity: 1;
   }
   100% {
     transform: scale(50); /* Permanece grande */
-    opacity: 0; /* Desaparece no final */
+  }
+}
+
+@keyframes shine {
+  0% {
+    left: 35%;
+  }
+  100% {
+    left: 75%;
   }
 }
 
@@ -28,6 +34,13 @@ body {
   padding-top: 25vw;
 }
 
+.center-load {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10rem;
+}
   .load {
     height: 100%;
     background-color: var(--color_3);
@@ -54,6 +67,32 @@ body {
     left: -10rem;
     top: 5rem;
     zoom: 0.8;
+  }
+
+  .load-filter {
+    position: relative;
+    display: inline-block;
+    width: 10rem;
+    height: auto;
+    z-index: 1;
+    overflow: hidden;
+  }
+
+  .center-load::before {
+    content: '';
+    position: absolute;
+    top: 12rem;
+    left: 25%;
+    width: 2%;
+    height: 6rem;
+    background: linear-gradient(
+      120deg,
+      rgba(255, 255, 255, 0.7) 0%,
+      rgba(255, 255, 255, 1) 50%,
+      rgba(255, 255, 255, 0.5) 50%
+    );
+    transform: skewX(-20deg);
+    animation: shine 3s infinite;
   }
 
   .input-cardapio {
@@ -489,7 +528,7 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* 2 colunas iguais */
   list-style: none;
-  padding-left: 4%;
+  padding-left:1%;
   margin-right: -1%;  
 }
 
