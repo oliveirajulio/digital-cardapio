@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/mn-transparency/static/css/main.8609ec10.css",
-    "main.js": "/mn-transparency/static/js/main.8a4c6eb4.js",
+    "main.css": "/mn-transparency/static/css/main.6c85cbfb.css",
+    "main.js": "/mn-transparency/static/js/main.8c86cc12.js",
+    "static/media/btncardapio.png": "/mn-transparency/static/media/btncardapio.95cd08b9f596696451d2.png",
     "static/media/logo.png": "/mn-transparency/static/media/logo.32ee812b075db675540e.png",
     "static/media/load.png": "/mn-transparency/static/media/load.f9d664a1b748cf3162f9.png",
     "index.html": "/mn-transparency/index.html",
-    "main.8609ec10.css.map": "/mn-transparency/static/css/main.8609ec10.css.map",
-    "main.8a4c6eb4.js.map": "/mn-transparency/static/js/main.8a4c6eb4.js.map"
+    "main.6c85cbfb.css.map": "/mn-transparency/static/css/main.6c85cbfb.css.map",
+    "main.8c86cc12.js.map": "/mn-transparency/static/js/main.8c86cc12.js.map"
   },
   "entrypoints": [
-    "static/css/main.8609ec10.css",
-    "static/js/main.8a4c6eb4.js"
+    "static/css/main.6c85cbfb.css",
+    "static/js/main.8c86cc12.js"
   ]
 }
