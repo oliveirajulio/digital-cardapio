@@ -92,7 +92,7 @@ body {
       rgba(255, 255, 255, 0.5) 50%
     );
     transform: skewX(-20deg);
-    animation: shine 3s infinite;
+    animation: shine 6s infinite;
   }
 
   .input-cardapio {

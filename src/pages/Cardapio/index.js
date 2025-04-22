@@ -57,7 +57,7 @@ function Cardapio() {
   
       const timer = setTimeout(() => {
         setLoadingFilter(false);
-      }, 800);
+      }, 1500);
   
       return () => clearTimeout(timer);
     }
