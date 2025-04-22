@@ -37,14 +37,12 @@ function Home () {
     
     return (
         <div className="container">
-            <div className="search">
-                <input className={showinput ? "input-show" : "input"} placeholder="Pesquisar Granel"></input>
+            <div className="main-header-cardapio">
+                
             </div>
             <div className="main-center">
-                <button className="btn-home"></button>
-                <button onClick={cardapio} className="granel-list">CARDAPIO DIGITAL</button>
-                <button onClick={list} className="b2"></button>
-                 <button onClick={list} className="b3"></button> 
+                <button onClick={cardapio} className="btn-cardapio-digital"></button>
+                <span className="title-cardapio-digital">Cardapio Digital</span>
             </div>
         </div>
     )

@@ -13,7 +13,7 @@
     padding: 0;
     height: 100vh;
     width: 100vw;
-    background-color: var(--color_3);
+    background-color: #f9f9f9;
 }
 
 .main-center {
@@ -50,15 +50,29 @@
 }
 
 
-.granel-list {
-    margin-top: 50vw;
+.btn-cardapio-digital {
+    margin-top: 70vw;
     width: 90vw;
-    height:8vh;
+    height:14vh;
     border-radius: 14px;
+    background-image: url(./btncardapio.png); 
+    background-repeat: no-repeat;
+    background-size: 45vh;
+    background-position-x: -2vw;
+    background-position-y: -6vh; 
     background-color: var(--color_1);
     border: none;
     color: #F9F9F9;
     font-size: 2.1vh;
+}
+
+.title-cardapio-digital {
+    position: relative;
+    display: flex;
+    color: var(--color_3);
+    font-weight: 500;
+    margin-left: -60vw;
+    
 }
 
 .b2 {
