@@ -37,8 +37,9 @@ function Home () {
     
     return (
         <div className="container">
-            <div className="main-header-cardapio">
-                
+            <div className="main-header-cardapio"></div>
+            <div className="container-courasel">
+                <nav></nav>
             </div>
             <div className="main-center">
                 <button onClick={cardapio} className="btn-cardapio-digital"></button>
