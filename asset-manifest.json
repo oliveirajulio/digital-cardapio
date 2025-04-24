@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/mn-transparency/static/css/main.6c85cbfb.css",
-    "main.js": "/mn-transparency/static/js/main.8c86cc12.js",
+    "main.js": "/mn-transparency/static/js/main.8108aaba.js",
     "static/media/btncardapio.png": "/mn-transparency/static/media/btncardapio.95cd08b9f596696451d2.png",
     "static/media/logo.png": "/mn-transparency/static/media/logo.32ee812b075db675540e.png",
     "static/media/load.png": "/mn-transparency/static/media/load.f9d664a1b748cf3162f9.png",
     "index.html": "/mn-transparency/index.html",
     "main.6c85cbfb.css.map": "/mn-transparency/static/css/main.6c85cbfb.css.map",
-    "main.8c86cc12.js.map": "/mn-transparency/static/js/main.8c86cc12.js.map"
+    "main.8108aaba.js.map": "/mn-transparency/static/js/main.8108aaba.js.map"
   },
   "entrypoints": [
     "static/css/main.6c85cbfb.css",
-    "static/js/main.8c86cc12.js"
+    "static/js/main.8108aaba.js"
   ]
 }
