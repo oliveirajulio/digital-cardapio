@@ -52,16 +52,15 @@ function Cardapio() {
   }, []);
 
   useEffect(() => {
-    if (categoriaSelecionada !== null) {
-      setLoadingFilter(true);
+    setLoadingFilter(true);
   
-      const timer = setTimeout(() => {
-        setLoadingFilter(false);
-      }, 1500);
+    const timer = setTimeout(() => {
+      setLoadingFilter(false);
+    }, 1500);
   
-      return () => clearTimeout(timer);
-    }
+    return () => clearTimeout(timer);
   }, [categoriaSelecionada]);
+  
 
   const filtrarPorCategoria = (categoria) => {
     setCategoriaSelecionada((prev) => {
