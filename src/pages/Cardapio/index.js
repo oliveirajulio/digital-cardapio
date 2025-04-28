@@ -23,7 +23,7 @@ function Cardapio() {
     const [loadingfilter, setLoadingFilter] = useState(true);
     const [error, setError] = useState(null);
     const [categoriaSelecionada, setCategoriaSelecionada] = useState(null);
-    const [viewlist, setviewlist] = useState(false);
+    const [viewlist, setviewlist] = useState(true);
     const [search, setsearch] = useState("")
 
   
