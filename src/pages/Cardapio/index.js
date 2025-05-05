@@ -166,7 +166,9 @@ function Cardapio() {
                 <span className={viewlist ? "icon-cardapio-list" :"icon-cardapio" }>
                 <img className={viewlist ? "ic-cardapio-list" : "ic-cardapio"} src={`/mn-transparency/imagens/${item["Produto"]}.png`} alt="Descrição"></img>
                 </span>
-                <span className={viewlist ? "item-name-cardapio-list" : "item-name-cardapio"}>{item["Produto"]}</span>
+                <span className={viewlist ? "item-name-cardapio-list" : "item-name-cardapio"}>{item["Produto"]} <span><span className= {viewlist ? "preco" : "preco-hidden"}>R$ 
+              {Number(String(item["Pr. Venda"]).replace(',', '.')).toFixed(2).replace('.', ',')}
+            </span></span></span>
               </button>
             </li>
           ))}
