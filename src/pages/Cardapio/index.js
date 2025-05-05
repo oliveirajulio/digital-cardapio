@@ -83,20 +83,7 @@ function Cardapio() {
     ? datacardapio.filter((item) => item["Categoria"] === categoriaSelecionada)
     : datacardapio;
 
-  if (loading) {
-    return (
-      <div className="container">
-        <div className="main-center">
-          <img className="comp" src="/mn-transparency/imagens/loadcomp.png" alt="logo" />
-          <button className="btn-home-load"></button>
-        </div>
-      </div>
-    );
-  }
-
-  if (error) {
-    return <p>Erro: {error}</p>;
-  }
+ 
 
   if (loadingfilter) {
     return (
@@ -167,7 +154,10 @@ function Cardapio() {
         </nav>
       </div>
       <div className="ctn-list-cardapio">
-        <button onClick={ViewList} className="view-list">{viewlist ? <GridViewIcon className="ic-view"/> : <ViewListIcon className="ic-view"/> }</button>
+        <div className="btn-view">
+          <button onClick={ViewList} className="view-list"><GridViewIcon className="ic-view"/></button>
+          <button onClick={ViewList} className="view-list"><ViewListIcon className="ic-view"/></button>
+        </div>  
         <ul className={viewlist ? "item-list-cardapio-list" : "item-list-cardapio"}>
           {filterdata.map((item, index) => (
             <li key={index} className={viewlist ? "item-row-cardapio-list" : "item-row-cardapio"}>
