@@ -24,7 +24,11 @@ function Cardapio() {
     const [error, setError] = useState(null);
     const [categoriaSelecionada, setCategoriaSelecionada] = useState(null);
     const [viewlist, setviewlist] = useState(true);
+    const [viewgird, setviewgrid] = useState(true);
     const [search, setsearch] = useState("")
+    const [viewType, setViewType] = useState("list"); // "grid" ou "list"
+    const setGridView = () => setViewType("grid");
+    const setListView = () => setViewType("list");
 
   
 
@@ -144,7 +148,6 @@ function Cardapio() {
         <nav className="nav-cardapio">
           <ul>
             <button  className={isFiltered("Lanches") ? "active" : ""} onClick={() => filtrarPorCategoria("Lanches")}><span className="ic-filter">Lanches da Casa</span></button>
-            <button  className={isFiltered("Pão de Queijo") ? "active" : ""} onClick={() => filtrarPorCategoria("Pão de Queijo")}><span className="ic-filter">Pães de Queijo</span></button>
             <button  className={isFiltered("Salgados Integrais") ? "active" : ""} onClick={() => filtrarPorCategoria("Salgados Integrais")}><span className="ic-filter">Salgados Integrais</span></button>
             <button className={isFiltered("Sobremesas") ? "active" : ""} onClick={() => filtrarPorCategoria("Sobremesas")}><span className="ic-filter">Sobremesas</span></button>
             <button className={isFiltered("Sucos Naturais") ? "active" : ""} onClick={() => filtrarPorCategoria("Sucos Naturais")}><span className="ic-filter">Sucos Naturais</span></button>
@@ -154,21 +157,37 @@ function Cardapio() {
         </nav>
       </div>
       <div className="ctn-list-cardapio">
-        <div className="btn-view">
-          <button onClick={ViewList} className="view-list"><GridViewIcon className="ic-view"/></button>
-          <button onClick={ViewList} className="view-list"><ViewListIcon className="ic-view"/></button>
-        </div>  
-        <ul className={viewlist ? "item-list-cardapio-list" : "item-list-cardapio"}>
+      <div className="btn-view">
+          <button 
+            onClick={setGridView} 
+            className={`view-grid ${viewType === "grid" ? "active-view" : ""}`}
+          >
+            <GridViewIcon className="ic-view"/>
+          </button>
+          <button 
+            onClick={setListView} 
+            className={`view-list ${viewType === "list" ? "active-view" : ""}`}
+          >
+            <ViewListIcon className="ic-view"/>
+          </button>
+        </div>
+        <ul className={viewType === "list" ? "item-list-cardapio-list" : "item-list-cardapio"}>
           {filterdata.map((item, index) => (
-            <li key={index} className={viewlist ? "item-row-cardapio-list" : "item-row-cardapio"}>
-              <button className={viewlist ? "item-button-cardapio-list" : "item-button-cardapio"}
-                       onClick={() => passcod(item.Código)}>
-                <span className={viewlist ? "icon-cardapio-list" :"icon-cardapio" }>
-                <img className={viewlist ? "ic-cardapio-list" : "ic-cardapio"} src={`/mn-transparency/imagens/${item["Produto"]}.png`} alt="Descrição"></img>
+            <li key={index} className={viewType === "list" ? "item-row-cardapio-list" : "item-row-cardapio"}>
+              <button 
+                className={viewType === "list" ? "item-button-cardapio-list" : "item-button-cardapio"}
+                onClick={() => passcod(item.Código)}
+              >
+                <span className={viewType === "list" ? "icon-cardapio-list" : "icon-cardapio"}>
+                  <img 
+                    className={viewType === "list" ? "ic-cardapio-list" : "ic-cardapio"} 
+                    src={`/mn-transparency/imagens/${item["Produto"]}.png`} 
+                    alt="Descrição"
+                  />
                 </span>
-                <span className={viewlist ? "item-name-cardapio-list" : "item-name-cardapio"}>{item["Produto"]} <span><span className= {viewlist ? "preco" : "preco-hidden"}>R$ 
-              {Number(String(item["Pr. Venda"]).replace(',', '.')).toFixed(2).replace('.', ',')}
-            </span></span></span>
+                <span className={viewType === "list" ? "item-name-cardapio-list" : "item-name-cardapio"}>
+                  {item["Produto"]}
+                </span>
               </button>
             </li>
           ))}
