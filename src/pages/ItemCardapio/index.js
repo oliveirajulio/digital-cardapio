@@ -32,7 +32,7 @@ function ItemCardapio() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const jsonData = await Data("/mn-transparency/cardapiodata.xlsx");
+        const jsonData = await Data("/cardapiodata.xlsx");
 
         // 1. Verifica se a chave "Código" existe corretamente
         const possibleKeys = Object.keys(jsonData[0]).filter(key => key.trim().toLowerCase() === "código");
@@ -73,7 +73,7 @@ function ItemCardapio() {
     <div className="container-icp">
             <div className="main-header-icp"></div>
             <div className="info-product">
-                <span className="img-product"><img className="im-product" src={`/mn-transparency/imagens/${produto["Produto"]}.jpg`} alt="Descrição"></img></span>
+                <span className="img-product"><img className="im-product" src={`/imagens/${produto["Produto"]}.jpg`} alt="Descrição"></img></span>
                 <span className="name-product">{produto["Produto"]}</span>
                 <span className="cal-product">{produto["Unidade"]}</span>
             </div>
