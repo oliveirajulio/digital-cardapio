@@ -41,7 +41,7 @@ function Cardapio() {
 
     const fetchData = async () => {
       try {
-        const jsonData = await Data("/mn-transparency/cardapiodata.xlsx");
+        const jsonData = await Data("/cardapiodata.xlsx");
         setTimeout(() => {
           setDataCardapio(jsonData);
           setLoading(false);
