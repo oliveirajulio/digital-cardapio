@@ -70,8 +70,13 @@ Esta aplicação simula um cardápio digital moderno com:
 
 ## 👨‍💻 Autor
 
-Desenvolvido por Julio Cesar de Oliveira Gomes
+Desenvolvido por **Julio Cesar de Oliveira Gomes**
    Github: https://github.com/oliveirajulio
+
+## 📄 Licença
+
+Este projeto está licenciado sob os termos da **MIT License** – consulte o arquivo [LICENSE](./LICENSE) para mais detalhes.
+
 
 
 
