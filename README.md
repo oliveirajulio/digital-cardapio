@@ -22,8 +22,6 @@ Esta aplicação simula um cardápio digital moderno com:
 - **React.js** (frontend)
 - **Excel como backend de dados**
 - **JavaScript**
-- **VS Code** (ambiente de desenvolvimento)
-
 ---
 
 ## 🛠️ Como Executar Localmente
@@ -71,12 +69,9 @@ Esta aplicação simula um cardápio digital moderno com:
 ## 👨‍💻 Autor
 
 Desenvolvido por **Julio Cesar de Oliveira Gomes**
-   Github: https://github.com/oliveirajulio
+   
+Github: https://github.com/oliveirajulio
 
 ## 📄 Licença
 
 Este projeto está licenciado sob os termos da **MIT License** – consulte o arquivo [LICENSE](./LICENSE) para mais detalhes.
-
-
-
-
