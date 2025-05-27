@@ -1,4 +1,4 @@
-# 📱 Cardápio Digital - MN Transparency
+# 📱 Cardápio Digital - Menu Transparency
 
 ![Status do Projeto](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)
 
