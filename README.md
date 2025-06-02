@@ -1,70 +1,77 @@
-# Getting Started with Create React App
+# 📱 Cardápio Digital - Menu Transparency
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Status do Projeto](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)
 
-## Available Scripts
+Um **template de cardápio digital** desenvolvido em **React.js**, ideal para lanchonetes, restaurantes e cafés que desejam oferecer um menu interativo e acessível diretamente pelo celular dos clientes.
 
-In the project directory, you can run:
+## 🧾 Visão Geral
 
-### `npm start`
+Esta aplicação simula um cardápio digital moderno com:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Listagem de itens com filtros;
+- Visualização detalhada de cada produto;
+- Informações como nome, descrição, preço e quantidade;
+- Interface responsiva para dispositivos móveis.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+> ⚙️ Os dados dos itens são carregados a partir de uma **planilha Excel**, funcionando como um backend leve e prático.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🚀 Tecnologias Utilizadas
 
-### `npm run build`
+- **React.js** (frontend)
+- **Excel como backend de dados**
+- **JavaScript**
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🛠️ Como Executar Localmente
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/oliveirajulio/mn-transparency.git
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Acesse a pasta do projeto
+   ```bash
+   cd mn-transparency
 
-### `npm run eject`
+3. Instale as dependencias:
+   ```bash
+   npm install
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+4. Inicie o servidor local: 
+   ```bash
+   npm start 
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+5. Acesse http://localhost:3000 no navegador.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 🧩 Funcionalidades
 
-## Learn More
+- Visualização de cardápio em tempo real;
+- Filtro por categorias ou tipos de produtos;
+- Página de detalhes com informações completas do item;
+- Layout adaptado para dispositivos móveis;
+- Leitura de dados estruturados via planilha.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🎯 Aplicações reais
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Exibição de cardápio digital em restaurantes e lanchonetes;
+- Facilita o autoatendimento pelo celular do cliente;
+- Reduz o uso de cardápios físicos;
+- Permite fácil atualização dos itens via planilha.
 
-### Code Splitting
+## 📦 Planejamentos Futuros
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Integração com banco de dados (Firebase, Supabase, etc);
+- Sistema de pedidos e carrinho;
+- Área administrativa para gerenciar itens via painel;
 
-### Analyzing the Bundle Size
+## 👨‍💻 Autor
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Desenvolvido por **Julio Cesar de Oliveira Gomes**
+   
+Github: https://github.com/oliveirajulio
 
-### Making a Progressive Web App
+## 📄 Licença
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Este projeto está licenciado sob os termos da **MIT License** – consulte o arquivo [LICENSE](./LICENSE) para mais detalhes.
