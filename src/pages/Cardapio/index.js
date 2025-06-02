@@ -41,7 +41,7 @@ function Cardapio() {
 
     const fetchData = async () => {
       try {
-        const jsonData = await Data("/mn-transparency/cardapiodata.xlsx");
+        const jsonData = await Data("/cardapiodata.xlsx");
         setTimeout(() => {
           setDataCardapio(jsonData);
           setLoading(false);
@@ -103,7 +103,7 @@ function Cardapio() {
         </input>
       </div>
         <div className="center-load">
-          <img className="load-filter" src="/mn-transparency/imagens/loadingfilter.png"/>
+          <img className="load-filter" src="/imagens/loadingfilter.png"/>
         </div>
       </div>
     )
@@ -181,7 +181,7 @@ function Cardapio() {
                 <span className={viewType === "list" ? "icon-cardapio-list" : "icon-cardapio"}>
                   <img 
                     className={viewType === "list" ? "ic-cardapio-list" : "ic-cardapio"} 
-                    src={`/mn-transparency/imagens/${item["Produto"]}.png`} 
+                    src={`/imagens/${item["Produto"]}.png`} 
                     alt="Descrição"
                   />
                 </span>
