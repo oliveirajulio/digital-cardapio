@@ -1,6 +1,6 @@
 import "./index.css"
 import Data from "../../service/service";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 
 import LocalDiningIcon from "@mui/icons-material/LocalDining";
@@ -29,8 +29,17 @@ function Cardapio() {
     const [viewType, setViewType] = useState("list"); // "grid" ou "list"
     const setGridView = () => setViewType("grid");
     const setListView = () => setViewType("list");
+    const navRef = useRef();
+    const scrollInterval = useRef();
 
-  
+    const [categorias, setCategorias] = useState([
+      "Lanches",
+      "Salgados Integrais",
+      "Sobremesas",
+      "Sucos Naturais",
+      "Cafés & Chocolates",
+      "Refeições",
+    ]);  
 
   useEffect(() => {
     
@@ -38,6 +47,8 @@ function Cardapio() {
       if (StoredFilter) {
         setCategoriaSelecionada(StoredFilter)
       }
+
+      
 
     const fetchData = async () => {
       try {
@@ -54,6 +65,7 @@ function Cardapio() {
 
     fetchData();
   }, []);
+  
 
   useEffect(() => {
     setLoadingFilter(true);
@@ -66,28 +78,33 @@ function Cardapio() {
   }, [categoriaSelecionada]);
   
 
-  const filtrarPorCategoria = (categoria) => {
-    setCategoriaSelecionada((prev) => {
-        const newCategory = (prev === categoria) ? null : categoria;
 
-        // Armazena a nova categoria no localStorage
-        if (newCategory) {
-            localStorage.setItem("categoriaSelecionada", newCategory);
-        } else {
-            localStorage.removeItem("categoriaSelecionada");
-        }
-        return newCategory;
+const filtrarPorCategoria = (categoria) => {
+  setCategoriaSelecionada((prev) => {
+    const newCategory = (prev === categoria) ? null : categoria;
 
+    if (newCategory) {
+      localStorage.setItem("categoriaSelecionada", newCategory);
+    } else {
+      localStorage.removeItem("categoriaSelecionada");
+    }
+
+    // Mover categoria clicada para o início:
+    setCategorias((prevCategorias) => {
+      const semCategoria = prevCategorias.filter(cat => cat !== categoria);
+      return [categoria, ...semCategoria];
     });
 
+    return newCategory;
+  });
 };
+
   
 
   const produtosFiltrados = categoriaSelecionada
     ? datacardapio.filter((item) => item["Categoria"] === categoriaSelecionada)
     : datacardapio;
 
- 
 
   if (loadingfilter) {
     return (
@@ -121,9 +138,8 @@ function Cardapio() {
     setviewlist(!viewlist)
   }
 
-  const isFiltered = (categoria) => {
-    return categoriaSelecionada === categoria;
-  };
+  const isFiltered = (categoria) => categoria === categoriaSelecionada;
+
 
   const filterdata = (produtosFiltrados || []).filter((item) =>
     item["Produto"].toLowerCase().includes(search.toLowerCase())
@@ -145,18 +161,24 @@ function Cardapio() {
 
 
       <div className="main-filter-cardapio">
-        <nav className="nav-cardapio">
-          <ul>
-            <button  className={isFiltered("Lanches") ? "active" : ""} onClick={() => filtrarPorCategoria("Lanches")}><span className="ic-filter">Lanches da Casa</span></button>
-            <button  className={isFiltered("Salgados Integrais") ? "active" : ""} onClick={() => filtrarPorCategoria("Salgados Integrais")}><span className="ic-filter">Salgados Integrais</span></button>
-            <button className={isFiltered("Sobremesas") ? "active" : ""} onClick={() => filtrarPorCategoria("Sobremesas")}><span className="ic-filter">Sobremesas</span></button>
-            <button className={isFiltered("Sucos Naturais") ? "active" : ""} onClick={() => filtrarPorCategoria("Sucos Naturais")}><span className="ic-filter">Sucos Naturais</span></button>
-            <button className={isFiltered("Cafés & Chocolates") ? "active" : ""} onClick={() => filtrarPorCategoria("Cafés & Chocolates")}><span className="ic-filter">Cafés & Chocolates</span></button>
-            <button className={isFiltered("Refeições") ? "active" : ""} onClick={() => filtrarPorCategoria("Refeições")}><span className="ic-filter">Refeições</span></button>
-          </ul>
-        </nav>
-      </div>
+          <nav 
+               className="nav-cardapio"
+               >
+            <ul>
+              {categorias.map((categoria) => (
+                <button
+                  key={categoria}
+                  className={isFiltered(categoria) ? "active" : ""}
+                  onClick={() => filtrarPorCategoria(categoria)}
+                >
+                  <span className="ic-filter">{categoria}</span>
+                </button>
+              ))}
+            </ul>
+          </nav>
+        </div>
       <div className="ctn-list-cardapio">
+        
       <div className="btn-view">
           <button 
             onClick={setGridView} 
@@ -171,6 +193,7 @@ function Cardapio() {
             <ViewListIcon className="ic-view"/>
           </button>
         </div>
+
         <ul className={viewType === "list" ? "item-list-cardapio-list" : "item-list-cardapio"}>
           {filterdata.map((item, index) => (
             <li key={index} className={viewType === "list" ? "item-row-cardapio-list" : "item-row-cardapio"}>
