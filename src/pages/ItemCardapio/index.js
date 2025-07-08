@@ -50,7 +50,18 @@ function ItemCardapio() {
           throw new Error("Produto não encontrado.");
         }
 
-        setProduto(produtoEncontrado);
+        function sanitizeText(text) {
+          return typeof text === "string"
+            ? text.replace(/[\u00A0\u200B\u200C\u200D]/g, ' ').replace(/\s{2,}/g, ' ').normalize("NFC")
+            : text;
+        }
+
+        const produtoSanitizado = {};
+        for (let key in produtoEncontrado) {
+          produtoSanitizado[key] = sanitizeText(produtoEncontrado[key]);
+        }
+
+        setProduto(produtoSanitizado);
         setLoading(false);
       } catch (err) {
         setError(err.message);
