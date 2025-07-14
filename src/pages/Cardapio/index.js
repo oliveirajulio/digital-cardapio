@@ -31,6 +31,8 @@ function Cardapio() {
     const setListView = () => setViewType("list");
     const navRef = useRef();
     const scrollInterval = useRef();
+    const currentIndex = useRef(0);
+    const autoClickInterval = useRef();
 
     const [categorias, setCategorias] = useState([
       "Lanches",
@@ -72,7 +74,7 @@ function Cardapio() {
   
     const timer = setTimeout(() => {
       setLoadingFilter(false);
-    }, 1500);
+    }, 500);
   
     return () => clearTimeout(timer);
   }, [categoriaSelecionada]);
@@ -86,8 +88,7 @@ const filtrarPorCategoria = (categoria) => {
     if (newCategory) {
       localStorage.setItem("categoriaSelecionada", newCategory);
     } else {
-      localStorage.removeItem("categoriaSelecionada");
-    }
+      localStorage.removeItem("categoriaSelecionada");  }
 
     // Mover categoria clicada para o início:
     setCategorias((prevCategorias) => {
@@ -98,9 +99,6 @@ const filtrarPorCategoria = (categoria) => {
     return newCategory;
   });
 };
-
-  
-
   const produtosFiltrados = categoriaSelecionada
     ? datacardapio.filter((item) => item["Categoria"] === categoriaSelecionada)
     : datacardapio;
@@ -178,7 +176,7 @@ const filtrarPorCategoria = (categoria) => {
           </nav>
         </div>
       <div className="ctn-list-cardapio">
-        
+
       <div className="btn-view">
           <button 
             onClick={setGridView} 
