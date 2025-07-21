@@ -10,6 +10,12 @@ import StorefrontTwoToneIcon from '@mui/icons-material/StorefrontTwoTone';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import AddIcon from '@mui/icons-material/Add';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
+import LocalDrinkIcon from '@mui/icons-material/LocalDrink';
+import EggIcon from '@mui/icons-material/Egg';
+import SetMealIcon from '@mui/icons-material/SetMeal'; // para glúten
+import EmojiNatureIcon from '@mui/icons-material/EmojiNature'; // para soja
+import NoMealsIcon from '@mui/icons-material/NoMeals'; // fallback genérico
+import GrassIcon from '@mui/icons-material/Grass';
 import { Hidden } from "@mui/material";
 
 function ItemCardapio() {
@@ -19,6 +25,15 @@ function ItemCardapio() {
   const [error, setError] = useState(null);
   const [openboard, setopenboard] = useState(true)
   const [openboardflavor, setopenboardflavor] = useState(false)
+
+  const alergenosMap = {
+    "Contém ovo": <EggIcon />,
+    "Contém lactose": <LocalDrinkIcon />,
+    "Contém peixe": <SetMealIcon />,
+    "Contém soja": <GrassIcon />,
+    "Contém soja": <EmojiNatureIcon />,
+    // ... adicione mais se quiser
+  };
 
   const opennutri = () => {
     setopenboard(prevState => !prevState)
@@ -137,7 +152,14 @@ function ItemCardapio() {
             <div className={ openboard ? "info-nutri" : "info-hidden"}>
                 <div className={ openboard ?"qtde" : "info-hidden"}><span>Descrição</span></div>
                 <span className={ openboard ?"description-icp" : "info-hidden"}>{produto["Descrição"]}</span>
-                <span className={ openboard ?"cal-nutri" : "info-hidden"}>{produto["Alergenicos"]}</span>
+                <span className={openboard ? "cal-nutri" : "info-hidden"}>
+                  {produto["Alergenicos"]?.split(", ").map((item, index) => (
+                    <span key={index} style={{ display: 'inline-flex', alignItems: 'center', marginRight: '8px' }}>
+                      {alergenosMap[item.trim()] || <NoMealsIcon />} {/* Ícone correspondente ou genérico */}
+                      <span style={{ marginLeft: '4px' }}>{item}</span> {/* Texto visível */}
+                    </span>
+                  ))}
+                </span>
 
             </div>
             <span className="price-product">R$<span className="num-price">
