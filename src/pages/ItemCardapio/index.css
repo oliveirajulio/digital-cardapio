@@ -86,18 +86,18 @@
     align-items: center;
     text-align: center;
     margin-top: 1rem;
-    font-size: 24px !important;
+    font-size: 28px !important;
     font-weight: 400;
 }
 
 .cal-product {
     position: relative;
-    color: #ffffffb3;
+    color: rgba(255, 255, 255, 0.4);
     align-items: center;
     text-align: center;
     margin-top: 0.2rem;
     font-weight: 400 !important;
-    font-size: 16px !important;
+    font-size: 14px !important;
 }
 
 .img-product {
@@ -133,12 +133,14 @@
 }
 
 .ask-way {
-    margin: 1rem;
+    margin-top: 2rem;
+    margin-left: 1rem;
     margin-bottom: 0.7rem;
     color: #f9f9f9;
 }
 
 .ask-way span {
+    font-size: 20px !important;
     font-weight: 400;
 
 }
@@ -344,10 +346,10 @@
     padding-right: 1rem;
     color: #ffffffb3;
     font-weight: 400;
+    font-size: 18px !important;
     box-sizing: border-box;
     overflow-wrap: break-word;
     word-break: normal;
-    white-space: normal;
     hyphens: auto;
     text-align: start;
     justify-content: center;

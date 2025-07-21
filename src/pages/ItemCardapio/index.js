@@ -130,7 +130,7 @@ function ItemCardapio() {
                     </ul>
                   </nav>
                 </div> */}
-                <h3 className="ask-way"><span onClick={opennutri}>Saiba mais{openboard ? <KeyboardArrowDownIcon className="ic-add"/> : <KeyboardArrowRightIcon className="ic-add"/> }</span></h3>
+                <h3 className="ask-way"><span onClick={opennutri}>Ver mais informações{openboard ? <KeyboardArrowDownIcon className="ic-add"/> : <KeyboardArrowRightIcon className="ic-add"/> }</span></h3>
                 <hr className="divisoria"/>
 
             </div>

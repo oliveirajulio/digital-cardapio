@@ -173,9 +173,24 @@ const filtrarPorCategoria = (categoria) => {
                 </button>
               ))}
             </ul>
+
           </nav>
         </div>
       <div className="ctn-list-cardapio">
+
+      <div className="remove-filter">
+        {categoriaSelecionada && (
+          <button
+            className="remove"
+            onClick={() => {
+              setCategoriaSelecionada(null);
+              localStorage.removeItem("categoriaSelecionada");
+            }}
+          >
+            Remover Filtro
+          </button>
+        )}
+      </div>
 
       <div className="btn-view">
           <button 
@@ -190,6 +205,7 @@ const filtrarPorCategoria = (categoria) => {
           >
             <ViewListIcon className="ic-view"/>
           </button>
+
         </div>
 
         <ul className={viewType === "list" ? "item-list-cardapio-list" : "item-list-cardapio"}>
