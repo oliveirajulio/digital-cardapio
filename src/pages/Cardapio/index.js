@@ -34,6 +34,7 @@ function Cardapio() {
     const scrollInterval = useRef();
     const currentIndex = useRef(0);
     const autoClickInterval = useRef();
+    const [loadingIcons, setLoadingIcons] = useState({});
 
     const [categorias, setCategorias] = useState([
       "Lanches",
@@ -44,34 +45,39 @@ function Cardapio() {
       "Refeições",
     ]);  
 
-  useEffect(() => {
-    
-    const StoredFilter = localStorage.getItem("categoriaSelecionada");
+      useEffect(() => {
+      const StoredFilter = localStorage.getItem("categoriaSelecionada");
       if (StoredFilter) {
-        setCategoriaSelecionada(StoredFilter)
+        setCategoriaSelecionada(StoredFilter);
       }
 
-      
+      const fetchData = async () => {
+        try {
+          const jsonData = await Data("/cardapiodata.xlsx");
 
-    const fetchData = async () => {
-      try {
-        const jsonData = await Data("/cardapiodata.xlsx");
-        setTimeout(() => {
+          // Inicializa o estado de loading por item
+          const initialLoading = {};
+          jsonData.forEach(item => {
+            initialLoading[item["Produto"]] = true;
+          });
+          setLoadingIcons(initialLoading);
+
           setDataCardapio(jsonData);
           setLoading(false);
-        }, 1000);
-      } catch (err) {
-        setError(err.message);
-        setLoading(false);
-      }
-    };
+        } catch (err) {
+          setError(err.message);
+          setLoading(false);
+        }
+      };
 
-    fetchData();
-  }, []);
+      fetchData();
+    }, []);
   
 
   useEffect(() => {
     setLoadingFilter(true);
+
+    
   
     const timer = setTimeout(() => {
       setLoadingFilter(false);
@@ -80,6 +86,9 @@ function Cardapio() {
     return () => clearTimeout(timer);
   }, [categoriaSelecionada]);
   
+  const handleImageLoad = (produto) => {
+  setLoadingIcons(prev => ({ ...prev, [produto]: false }));
+};
 
 
 const filtrarPorCategoria = (categoria) => {
@@ -104,6 +113,15 @@ const filtrarPorCategoria = (categoria) => {
     ? datacardapio.filter((item) => item["Categoria"] === categoriaSelecionada)
     : datacardapio;
 
+    useEffect(() => {
+  if (!loading && datacardapio.length) {
+    const initialLoading = {};
+    datacardapio.forEach(item => {
+      initialLoading[item["Produto"]] = true;
+    });
+    setLoadingIcons(initialLoading);
+  }
+}, [loading, datacardapio]);
 
   if (loadingfilter) {
     return (
@@ -216,19 +234,22 @@ const filtrarPorCategoria = (categoria) => {
                 className={viewType === "list" ? "item-button-cardapio-list" : "item-button-cardapio"}
                 onClick={() => passcod(item.Código)}
               >
-                <span className={viewType === "list" ? "icon-cardapio-list" : "icon-cardapio"}>
-                  {loadingicon ? (
-                    <CoffeeIcon size={24} />
-                  ) : (
-                    <img
-                      className={viewType === "list" ? "ic-cardapio-list" : "ic-cardapio"}
-                      src={`/imagens/${item["Produto"]}.png`}
-                      alt="Descrição"
-                      onLoad={() => setLoadingIcon(false)}   // 👈 quando carrega, troca
-                      onError={() => setLoadingIcon(false)}  // 👈 se der erro, some tbm
-                    />
-                  )}
-                </span>
+              <span className={viewType === "list" ? "icon-cardapio-list" : "icon-cardapio"}>
+                {loadingIcons[item["Produto"]] && (
+                  <img
+                    src="/imagens/CoffeeIcon.png"
+                    alt="Carregando..."
+                    className={viewType === "list" ? "ic-cardapio-list" : "ic-cardapio"}
+                  />
+                )}
+                <img
+                  src={`/imagens/${item["Produto"]}.png`}
+                  alt={item["Produto"]}
+                  className={viewType === "list" ? "ic-cardapio-list" : "ic-cardapio"}
+                  onLoad={() => handleImageLoad(item["Produto"])}
+                  onError={() => handleImageLoad(item["Produto"])}
+                />
+              </span>
                 <span className={viewType === "list" ? "item-name-cardapio-list" : "item-name-cardapio"}>
                   {item["Produto"]}
                 </span>
