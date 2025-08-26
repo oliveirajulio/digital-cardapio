@@ -20,6 +20,7 @@ function Cardapio() {
     const navigate = useNavigate();
     const [datacardapio, setDataCardapio] = useState([]);
     const [loading, setLoading] = useState(true);
+    const [loadingicon, setLoadingIcon] = useState(true);
     const [loadingfilter, setLoadingFilter] = useState(true);
     const [error, setError] = useState(null);
     const [categoriaSelecionada, setCategoriaSelecionada] = useState(null);
@@ -216,15 +217,15 @@ const filtrarPorCategoria = (categoria) => {
                 onClick={() => passcod(item.Código)}
               >
                 <span className={viewType === "list" ? "icon-cardapio-list" : "icon-cardapio"}>
-                  {loading ? (
+                  {loadingicon ? (
                     <CoffeeIcon size={24} />
                   ) : (
                     <img
                       className={viewType === "list" ? "ic-cardapio-list" : "ic-cardapio"}
                       src={`/imagens/${item["Produto"]}.png`}
                       alt="Descrição"
-                      onLoad={() => setLoading(false)}   // 👈 quando carrega, troca
-                      onError={() => setLoading(false)}  // 👈 se der erro, some tbm
+                      onLoad={() => setLoadingIcon(false)}   // 👈 quando carrega, troca
+                      onError={() => setLoadingIcon(false)}  // 👈 se der erro, some tbm
                     />
                   )}
                 </span>
