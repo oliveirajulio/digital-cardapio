@@ -86,7 +86,7 @@
     align-items: center;
     text-align: center;
     margin-top: 1rem;
-    font-size: 28px !important;
+    font-size: 24px !important;
     font-weight: 400;
 }
 
@@ -346,7 +346,7 @@
     padding-right: 1rem;
     color: #ffffffb3;
     font-weight: 400;
-    font-size: 18px !important;
+    font-size: 17px !important;
     box-sizing: border-box;
     overflow-wrap: break-word;
     word-break: normal;
@@ -358,7 +358,7 @@
 
 .cal-nutri {
     position: relative;
-    width: 100%;
+    width: 23rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* 2 colunas iguais */
     margin: 1rem;

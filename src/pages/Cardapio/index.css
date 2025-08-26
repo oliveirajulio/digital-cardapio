@@ -303,6 +303,8 @@ body {
   cursor: pointer;
   filter: grayscale(0%) blur(0);
   border: solid 2px var(--color_1);
+  color: var(--color_1) !important;
+  background-color: var(--color_3);
   opacity: 1;
 }
 
