@@ -216,11 +216,17 @@ const filtrarPorCategoria = (categoria) => {
                 onClick={() => passcod(item.Código)}
               >
                 <span className={viewType === "list" ? "icon-cardapio-list" : "icon-cardapio"}>
-                  <img 
-                    className={viewType === "list" ? "ic-cardapio-list" : "ic-cardapio"} 
-                    src={`/imagens/${item["Produto"]}.png`} 
-                    alt="Descrição"
-                  />
+                  {loading ? (
+                    <CoffeeIcon size={24} />
+                  ) : (
+                    <img
+                      className={viewType === "list" ? "ic-cardapio-list" : "ic-cardapio"}
+                      src={`/imagens/${item["Produto"]}.png`}
+                      alt="Descrição"
+                      onLoad={() => setLoading(false)}   // 👈 quando carrega, troca
+                      onError={() => setLoading(false)}  // 👈 se der erro, some tbm
+                    />
+                  )}
                 </span>
                 <span className={viewType === "list" ? "item-name-cardapio-list" : "item-name-cardapio"}>
                   {item["Produto"]}

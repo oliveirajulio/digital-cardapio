@@ -572,6 +572,7 @@ body {
     align-items: center;
     text-align: center;
     z-index: 1000;
+    color: var(--color_10);
 
 }
 
@@ -636,6 +637,7 @@ body {
     align-items: center;
     text-align: center;
     z-index: 1000;
+    color: var(--color_10);
 }
 
 .ic-cardapio {
