@@ -27,7 +27,7 @@ function Cardapio() {
     const [viewlist, setviewlist] = useState(true);
     const [viewgird, setviewgrid] = useState(true);
     const [search, setsearch] = useState("")
-    const [viewType, setViewType] = useState("list"); // "grid" ou "list"
+    const [viewType, setViewType] = useState("grid"); // "grid" ou "list"
     const setGridView = () => setViewType("grid");
     const setListView = () => setViewType("list");
     const navRef = useRef();
