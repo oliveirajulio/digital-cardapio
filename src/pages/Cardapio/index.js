@@ -243,7 +243,7 @@ const filtrarPorCategoria = (categoria) => {
                   />
                 )}
                 <img
-                  src={`/imagens/${item["Produto"]}.png`}
+                  src={`/imagens/${item["Produto"]}.jpg`}
                   alt={item["Produto"]}
                   className={viewType === "list" ? "ic-cardapio-list" : "ic-cardapio"}
                   onLoad={() => handleImageLoad(item["Produto"])}
