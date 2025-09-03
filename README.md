@@ -75,4 +75,3 @@ Github: https://github.com/oliveirajulio
 ## 📄 Licença
 
 Este projeto está licenciado sob os termos da **MIT License** – consulte o arquivo [LICENSE](./LICENSE) para mais detalhes.
-

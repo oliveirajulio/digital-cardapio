@@ -39,8 +39,10 @@ function Home () {
         <div className="container">
             <div className="main-header-cardapio"></div>
                 <nav className="nav-carousel">
-                    <ul>
-                        <span>a</span>
+                    <ul className="carousel-list">
+                         <li className="img-carousel"><img className="im-carousel" src="/imagens/cr1.jpg" alt="Carousel_01"></img></li>
+                         <li className="img-carousel"><img className="im-carousel" src="/imagens/cr2.jpg" alt="Carousel_02"></img></li>
+                         <li className="img-carousel"><img className="im-carousel" src="/imagens/cr3.jpg" alt="Carousel_03"></img></li>
                     </ul>
                 </nav>
             <div className="main-center">
