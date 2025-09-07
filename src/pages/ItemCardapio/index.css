@@ -17,7 +17,7 @@
     left: 0;
     height: 5.5rem;
     background-color: var(--color_3);
-    background-image: url(./logo.png);
+    /* background-image: url(./logo.png); */
     background-repeat: no-repeat;
     background-size: 90px;
     background-position-y: 0rem;
