@@ -57,11 +57,10 @@
 
 
 .btn-cardapio-digital {
-    margin-top: 30vw;
+    margin-top: 10vw;
     width: 90vw;
     height:14vh;
     border-radius: 14px;
-    background-image: url(./btncardapio.png); 
     background-repeat: no-repeat;
     background-size: 45vh;
     background-position-x: -2vw;
@@ -205,8 +204,6 @@
   padding: 0;
   margin: 0;
   list-style: none;
-
-  /* animação automática */
   animation: slide 12s infinite;
 }
 
