@@ -1,3 +1,24 @@
+/* Animação individual de cada indicador */
+.indicator:nth-child(1) { animation: indicator1 15s infinite; }
+.indicator:nth-child(2) { animation: indicator2 15s infinite; }
+.indicator:nth-child(3) { animation: indicator3 15s infinite; }
+
+@keyframes indicator1 {
+    0%, 30% { background-color: white; transform: scale(1.2); }
+    35%, 100% { background-color: rgba(255, 255, 255, 0.5); transform: scale(1); }
+}
+
+@keyframes indicator2 {
+    0%, 30% { background-color: rgba(255, 255, 255, 0.5); transform: scale(1); }
+    35%, 65% { background-color: white; transform: scale(1.2); }
+    70%, 100% { background-color: rgba(255, 255, 255, 0.5); transform: scale(1); }
+}
+
+@keyframes indicator3 {
+    0%, 65% { background-color: rgba(255, 255, 255, 0.5); transform: scale(1); }
+    70%, 100% { background-color: white; transform: scale(1.2); }
+}
+
 
 @keyframes slide {
     0%, 30% { 
@@ -8,6 +29,18 @@
     }
     70%, 100% { 
         transform: translateX(-66.666%); 
+    }
+}
+
+@keyframes indicators {
+    0%, 30% { 
+        /* Primeiro indicador ativo */
+    }
+    35%, 65% { 
+        /* Segundo indicador ativo */
+    }
+    70%, 100% { 
+        /* Terceiro indicador ativo */
     }
 }
 
@@ -56,18 +89,26 @@
 
 
 .btn-cardapio-digital {
-    margin-top: 10vw;
+    margin-top: 5vw;
+    padding-top: 1.5rem;
     width: 90vw;
     height:14vh;
+    display: flex;
+    flex-direction: column;
     border-radius: 14px;
     background-repeat: no-repeat;
     background-size: 45vh;
     background-position-x: -2vw;
     background-position-y: -6vh; 
-    background-color: var(--color_1);
+    background-color: var(--color_5);
     border: none;
-    color: #F9F9F9;
+    color: var(--color_3);
     font-size: 2.1vh;
+}
+
+.ic-btn-digital {
+  position: relative;
+  font-size: 36px !important;  
 }
 
 .title-cardapio-digital {
@@ -202,5 +243,32 @@
     width: 300%; /* 3 imagens × 100% */
     animation: slide 15s infinite;
 }
+
+.carousel-indicators {
+    position: absolute;
+    bottom: 0.5rem;
+    left: 63%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+    animation: indicators 15s infinite;
+}
+
+.indicator {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+}
+
+.indicator.active {
+    background-color: white;
+    transform: scale(1.2);
+}
+
 
 

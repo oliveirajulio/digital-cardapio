@@ -8,6 +8,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import CloseIcon from '@mui/icons-material/Close';
 import { Opacity } from "@mui/icons-material";
 import { easeInOut } from "framer-motion";
+import AddToHomeScreenIcon from '@mui/icons-material/AddToHomeScreen';
 
 function Home () {
 
@@ -44,12 +45,20 @@ function Home () {
                          <li className="img-carousel2"><img className="im-carousel" src="/imagens/cr2.jpg" alt="Carousel_02"></img></li>
                          <li className="img-carousel3"><img className="im-carousel" src="/imagens/cr3.jpg" alt="Carousel_03"></img></li>
                     </ul>
+                    <div className="carousel-indicators">
+                        <span className="indicator active"></span>
+                        <span className="indicator"></span>
+                        <span className="indicator"></span>
+                    </div>
                 </nav>
             <div className="main-center">
-                <button onClick={cardapio} className="btn-cardapio-digital"></button>
+                <button onClick={cardapio} className="btn-cardapio-digital">
+                    <span><AddToHomeScreenIcon className="ic-btn-digital"/></span>
+                    <span>SEU PEDIDO COMEÇA AQUI</span>
+                </button>
                 <span className="title-cardapio-digital">Cardapio Digital</span>
                 <button onClick={cardapio} className="btn-cardapio-digital"></button>
-                <span className="title-cardapio-digital">Cardapio Digital</span>
+                <span className="title-cardapio-digital">Redes Sociais</span>
             </div>
         </div>
     )

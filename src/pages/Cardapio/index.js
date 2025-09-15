@@ -14,7 +14,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import GridViewIcon from '@mui/icons-material/GridView';
 import ViewListIcon from '@mui/icons-material/ViewList';
 import SearchIcon from '@mui/icons-material/Search';
-
+import FilterAltOffIcon from '@mui/icons-material/FilterAltOff';
 
 function Cardapio() {
     const navigate = useNavigate();
@@ -202,11 +202,11 @@ const filtrarPorCategoria = (categoria) => {
           <button
             className="remove"
             onClick={() => {
-              setCategoriaSelecionada(null);
-              localStorage.removeItem("categoriaSelecionada");
+              setCategoriaSelecionada(null);  
             }}
           >
             Remover Filtro
+            <span className="ic-filter-list"><FilterAltOffIcon /></span>
           </button>
         )}
       </div>
