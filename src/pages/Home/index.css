@@ -1,35 +1,40 @@
 /* Animação individual de cada indicador */
-.indicator:nth-child(1) { animation: indicator1 15s infinite; }
-.indicator:nth-child(2) { animation: indicator2 15s infinite; }
-.indicator:nth-child(3) { animation: indicator3 15s infinite; }
+.indicator:nth-child(1) { animation: indicator1 20s infinite; }
+.indicator:nth-child(2) { animation: indicator2 20s infinite; }
+.indicator:nth-child(3) { animation: indicator3 20s infinite; }
+.indicator:nth-child(4) { animation: indicator4 20s infinite; }
+
 
 @keyframes indicator1 {
-    0%, 30% { background-color: white; transform: scale(1.2); }
-    35%, 100% { background-color: rgba(255, 255, 255, 0.5); transform: scale(1); }
+    0%, 20% { background-color: white; transform: scale(1.2); }
+    25%, 100% { background-color: rgba(255, 255, 255, 0.5); transform: scale(1); }
 }
 
 @keyframes indicator2 {
-    0%, 30% { background-color: rgba(255, 255, 255, 0.5); transform: scale(1); }
-    35%, 65% { background-color: white; transform: scale(1.2); }
-    70%, 100% { background-color: rgba(255, 255, 255, 0.5); transform: scale(1); }
+    0%, 20% { background-color: rgba(255, 255, 255, 0.5); transform: scale(1); }
+    25%, 45% { background-color: white; transform: scale(1.2); }
+    50%, 100% { background-color: rgba(255, 255, 255, 0.5); transform: scale(1); }
 }
 
 @keyframes indicator3 {
-    0%, 65% { background-color: rgba(255, 255, 255, 0.5); transform: scale(1); }
-    70%, 100% { background-color: white; transform: scale(1.2); }
+    0%, 45% { background-color: rgba(255, 255, 255, 0.5); transform: scale(1); }
+    50%, 70% { background-color: white; transform: scale(1.2); }
+    75%, 100% { background-color: rgba(255, 255, 255, 0.5); transform: scale(1); }
+}
+
+@keyframes indicator4 {
+    0%, 70% { background-color: rgba(255, 255, 255, 0.5); transform: scale(1); }
+    75%, 95% { background-color: white; transform: scale(1.2); }
+    100% { background-color: rgba(255, 255, 255, 0.5); transform: scale(1); }
 }
 
 
 @keyframes slide {
-    0%, 30% { 
-        transform: translateX(0); 
-    }
-    35%, 65% { 
-        transform: translateX(-33.333%); 
-    }
-    70%, 100% { 
-        transform: translateX(-66.666%); 
-    }
+    0%, 20% { transform: translateX(0); }        /* Imagem 1 */
+    25%, 45% { transform: translateX(-25%); }    /* Imagem 2 */
+    50%, 70% { transform: translateX(-50%); }    /* Imagem 3 */
+    75%, 95% { transform: translateX(-75%); }    /* Imagem 4 */
+    100% { transform: translateX(0); }
 }
 
 @keyframes indicators {
@@ -90,11 +95,9 @@
 
 .btn-cardapio-digital {
     margin-top: 5vw;
-    padding-top: 1.5rem;
     width: 90vw;
-    height:14vh;
-    display: flex;
-    flex-direction: column;
+    height:7vh;
+    padding-bottom: 0.6rem;
     border-radius: 14px;
     background-repeat: no-repeat;
     background-size: 45vh;
@@ -103,11 +106,12 @@
     background-color: var(--color_5);
     border: none;
     color: var(--color_3);
-    font-size: 2.1vh;
+    font-size: 20px;
 }
 
 .ic-btn-digital {
   position: relative;
+  top: 0.7rem;
   font-size: 36px !important;  
 }
 
@@ -221,10 +225,8 @@
     overflow: hidden;
 }
 
-.img-carousel1,
-.img-carousel2,
-.img-carousel3 {
-    width: 33.333%; /* cada li ocupa exatamente 1/3 */
+.img-carousel {
+    width: 25%; /* cada li ocupa exatamente 1/3 */
     flex-shrink: 0;
 }
 
@@ -240,8 +242,8 @@
     padding: 0;
     margin: 0;
     list-style: none;
-    width: 300%; /* 3 imagens × 100% */
-    animation: slide 15s infinite;
+    width: 400%; /* 4 imagens × 100% */
+    animation: slide 20s infinite; /* 5s por imagem */
 }
 
 .carousel-indicators {
@@ -268,6 +270,42 @@
 .indicator.active {
     background-color: white;
     transform: scale(1.2);
+}
+
+.announ1 {
+    position: relative;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    width: 100%;
+    height: auto;
+    background-color: var(--color_6);
+}
+
+.tlt-an1 {
+    padding:2rem;
+    color: white;
+    font-weight: 600;
+    align-items: center;
+    text-align: center;
+}
+
+.dcp-an1 {
+    position: relative;
+    display: flex;
+    width: 100vw;
+    height: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    color: #ffffffb3;
+    font-weight: 400;
+    font-size: 17px !important;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+    word-break: normal;
+    hyphens: auto;
+    text-align: start;
+    justify-content: center;
+    align-items: center;
 }
 
 

@@ -41,24 +41,28 @@ function Home () {
             <div className="main-header-cardapio"></div>
                 <nav className="nav-carousel">
                     <ul className="carousel-list">
-                         <li className="img-carousel1"><img className="im-carousel" src="/imagens/cr1.jpg" alt="Carousel_01"></img></li>
-                         <li className="img-carousel2"><img className="im-carousel" src="/imagens/cr2.jpg" alt="Carousel_02"></img></li>
-                         <li className="img-carousel3"><img className="im-carousel" src="/imagens/cr3.jpg" alt="Carousel_03"></img></li>
+                         <li className="img-carousel"><img className="im-carousel" src="/imagens/cr1.jpg" alt="Carousel_01"></img></li>
+                         <li className="img-carousel"><img className="im-carousel" src="/imagens/cr2.jpg" alt="Carousel_02"></img></li>
+                         <li className="img-carousel"><img className="im-carousel" src="/imagens/cr3.jpg" alt="Carousel_03"></img></li>
+                         <li className="img-carousel"><img className="im-carousel" src="/imagens/cr4.jpg" alt="Carousel_04"></img></li>
                     </ul>
                     <div className="carousel-indicators">
                         <span className="indicator active"></span>
+                        <span className="indicator"></span>
                         <span className="indicator"></span>
                         <span className="indicator"></span>
                     </div>
                 </nav>
             <div className="main-center">
                 <button onClick={cardapio} className="btn-cardapio-digital">
+                    <span>CARDAPIO DIGITAL</span>
                     <span><AddToHomeScreenIcon className="ic-btn-digital"/></span>
-                    <span>SEU PEDIDO COMEÇA AQUI</span>
                 </button>
-                <span className="title-cardapio-digital">Cardapio Digital</span>
-                <button onClick={cardapio} className="btn-cardapio-digital"></button>
-                <span className="title-cardapio-digital">Redes Sociais</span>
+            </div>
+            <div className="announ1">
+                 <span className="img-carousel"><img className="im-carousel" src="/imagens/announ1.jpg" alt="Announ_1"></img></span>
+                 <h3 className="tlt-an1">E aí, vamos incluir alimentos integrais à sua dieta?</h3>
+                 <h5 className="dcp-an1">Uma das consequências da preservação das películas e cascas nos alimentos integrais é que, dessa forma, também são conservadas as propriedades nutricionais em sua totalidade, evitando a perda de vitaminas, sais minerais e fibras. Isso acontece porque nesses nutrientes existem maior quantidade justamente nessas partes, que seriam removidas e descartadas durante o refinamento.</h5>
             </div>
         </div>
     )
