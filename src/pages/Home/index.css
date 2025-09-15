@@ -247,7 +247,7 @@
 .carousel-indicators {
     position: absolute;
     bottom: 0.5rem;
-    left: 63%;
+    left: 65%;
     transform: translateX(-50%);
     display: flex;
     gap: 10px;
