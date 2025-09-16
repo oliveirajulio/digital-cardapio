@@ -123,19 +123,12 @@ const filtrarPorCategoria = (categoria) => {
   }
 }, [loading, datacardapio]);
 
+
+
   if (loadingfilter) {
     return (
       
       <div className="ctn-list">
-        <div className="main-header-cardapio">
-        <input 
-          className="input-cardapio"
-          placeholder="O que você quer comer hoje?"
-          value={search}
-          onChange={(e) => setsearch(e.target.value)}
-        >
-        </input>
-      </div>
         <div className="center-load">
           <img className="load-filter" src="/imagens/loadingfilter.png"/>
         </div>
@@ -162,10 +155,17 @@ const filtrarPorCategoria = (categoria) => {
     item["Produto"].toLowerCase().includes(search.toLowerCase())
   );
 
+  const home = () => {
+    navigate("/");
+  };
+
 
   return (
     <div className="container-cardapio">
       <div className="main-header-cardapio">
+        <button  
+            className="logo-link" onClick={home}>
+          </button>
         <input 
           className="input-cardapio"
           placeholder="O que você quer comer hoje?"

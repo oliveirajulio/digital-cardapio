@@ -273,6 +273,7 @@
 }
 
 .carousel-nav {
+    margin-bottom: 0;
     padding: 0;
     display: flex;
     overflow-x: auto;
@@ -289,6 +290,7 @@
     }
 
 .carousel-nav li {
+    margin-bottom: 0;
     list-style: none;
     scroll-snap-align: start;
 }
@@ -340,4 +342,31 @@
         font-size: 16px;
     }
 
+}
+
+.footer {
+    position: relative;
+    width: 100%;
+    height: auto;
+    top: -2rem;
+    color: white;
+    display: inline-flex;
+}
+
+.ig-btn {
+    position: relative;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 4rem;
+    background-color: var(--color_3);
+}
+
+.ic-ig {
+    font-size: 28px !important;
+    color: white;
+}
+
+.id-ig {
+    position: relative;
+    top: 0.8rem;
 }

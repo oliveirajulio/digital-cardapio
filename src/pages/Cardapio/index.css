@@ -139,6 +139,8 @@ body {
   margin-bottom: 0; /* Garante que não haja margem no final */
 }
 
+
+
 .btn-view {
   position: absolute;
   margin-top: 0.3rem;
@@ -215,6 +217,16 @@ body {
 
 }
 
+.logo-link {
+    position: absolute;
+    top: 0;
+    left: -0.5rem; /* Mesma posição do background */
+    width: 90px; /* Mesmo tamanho do background */
+    height: 100%;
+    z-index: 1000;
+    text-decoration: none;
+    background-color: transparent;
+}
 
 
 .menu-cardapio {
