@@ -37,6 +37,12 @@
     100% { transform: translateX(0); }
 }
 
+@keyframes slideHint {
+    0%, 90% { transform: translateX(0); }
+    5% { transform: translateX(-20px); }
+    10% { transform: translateX(0); }
+}
+
 @keyframes indicators {
     0%, 30% { 
         /* Primeiro indicador ativo */
@@ -249,7 +255,7 @@
 .carousel-indicators {
     position: absolute;
     bottom: 0.5rem;
-    left: 65%;
+    left: 64%;
     transform: translateX(-50%);
     display: flex;
     gap: 10px;
@@ -283,7 +289,15 @@
     scrollbar-width: none;
     -ms-overflow-style: none;
     list-style: none;
+     animation: slideHint 4s ease-in-out infinite;
+     animation-delay: 2s;
     }
+
+.carousel-nav li :hover, .carousel-nav li:active, .carousel-nav li:focus-within {
+  animation: none !important;
+}
+
+
 
 .carousel-nav::-webkit-scrollbar {
         display: none;

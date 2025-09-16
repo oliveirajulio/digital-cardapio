@@ -40,7 +40,7 @@ function Home () {
     return (
         <div className="container">
             <div className="main-header-cardapio">
-                
+
             </div>
                 <nav className="nav-carousel">
                     <ul className="carousel-list">
@@ -63,7 +63,7 @@ function Home () {
                 </button>
             </div>
             <div class="carousel-container">
-        <ul class="carousel-nav" id="carousel">
+        <ul className="carousel-nav">
             <li>
                 <div class="announ">
                     <span class="img-carousel">
