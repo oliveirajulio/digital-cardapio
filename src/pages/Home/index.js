@@ -59,11 +59,28 @@ function Home () {
                     <span><AddToHomeScreenIcon className="ic-btn-digital"/></span>
                 </button>
             </div>
-            <div className="announ1">
-                 <span className="img-carousel"><img className="im-carousel" src="/imagens/announ1.jpg" alt="Announ_1"></img></span>
-                 <h3 className="tlt-an1">E aí, vamos incluir alimentos integrais à sua dieta?</h3>
-                 <h5 className="dcp-an1">Uma das consequências da preservação das películas e cascas nos alimentos integrais é que, dessa forma, também são conservadas as propriedades nutricionais em sua totalidade, evitando a perda de vitaminas, sais minerais e fibras. Isso acontece porque nesses nutrientes existem maior quantidade justamente nessas partes, que seriam removidas e descartadas durante o refinamento.</h5>
-            </div>
+            <div class="carousel-container">
+        <ul class="carousel-nav" id="carousel">
+            <li>
+                <div class="announ">
+                    <span class="img-carousel">
+                        <img className="im-carousel" src="/imagens/announ1.jpg" alt="Announ_1"></img>
+                    </span>
+                    <h3 class="tlt-an1">E aí, vamos incluir alimentos integrais à sua dieta?</h3>
+                    <h5 class="dcp-an1">Uma das consequências da preservação das películas e cascas nos alimentos integrais é que, dessa forma, também são conservadas as propriedades nutricionais em sua totalidade, evitando a perda de vitaminas, sais minerais e fibras. Isso acontece porque nesses nutrientes existem maior quantidade justamente nessas partes, que seriam removidas e descartadas durante o refinamento.</h5>
+                </div>
+            </li>
+             <li>
+                <div class="announ">
+                    <span class="img-carousel">
+                        <img className="im-carousel" src="/imagens/announ2.jpg" alt="Announ_2"></img>
+                    </span>
+                    <h3 class="tlt-an1">E aí, vamos incluir alimentos integrais à sua dieta?</h3>
+                    <h5 class="dcp-an1">Uma das consequências da preservação das películas e cascas nos alimentos integrais é que, dessa forma, também são conservadas as propriedades nutricionais em sua totalidade, evitando a perda de vitaminas, sais minerais e fibras. Isso acontece porque nesses nutrientes existem maior quantidade justamente nessas partes, que seriam removidas e descartadas durante o refinamento.</h5>
+                </div>
+            </li>
+        </ul>
+        </div>
         </div>
     )
 }
