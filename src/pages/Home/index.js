@@ -36,6 +36,10 @@ function Home () {
             window.location.href = "https://drive.google.com/uc?export=download&id=1qT7x_xnJuRCKrp4JcIJAVnnd1YfwmgUp";
         }, 1000);
     };
+
+    const insta = () => {
+        window.location.href = "https://drive.google.com/uc?export=download&id=1qT7x_xnJuRCKrp4JcIJAVnnd1YfwmgUp";
+    };
     
     return (
         <div className="container">
