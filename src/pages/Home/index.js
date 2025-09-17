@@ -39,7 +39,7 @@ function Home () {
     };
 
     const insta = () => {
-        window.location.href = "https://drive.google.com/uc?export=download&id=1qT7x_xnJuRCKrp4JcIJAVnnd1YfwmgUp";
+        window.location.href = "https://www.instagram.com/mundonaturalmix/";
     };
 
     const OpenBout = () => {
@@ -126,7 +126,7 @@ function Home () {
            )}
         </div>
         <div className="footer">
-            <button className="ig-btn"><InstagramIcon className="ic-ig"/></button>
+            <button onClick={insta} className="ig-btn"><InstagramIcon className="ic-ig"/></button>
             <span className="id-ig">@mundonaturalmmix</span>
         </div>
         </div>
