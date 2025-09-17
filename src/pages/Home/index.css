@@ -360,6 +360,7 @@
 
 .footer {
     position: relative;
+    margin-top: 2rem;
     width: 100%;
     height: auto;
     top: -2rem;
@@ -384,4 +385,39 @@
 .id-ig {
     position: relative;
     top: 0.8rem;
+}
+
+.section-bout {
+    margin: 0;
+    position: relative;
+    color: #f9f9f9;
+    padding: 1rem;
+    list-style: none;
+}
+
+.section-bout ul {
+    padding: 0;
+    list-style: none;
+    font-weight: 400 !important;
+}
+
+.section-bout li {
+    font-weight: 400 !important;
+    margin-top: 1rem;
+}
+
+.section-bout li:hover {
+    cursor: pointer;
+    color: white;
+    font-weight: 500 !important;
+}
+
+
+
+.btn-bout {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
 }

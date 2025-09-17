@@ -17,6 +17,7 @@ function Home () {
     const [modesearch, setmodesearch] = useState(false);
     const [animation, setanimation ] = useState(false)
     const navigate = useNavigate();
+    const [openbout, setopenbout] = useState(true);
 
     const inputshow = () => {
         setshowinput(!showinput)
@@ -40,6 +41,10 @@ function Home () {
     const insta = () => {
         window.location.href = "https://drive.google.com/uc?export=download&id=1qT7x_xnJuRCKrp4JcIJAVnnd1YfwmgUp";
     };
+
+    const OpenBout = () => {
+      setopenbout(prevState => !prevState);
+    }
     
     return (
         <div className="container">
@@ -106,6 +111,19 @@ function Home () {
                 </div>
             </li>
         </ul>
+        </div>
+        <div className="section-bout">
+            <span open={openbout} onClick={OpenBout}>Sobre Nós</span>
+           
+           {openbout && (
+            <div className="btn-bout">
+                <ul>
+                    <li>Nossa Empresa</li>
+                    <li>Nos Contate</li>
+                    
+                </ul>
+            </div>
+           )}
         </div>
         <div className="footer">
             <button className="ig-btn"><InstagramIcon className="ic-ig"/></button>
