@@ -406,6 +406,11 @@
     margin-top: 1rem;
 }
 
+.section-bout h4 {
+    font-weight: 400 !important;
+    margin-top: 1rem;
+}
+
 .section-bout li:hover {
     cursor: pointer;
     color: white;
@@ -420,4 +425,10 @@
     height: auto;
     display: flex;
     flex-direction: column;
+}
+
+.ic-wpp {
+    position: relative;
+    margin-right: 0.5rem;
+    top: 0.3rem;
 }

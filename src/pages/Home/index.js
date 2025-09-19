@@ -10,6 +10,9 @@ import { Opacity } from "@mui/icons-material";
 import { easeInOut } from "framer-motion";
 import AddToHomeScreenIcon from '@mui/icons-material/AddToHomeScreen';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 function Home () {
 
@@ -113,14 +116,37 @@ function Home () {
         </ul>
         </div>
         <div className="section-bout">
-            <span open={openbout} onClick={OpenBout}>Sobre Nós</span>
-           
+            <span onClick={OpenBout} style={{ cursor: "pointer", display: "flex", alignItems: "center" }}>
+            Sobre Nós
+            {openbout 
+            ? <KeyboardArrowDownIcon style={{ marginLeft: "5px" }} />  
+            : <KeyboardArrowRightIcon style={{ marginLeft: "5px" }} />
+            }
+  </span>
+        
            {openbout && (
             <div className="btn-bout">
                 <ul>
-                    <li>Nossa Empresa</li>
-                    <li>Nos Contate</li>
+                    <li>
+                        Nossa Empresa
+                        <div>
+                            <h4>
+                                Há uma década, iniciamos essa jornada com o propósito de levar mais saúde, qualidade de vida e bem-estar para você, nosso cliente e amigo.
+                                Foram 10 anos oferecendo os melhores produtos a granel, suplementos e soluções naturais, sempre com carinho, dedicação e o compromisso de fazer parte da sua rotina saudável.
+                                Que venham muitos outros anos construindo juntos um mundo mais saudável e equilibrado!
+                            </h4>
+                        </div>
                     
+                    </li>
+                    <li>
+                        Nos Contate
+                        <div>
+                            <h4><WhatsAppIcon className="ic-wpp"/>Barra do Piraí: 99265-7942</h4>
+                            <h4><WhatsAppIcon className="ic-wpp"/>Vassouras: 99238-9127 </h4>
+                            <h4><WhatsAppIcon className="ic-wpp"/>Volta Redonda: 99282-2782</h4>
+                            <h4><WhatsAppIcon className="ic-wpp"/>Mendes: 97400-3190</h4>
+                        </div>
+                    </li>     
                 </ul>
             </div>
            )}
